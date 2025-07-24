@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>第??回有限体理論とその擬似乱数系列生成への応用ワークショップ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="sticky top-0 bg-white shadow-sm z-10">
+        <div class="container mx-auto px-6 md:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a class="text-sm text-blue-600" href="#">FFTPR2025</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a class="text-gray-600 hover:text-blue-600" href="#overview">概要</a>
+                    <a class="text-gray-600 hover:text-blue-600" href="#info">基本情報</a>
+                    <a class="text-gray-600 hover:text-blue-600" href="#program">プログラム</a>
+                    <a class="text-gray-600 hover:text-blue-600" href="#proceedings">予稿集</a>
+                    <a class="text-gray-600 hover:text-blue-600" href="#links">関連情報</a>
+                </nav>
+                <button class="md:hidden">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 md:px-8 py-12" id="top">
+        <h1 class="text-4xl font-bold text-center mb-2">第??回有限体理論とその擬似乱数系列生成への<br />応用ワークショップ</h1>
+        <p class="text-center text-gray-500 mb-12">主催: 電子情報通信学会 情報理論とその応用サブソサイエティ<br />委員:
+            林夏生(北九州市立大学)、宮崎武(九州情報大学)、荒木俊輔(九州工業大学)、上原聡(北九州市立大学)</p>
+        <section class="mb-12" id="overview">
+            <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">概要</h2>
+            <p class="text-gray-700 leading-relaxed">
+                今回で??回目となる有限体理論とその擬似乱数系列生成への応用ワークショップは、日頃より有限体理論やその擬似乱数系列生成への応用に関連する研究者、<br />
+                またそのようなテーマに興味をもっている研究者が一堂に会し、日々の研究活動の中で得られた成果の報告をはじめ、疑問に思っている事柄、<br />
+                あるいは個人的な興味から深く掘り下げているテーマなどを、十分な時間をかけてお互いに紹介し、共有し、密な議論を展開するための場を提供することを意図したワークショップです。
+                それぞれの研究活動がより情熱をもって進められることへの一助になることを期待しています。<br />
+                <br />
+                本ワークショップでは、一般講演も設ける予定ですので、関連する発表についても広く歓迎いたします。なお、本年ワークショップは2日間に渡り対面及びオンライン形式のハイブリッドでの実施を計画しております。（情勢によっては完全オンラインに移行する可能性もございます）。
+
+            </p>
+        </section>
+        <section class="mb-12" id="info">
+            <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">基本情報</h2>
+            <div class="border rounded-lg overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                    <div class="bg-gray-50 p-4 font-semibold text-gray-600">開催日時</div>
+                    <div class="p-4 md:col-span-3">2025年9月??日（??）〜 9月??日（??）</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                    <div class="bg-gray-50 p-4 font-semibold text-gray-600">場所</div>
+                    <div class="p-4 md:col-span-3">
+                        <p class="mb-4">？？？？？？？？ &amp; どこかの県どこかの町</p>
+                        <div class="aspect-w-16 aspect-h-9 rounded-md overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6624.012061242134!2d130.70962887628627!3d33.889498526305196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543cbd8d8d13b4d%3A0x97af4e3ff45c8c58!2z5YyX5Lmd5bee5biC56uL5aSn5a2mIOOBsuOBs-OBjeOBruOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1753321995982!5m2!1sja!2sjp"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                    <div class="bg-gray-50 p-4 font-semibold text-gray-600">参加費</div>
+                    <div class="p-4 md:col-span-3">一般: 1,500円 / 学生: 無料</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4">
+                    <div class="bg-gray-50 p-4 font-semibold text-gray-600">発表申し込み</div>
+                    <div class="p-4 md:col-span-3">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>申込締切: 2025年9月????日 (????)</li>
+                            <li>原稿締め切り: 2025年9月????日 (????)</li>
+                            <li>懇親会申込締切：2025年9月????日 (????)</li>
+                            <li>詳細は申込要領ページよりご確認の上、お申し込みください。</li>
+                        </ul>
+                        <p class="mb-4">発表及び参加をご希望の方は、以下の締め切りをご確認の上、こちらのフォームからご回答ください。<br />
+                            また、発表される場合はこちらのフォーマットにしたがって原稿を執筆のうえ、メール（fftprs[at]googlegroups.com）にて送付ください。<br />
+                            なお、講演(および参加)希望者多数の場合には、会場の広さなどの関係でお断りせざるを得ない場合があり得ますこと、予めご了承ください。<br />
+                            予稿集は当日配布いたします。また、16日の17時半ごろから懇親会を予定しております。ご参加の可否についても併せて上記フォームからご回答ください。
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-12" id="program">
+            <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">プログラム詳細</h2>
+            <div class="mb-8">
+                <h3 class="text-xl font-bold bg-blue-50 text-blue-700 p-4 rounded-t-lg">1日目: 2025年9月?????日（?????）</h3>
+                <div class="border border-t-0 rounded-b-lg p-6 space-y-8">
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">12:50 - 13:20</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">受付</p>
+                            <!--
+                            <p class="text-sm text-gray-600"></p>
+                            -->
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:20 - 13:30</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">開会あいさつ</p>
+                            <!--
+                            <p class="text-sm text-gray-600 mb-2"></p>
+                            -->
+                            <p class="text-sm text-gray-600">
+                                以下、発表・質疑で30分/人、転換5分としています。</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:30 - 14:00</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">講演1: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究</p>
+                            <p class="text-sm text-gray-600 mb-2">発表者: 髙市 康平（九州工業大学）</p>
+                            <p class="text-sm text-gray-600">
+                                不要なら消す。発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:30 - 14:00</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">講演2: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究</p>
+                            <p class="text-sm text-gray-600 mb-2">発表者: 髙市 康平（九州工業大学）</p>
+                            <p class="text-sm text-gray-600">
+                                不要なら消す。発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">10:10 - 10:30</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">休憩</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:30 - 14:00</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">講演3: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究</p>
+                            <p class="text-sm text-gray-600 mb-2">発表者: 髙市 康平（九州工業大学）</p>
+                            <p class="text-sm text-gray-600">
+                                不要なら消す。発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:30 - 14:00</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">講演4: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究</p>
+                            <p class="text-sm text-gray-600 mb-2">発表者: 髙市 康平（九州工業大学）</p>
+                            <p class="text-sm text-gray-600">
+                                不要なら消す。発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:30 - </div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">懇親会（研究討論）</p>
+                            <p class="text-sm text-gray-600 mb-2">どこかのどこかで</p>
+                            <p class="text-sm text-gray-600">
+                                不要なら消す。場所場所場所場所場所場所場所場所場所場所場所場所
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-xl font-bold bg-blue-50 text-blue-700 p-4 rounded-t-lg">2日目: 2025年9月？？日（？？）</h3>
+                <div class="border border-t-0 rounded-b-lg p-6 space-y-8">
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:30 - 14:00</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">講演5: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究</p>
+                            <p class="text-sm text-gray-600 mb-2">発表者: 髙市 康平（九州工業大学）</p>
+                            <p class="text-sm text-gray-600">
+                                不要なら消す。発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:30 - 14:00</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">講演6: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究</p>
+                            <p class="text-sm text-gray-600 mb-2">発表者: 髙市 康平（九州工業大学）</p>
+                            <p class="text-sm text-gray-600">
+                                不要なら消す。発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">13:30 - 14:00</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">講演7: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究</p>
+                            <p class="text-sm text-gray-600 mb-2">発表者: 髙市 康平（九州工業大学）</p>
+                            <p class="text-sm text-gray-600">
+                                不要なら消す。発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要発表概要
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">15:00 - 15:10</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">閉会の挨拶</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-28 text-gray-500 font-medium shrink-0">- 15:10</div>
+                        <div class="pl-6 border-l-2 border-gray-200">
+                            <p class="font-semibold">完全撤収完了</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row justify-between items-center mb-12"
+            id="proceedings">
+            <div>
+                <h2 class="text-2xl font-bold mb-2">予稿集</h2>
+                <p class="text-gray-600">ワークショップの予稿集（PDF形式）は、ダウンロードいただけます。</p>
+            </div>
+            <a class="mt-4 md:mt-0 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+                href="#">
+                <span class="material-icons mr-2">download</span>
+                ダウンロード
+            </a>
+        </section>
+        <section id="links">
+            <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">関連情報</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 border rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">情報理論とその応用サブソサイエティ（SITAサブソ）</h3>
+                    <a class="text-blue-600 hover:underline" href="https://www.ieice.org/ess/sita/index.html">https://www.ieice.org/ess/sita/index.html</a>
+                </div>
+                <div class="p-6 border rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">第10回有限体理論とその擬似乱数系列生成への応用ワークショップ</h3>
+                    <a class="text-blue-600 hover:underline" href="https://sites.google.com/ec.okayama-u.ac.jp/fftprs2024">https://sites.google.com/ec.okayama-u.ac.jp/fftprs2024</a>
+                </div>
+                <div class="p-6 border rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">お問い合わせ</h3>
+                    <p class="text-gray-600">実行委員長 林夏生: <a class="text-blue-600 hover:underline"
+                            href="mailto:test@test">test@test</a></p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-100 text-gray-600 text-center py-6">
+        <p class="text-sm">FFTPRS2025実行委員会</p>
+        <p class="text-xs mt-2">© FFTPRS2025 Executive Committee.All rights reserved.</p>
+    </footer>
+    <button
+        class="fixed bottom-6 right-6 bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
+        <a href="#top">
+            <span class="material-icons">arrow_upward</span>
+        </a>
+    </button>
+
+</body>
+
+</html>

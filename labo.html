@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#ec5b13",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                        "lab-navy": "#0f172a",
+                        "lab-accent": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans JP", "Public Sans", "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"],
+                        sans: ["Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style data-purpose="typography">
+        .hero-title {
+            letter-spacing: 0.03em;
+            line-height: 1.16;
+        }
+
+        .section-title {
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+
+        .japanese-sub {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+            display: block;
+        }
+    </style>
+    <style data-purpose="layout">
+        .card-hover:hover {
+            opacity: 0.92;
+            transition: opacity 0.3s ease;
+        }
+
+        .abstract-lab-bg {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(236, 91, 19, 0.18), transparent 28%),
+                radial-gradient(circle at 82% 16%, rgba(0, 51, 102, 0.30), transparent 30%),
+                radial-gradient(circle at 50% 82%, rgba(15, 23, 42, 0.22), transparent 36%),
+                linear-gradient(135deg, #0f172a 0%, #1e293b 52%, #003366 100%);
+        }
+    </style>
+    <title>上原研究室 | 研究室紹介</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 antialiased">
+    <!-- BEGIN: MainHeader -->
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center space-x-4">
+                <div class="text-2xl font-bold tracking-tighter text-lab-navy" data-purpose="logo">
+                    UEHARA LAB <span class="text-sm font-normal text-slate-500 ml-2 uppercase tracking-normal">University of Kitakyushu</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
+                <a class="hover:text-primary" href="./index.html">ホーム</a>
+                <a class="hover:text-primary text-primary" href="./labo.html">上原研究室について</a>
+                <a class="hover:text-primary" href="./works.html">研究業績</a>
+                <a class="hover:text-primary" href="./members.html">メンバー</a>
+                <a class="hover:text-primary" href="./access/index.html">アクセス</a>
+            </nav>
+            <button id="mobile-menu-button" aria-label="Toggle menu" class="md:hidden p-2 text-lab-navy">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 text-sm font-medium text-slate-700 space-y-3">
+            <a class="block hover:text-primary" href="./index.html">ホーム</a>
+            <a class="block hover:text-primary text-primary" href="./labo.html">上原研究室について</a>
+            <a class="block hover:text-primary" href="./works.html">研究業績</a>
+            <a class="block hover:text-primary" href="./members.html">メンバー</a>
+            <a class="block hover:text-primary" href="../access/index.html">アクセス</a>
+        </nav>
+    </header>
+    <!-- END: MainHeader -->
+
+    <main class="pt-20">
+        <!-- Hero Section with Breadcrumb -->
+        <section class="relative pt-12 pb-20 overflow-hidden bg-slate-50 dark:bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Breadcrumb -->
+                <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+                    <a class="hover:text-primary transition-colors" href="../index.html">Home</a>
+                    <span class="material-symbols-outlined text-xs">chevron_right</span>
+                    <span class="text-primary font-medium dark:text-accent">研究室紹介</span>
+                </nav>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary dark:bg-accent/20 dark:text-accent text-xs font-bold uppercase tracking-widest">
+                            About Uehara Lab
+                        </span>
+                        <h1 class="hero-title text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white">
+                            数理情報とAIで、<br />
+                            <span class="text-primary dark:text-accent">安全で信頼できる情報社会を支える</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
+                            上原研究室では、代数学や系列・擬似乱数生成などの数理的基盤をもとに、情報セキュリティ、画像AI、システム応用に関する研究を行っています。理論の理解だけでなく、実装・実験・評価を通して、社会で役立つ情報技術の探究を目指します。
+                        </p>
+                    </div>
+                    <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl abstract-lab-bg">
+                        <div class="absolute inset-0 bg-slate-950/10"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between">
+                            <div class="flex justify-end gap-3 text-white/80">
+                                <span class="material-symbols-outlined text-5xl">functions</span>
+                                <span class="material-symbols-outlined text-5xl">security</span>
+                                <span class="material-symbols-outlined text-5xl">neurology</span>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur rounded-2xl border border-white/20 p-6 text-white max-w-md">
+                                <p class="text-sm uppercase tracking-[0.25em] text-white/70 mb-3">Research Fields</p>
+                                <p class="text-2xl font-bold leading-relaxed">Algebra / Sequences / Security / Image AI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative background element -->
+            <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="py-24 bg-white dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <h2 class="text-3xl font-bold mb-8 border-l-4 border-primary pl-6 dark:text-white">研究室の目的</h2>
+                    <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <p>
+                            上原研究室では、情報科学の理論と応用を結びつけ、安全で信頼性の高い情報システムを実現するための研究に取り組んでいます。特に、代数学、系列生成、擬似乱数、暗号、画像AIといった分野を対象に、理論的な理解と実践的な応用の両面から研究を進めています。
+                        </p>
+                        <p>
+                            研究活動では、文献調査、数理的な考察、プログラムによる実装、実験結果の分析、発表資料や論文としての整理を重視します。学生一人ひとりが自ら課題を見つけ、考え、検証し、研究を通して問題解決力と技術力を身につけることを目指しています。
+                        </p>
+                    </div>
+                    <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">functions</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-2">理論</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed">代数学や系列生成など、情報技術を支える数理的な基盤を学びます。</p>
+                        </div>
+                        <div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">shield</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-2">セキュリティ</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed">暗号や擬似乱数生成、AIの安全性など、情報を守る技術を探究します。</p>
+                        </div>
+                        <div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">terminal</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-2">実装と評価</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed">プログラムを作成し、実験やデータ分析を通して技術の有効性を検証します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Themes -->
+        <section class="py-24 bg-slate-50 dark:bg-slate-900/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold dark:text-white mb-4">主な研究テーマ</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                        上原研究室では、数理的な理論を土台にしながら、情報セキュリティやAI応用に関する研究を進めています。
+                    </p>
+                    <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Theme 1 -->
+                    <div class="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-4xl">casino</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3 dark:text-white">系列・擬似乱数生成</h3>
+                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                    暗号、通信、シミュレーション、ゲーム、統計的サンプリングなどに利用される系列や擬似乱数生成について研究します。予測困難性や安全性、実用上の品質評価を通して、信頼できる乱数生成技術の理解を深めます。
+                                </p>
+                                <a class="text-primary dark:text-accent font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="../works/index.html">
+                                    関連する研究業績を見る <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Theme 2 -->
+                    <div class="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-4xl">calculate</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3 dark:text-white">代数学と暗号理論</h3>
+                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                    群論や体論などの代数学的な考え方をもとに、暗号技術や情報セキュリティの基盤となる理論を学びます。数学的な構造を理解し、それが安全な通信やデータ保護にどのように応用されるかを探究します。
+                                </p>
+                                <a class="text-primary dark:text-accent font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="../works/index.html">
+                                    関連する研究業績を見る <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Theme 3 -->
+                    <div class="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-4xl">security</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3 dark:text-white">情報セキュリティ</h3>
+                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                    デジタル情報を安全に扱うための技術について研究します。暗号、認証、脅威分析、攻撃への耐性評価などを対象に、安全な情報システムを実現するための仕組みを考えます。
+                                </p>
+                                <a class="text-primary dark:text-accent font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="../works/index.html">
+                                    関連する研究業績を見る <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Theme 4 -->
+                    <div class="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-4xl">neurology</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3 dark:text-white">画像AI・AIセキュリティ</h3>
+                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                    画像認識AIの仕組みや、AIが誤認識する要因、AIを利用した認証・識別技術について研究します。AIは便利な技術である一方、攻撃や悪用の対象にもなり得るため、安全性と信頼性の両面から検証します。
+                                </p>
+                                <a class="text-primary dark:text-accent font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="../works/index.html">
+                                    関連する研究業績を見る <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environment / Lab Life Section -->
+        <section class="py-24 bg-white dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-4">
+                                <div class="rounded-xl w-full h-48 shadow-md bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6 flex flex-col justify-between">
+                                    <span class="material-symbols-outlined text-primary text-5xl">menu_book</span>
+                                    <p class="font-bold text-slate-800 dark:text-white">文献調査</p>
+                                </div>
+                                <div class="rounded-xl w-full h-64 shadow-md bg-primary text-white p-6 flex flex-col justify-between">
+                                    <span class="material-symbols-outlined text-5xl">code_blocks</span>
+                                    <p class="font-bold">実装・実験</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4 pt-8">
+                                <div class="rounded-xl w-full h-64 shadow-md bg-slate-900 text-white p-6 flex flex-col justify-between">
+                                    <span class="material-symbols-outlined text-5xl">analytics</span>
+                                    <p class="font-bold">分析・可視化</p>
+                                </div>
+                                <div class="rounded-xl w-full h-48 shadow-md bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6 flex flex-col justify-between">
+                                    <span class="material-symbols-outlined text-accent text-5xl">co_present</span>
+                                    <p class="font-bold text-slate-800 dark:text-white">発表・議論</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2 space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-6 dark:text-white">研究の進め方</h2>
+                            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                                上原研究室では、学生の興味や研究テーマに応じて、文献調査、実装、実験、結果の分析を段階的に進めていきます。定期的なゼミでは、研究の進捗報告や議論を行い、発表資料や卒業論文として成果をまとめます。
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                研究テーマによっては、PythonやWeb技術、画像処理、データ分析などを利用します。プログラミング経験が少ない場合でも、必要な技術を学びながら、自分の研究に必要な力を身につけていくことを重視しています。
+                            </p>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary dark:text-accent">check_circle</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">文献調査と先行研究の整理</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary dark:text-accent">check_circle</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">プログラムによる実装・実験</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary dark:text-accent">check_circle</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">結果の可視化とデータ分析</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary dark:text-accent">check_circle</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">ゼミでの発表・卒業研究としてのまとめ</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Students Section -->
+        <section class="py-20 bg-slate-50 dark:bg-slate-900/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="rounded-2xl bg-lab-navy text-white p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8 overflow-hidden relative">
+                    <div class="absolute -right-20 -top-20 w-72 h-72 bg-primary/40 rounded-full blur-3xl"></div>
+                    <div class="relative max-w-3xl">
+                        <p class="text-accent font-bold uppercase tracking-widest text-sm mb-3">For Prospective Students</p>
+                        <h2 class="text-3xl font-bold mb-4">配属を希望する学生の方へ</h2>
+                        <p class="text-slate-300 leading-relaxed">
+                            数学、プログラミング、セキュリティ、AI、画像処理などに興味がある学生を歓迎します。最初からすべてができる必要はありません。自分で調べ、考え、試し、結果を分かりやすくまとめる姿勢を大切にしています。
+                        </p>
+                    </div>
+                    <a href="../access/index.html" class="relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-lab-navy font-bold hover:bg-slate-100 transition-colors whitespace-nowrap">
+                        見学・相談について <span class="material-symbols-outlined text-base">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-lab-navy text-white py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between gap-12 mb-10">
+                <div class="space-y-6">
+                    <div class="text-2xl font-bold tracking-tighter">
+                        UEHARA LAB
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-xs leading-relaxed">
+                        The University of Kitakyushu <br />
+                        代数学・系列生成・情報セキュリティ・画像AIを中心に、理論と実装の両面から情報技術を探究します。
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+                    <div class="space-y-4">
+                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">研究</h3>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a class="hover:text-white" href="../works/index.html">研究業績</a></li>
+                            <li><a class="hover:text-white" href="../works/index.html">国内・国際発表</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">ページ</h3>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a class="hover:text-white" href="../member/index.html">メンバー</a></li>
+                            <li><a class="hover:text-white" href="../access/index.html">アクセス</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">Links</h3>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a class="hover:text-white" href="#">北九州市立大学</a></li>
+                            <li><a class="hover:text-white" href="#">ひびきのキャンパス</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+                <p>© 2026 Uehara Laboratory, The University of Kitakyushu. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>

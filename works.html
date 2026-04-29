@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="light" lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>研究業績 | Uehara Lab</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            accent: '#ec5b13',
+            'background-light': '#f8fafc',
+            'background-dark': '#0f172a',
+            'lab-navy': '#0f172a',
+            'lab-accent': '#1e293b'
+          },
+          fontFamily: {
+            display: ['Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+            sans: ['Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 18px 45px rgba(15, 23, 42, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .publication-card {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .publication-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen antialiased">
+    <!-- BEGIN: MainHeader -->
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center space-x-4">
+                <div class="text-2xl font-bold tracking-tighter text-lab-navy" data-purpose="logo">
+                    UEHARA LAB <span class="text-sm font-normal text-slate-500 ml-2 uppercase tracking-normal">University of Kitakyushu</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
+                <a class="hover:text-primary" href="./index.html">ホーム</a>
+                <a class="hover:text-primary text-primary" href="./labo.html">上原研究室について</a>
+                <a class="hover:text-primary" href="./works.html">研究業績</a>
+                <a class="hover:text-primary" href="./members.html">メンバー</a>
+                <a class="hover:text-primary" href="./access/index.html">アクセス</a>
+            </nav>
+            <button id="mobile-menu-button" aria-label="Toggle menu" class="md:hidden p-2 text-lab-navy">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 text-sm font-medium text-slate-700 space-y-3">
+            <a class="block hover:text-primary" href="./index.html">ホーム</a>
+            <a class="block hover:text-primary text-primary" href="./labo.html">上原研究室について</a>
+            <a class="block hover:text-primary" href="./works.html">研究業績</a>
+            <a class="block hover:text-primary" href="./members.html">メンバー</a>
+            <a class="block hover:text-primary" href="../access/index.html">アクセス</a>
+        </nav>
+    </header>
+    <!-- END: MainHeader -->
+
+  <main class="pt-20">
+    <!-- Hero -->
+    <section class="bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-14 md:py-20">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <a class="hover:text-primary transition-colors" href="../index.html">Home</a>
+          <span class="material-symbols-outlined text-base" aria-hidden="true">chevron_right</span>
+          <span class="text-primary font-medium">研究業績</span>
+        </nav>
+
+        <div class="grid lg:grid-cols-[1fr_360px] gap-10 items-end">
+          <div>
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+              <span class="material-symbols-outlined text-base" aria-hidden="true">article</span>
+              Research Works
+            </span>
+            <h1 class="mt-6 text-4xl md:text-6xl font-black tracking-tight text-lab-navy leading-tight">
+              研究業績
+            </h1>
+            <p class="mt-5 text-lg text-slate-600 leading-relaxed max-w-3xl">
+              上原研究室に関連する国際会議発表・口頭発表などの研究成果を掲載しています。
+              最近の研究業績を中心に、年度別ページへのリンクも整理しています。
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+              <p class="text-3xl font-black text-primary">6</p>
+              <p class="mt-1 text-sm font-medium text-slate-600">国際会議<br class="sm:hidden" />（査読あり）</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+              <p class="text-3xl font-black text-primary">10</p>
+              <p class="mt-1 text-sm font-medium text-slate-600">口頭発表</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-10 md:py-14">
+      <!-- Year navigation -->
+      <div class="mb-10 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+          <div>
+            <h2 class="text-lg font-bold text-lab-navy">年度別リンク</h2>
+            <p class="mt-1 text-sm text-slate-500">過去年度の研究業績ページへ移動できます。</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a class="px-5 py-2 rounded-full bg-primary text-white font-semibold text-sm shadow-sm" href="./index.html">最近</a>
+            <a class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="./works2022.html">2022年</a>
+            <a class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="./works2021.html">2021年</a>
+            <a class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="./works2020.html">2020年</a>
+            <a class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="./works2019.html">2019年</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category anchors -->
+      <div class="mb-12 flex flex-wrap gap-3">
+        <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#international">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">public</span>
+          国際会議（査読あり）
+        </a>
+        <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#oral">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">record_voice_over</span>
+          口頭発表
+        </a>
+      </div>
+
+      <div class="space-y-16">
+        <!-- International Conferences -->
+        <section id="international" class="scroll-mt-28">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7 border-b border-slate-200 pb-4">
+            <div>
+              <h2 class="text-3xl font-black text-lab-navy">国際会議</h2>
+              <p class="mt-2 text-slate-500">査読ありの国際会議発表</p>
+            </div>
+            <span class="inline-flex w-fit px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold">6件</span>
+          </div>
+
+          <div class="grid gap-5">
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0">
+                <div class="size-14 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-700">
+                  <span class="material-symbols-outlined text-3xl" aria-hidden="true">public</span>
+                </div>
+              </div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">International Conference</span>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">Some properties of well-balanced sequences obtained from two logistic maps over integers</h3>
+                <p class="mt-3 text-slate-700 font-medium">H. Fujii, S. Uehara, T. Miyazaki, S. Araki and Y. Nogami</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">Proc. of 2023 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW), E8-1, pp. 1-2, Taipei, Jul. 17-19, 2023.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0">
+                <div class="size-14 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-700">
+                  <span class="material-symbols-outlined text-3xl" aria-hidden="true">public</span>
+                </div>
+              </div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">International Conference</span>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">A study on robustness evaluation of weave filters against reverse image search attacks on CAPTCHA</h3>
+                <p class="mt-3 text-slate-700 font-medium">N. Hayashi, T. Satoh and S. Uehara</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">Proc. of 2023 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW), E8-5, pp. 1-2, Taipei, Jul. 17-19, 2023.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0">
+                <div class="size-14 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-700">
+                  <span class="material-symbols-outlined text-3xl" aria-hidden="true">public</span>
+                </div>
+              </div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">International Conference</span>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">How to construct pseudorandom bit sequences from mazes by a method digging out walls</h3>
+                <p class="mt-3 text-slate-700 font-medium">T. Miyazaki, S. Araki and S. Uehara</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">Proc. of 2023 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW), E8-8, pp. 1-2, Taipei, Jul. 17-19, 2023.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0">
+                <div class="size-14 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-700">
+                  <span class="material-symbols-outlined text-3xl" aria-hidden="true">public</span>
+                </div>
+              </div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">International Conference</span>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2022</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">A study on parameters of piecewise logistic map over large integers and processing time</h3>
+                <p class="mt-3 text-slate-700 font-medium">R. Inoue, T. Miyazaki, S. Uehara, S. Araki and Y. Nogami</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">Proc. of 2022 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW), pp. 1-2, Taipei, Jul. 6-8, 2022.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0">
+                <div class="size-14 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-700">
+                  <span class="material-symbols-outlined text-3xl" aria-hidden="true">public</span>
+                </div>
+              </div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">International Conference</span>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2022</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">A study on a DDH-based keyed homomorphic encryption suitable to machine learning in the cloud</h3>
+                <p class="mt-3 text-slate-700 font-medium">T. Tsuruta, S. Araki, T. Miyazaki, S. Uehara and K. Kakizaki</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">Proc. of 2022 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW), pp. 1-2, Taipei, Jul. 6-8, 2022.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0">
+                <div class="size-14 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-700">
+                  <span class="material-symbols-outlined text-3xl" aria-hidden="true">public</span>
+                </div>
+              </div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">International Conference</span>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2022</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">On Timing for Applying the Updating Parameters of Sum-Product/BP Decoding</h3>
+                <p class="mt-3 text-slate-700 font-medium">S. Fujimoto, T. Miyazaki, S. Uehara and J. Zheng</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">Proc. of 2020 Intern. Symp. on Inform. Theory and Its Applications, T-PR-101-4, p. 72, Tsukuba, Oct. 17-Oct. 19, 2022.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Oral Presentations -->
+        <section id="oral" class="scroll-mt-28">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7 border-b border-slate-200 pb-4">
+            <div>
+              <h2 class="text-3xl font-black text-lab-navy">口頭発表</h2>
+              <p class="mt-2 text-slate-500">国内シンポジウム・ワークショップ等での発表</p>
+            </div>
+            <span class="inline-flex w-fit px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">10件</span>
+          </div>
+
+          <div class="grid gap-5">
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">暗号化処理を制約する演算鍵付き準同型暗号</h3>
+                <p class="mt-3 text-slate-700 font-medium">鶴田 拓矢、荒木 俊輔、宮崎 武、上原 聡、硴崎 賢一</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">2023年暗号と情報セキュリティ・シンポジウム講演論文集, 1D3-4, pp. 1-8, 小倉, 1月24日-1月27日 2023年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">穴掘り法による迷路を用いた擬似乱数生成における迷路サイズと種類数に関する一考察</h3>
+                <p class="mt-3 text-slate-700 font-medium">宮崎 武、荒木 俊輔、上原 聡</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">2023年暗号と情報セキュリティ・シンポジウム講演論文集, 2C3-3, pp. 1-8, 小倉, 1月24日-1月27日 2023年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">線形合同法における周期性とニューラルネットワークによる予測精度に関する考察</h3>
+                <p class="mt-3 text-slate-700 font-medium">野口 亮祐、荒木 俊輔、宮崎 武、上原 聡、硴崎 賢一</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">2023年暗号と情報セキュリティ・シンポジウム講演論文集, 2C3-4, pp. 1-7, 小倉, 1月24日-1月27日 2023年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">２つの整数上のロジスティック写像を用いた擬似乱数生成法の統計的乱数性に関する一考察</h3>
+                <p class="mt-3 text-slate-700 font-medium">藤井 博希、宮崎 武、荒木 俊輔、上原 聡、野上 保之</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集, pp. 1-5, 松山, 9月11日-9月12日, 2023年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">迷路法によって生成される系列の種類数の理論的解析に関する一考察</h3>
+                <p class="mt-3 text-slate-700 font-medium">宮崎 武、荒木 俊輔、上原 聡</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集, pp. 24-29, 松山, 9月11日-9月12日, 2023年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">CAPTCHAへの逆画像検索攻撃を対象とする織物フィルタの耐性評価に関する研究</h3>
+                <p class="mt-3 text-slate-700 font-medium">林 夏生、上原 聡</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集, pp. 35-37, 松山, 9月11日-9月12日, 2023年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">研究紹介: 動的同期カオスベースランダム鍵を用いたビデオ/オーディオストリーミング用暗号システム</h3>
+                <p class="mt-3 text-slate-700 font-medium">高市 康平、顔 綿柱、荒木 俊輔、宮崎 武、上原 聡</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集, pp. 38-40, 松山, 9月11日-9月12日, 2023年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2023</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">2つの整数上のカオス写像を用いた擬似乱数系列の乱数性に関する一考察</h3>
+                <p class="mt-3 text-slate-700 font-medium">藤井 博希、森脇 圭祐、宮崎 武、荒木 俊輔、上原 聡、野上 保之</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">第46回情報理論とその応用シンポジウム予稿集, no. 6.1.1, pp. 438-441, 山口, 11月28-12月1日 2023年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2022</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">整数上のPLMを用いた擬似乱数系列の4つのパラメータに対する乱数性の一考察</h3>
+                <p class="mt-3 text-slate-700 font-medium">井上 凌、宮崎 武、荒木 俊輔、上原 聡</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">第8回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集, pp. 1-4, 福岡, 9月12日, 2022年.</p>
+              </div>
+            </article>
+
+            <article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5">
+              <div class="flex-shrink-0"><div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700"><span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span></div></div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">2022</span></div>
+                <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">2つの整数上のロジスティック写像を用いたバランスの良い擬似乱数生成法に関する一考察</h3>
+                <p class="mt-3 text-slate-700 font-medium">藤井 博希、上原 聡、宮崎 武、荒木 俊輔、日下 卓也、野上 保之</p>
+                <p class="mt-1 text-slate-500 text-sm leading-relaxed">第45回情報理論とその応用シンポジウム予稿集, no. 3.3.1, pp. 265-270, 登別, 11月29-12月2日 2022年.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <!-- Bottom year navigation -->
+      <div class="mt-16 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <a class="px-5 py-2 rounded-full bg-primary text-white font-semibold text-sm" href="./index.html">最近</a>
+          <a class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="./works2022.html">2022年</a>
+          <a class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="./works2021.html">2021年</a>
+          <a class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="./works2020.html">2020年</a>
+          <a class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="./works2019.html">2019年</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- BEGIN: Footer -->
+  <footer class="bg-lab-navy text-white py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between gap-12 mb-10">
+        <div class="space-y-6">
+          <div class="text-2xl font-bold tracking-tighter">UEHARA LAB</div>
+          <p class="text-slate-400 text-sm max-w-sm leading-relaxed">
+            The University of Kitakyushu<br />
+            代数学・系列生成・擬似乱数生成・情報セキュリティを中心に、理論と実装の両面から情報技術を探究します。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div class="space-y-4">
+            <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">研究</h3>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li><a class="hover:text-white transition-colors" href="./index.html">研究業績</a></li>
+              <li><a class="hover:text-white transition-colors" href="#international">国際会議</a></li>
+              <li><a class="hover:text-white transition-colors" href="#oral">口頭発表</a></li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">ページ</h3>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li><a class="hover:text-white transition-colors" href="../labo/index.html">研究室紹介</a></li>
+              <li><a class="hover:text-white transition-colors" href="../member/index.html">メンバー</a></li>
+              <li><a class="hover:text-white transition-colors" href="../access/index.html">アクセス</a></li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">Links</h3>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li><a class="hover:text-white transition-colors" href="#">北九州市立大学</a></li>
+              <li><a class="hover:text-white transition-colors" href="#">ひびきのキャンパス</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+        <p>© 2026 Uehara Laboratory, The University of Kitakyushu. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton?.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      mobileMenuButton.setAttribute('aria-expanded', String(!isHidden));
+    });
+  </script>
+</body>
+
+</html>

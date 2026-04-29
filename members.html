@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans JP", "Public Sans", "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+
+        tailwind.config.theme.extend.colors['lab-navy'] = '#0f172a';
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Public Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <!-- BEGIN: MainHeader -->
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center space-x-4">
+                <div class="text-2xl font-bold tracking-tighter text-lab-navy" data-purpose="logo">
+                    UEHARA LAB <span class="text-sm font-normal text-slate-500 ml-2 uppercase tracking-normal">University of Kitakyushu</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
+                <a class="hover:text-primary" href="./index.html">ホーム</a>
+                <a class="hover:text-primary" href="./labo.html">上原研究室について</a>
+                <a class="hover:text-primary" href="./works.html">研究業績</a>
+                <a class="hover:text-primary text-primary font-bold" href="./members.html" aria-current="page">メンバー</a>
+                <a class="hover:text-primary" href="./access/index.html">アクセス</a>
+            </nav>
+            <button id="mobile-menu-button" aria-label="Toggle menu" class="md:hidden p-2 text-lab-navy">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 text-sm font-medium text-slate-700 space-y-3">
+            <a class="block hover:text-primary" href="./index.html">ホーム</a>
+            <a class="block hover:text-primary" href="./labo.html">上原研究室について</a>
+            <a class="block hover:text-primary" href="./works.html">研究業績</a>
+            <a class="block hover:text-primary text-primary font-bold" href="./members.html" aria-current="page">メンバー</a>
+            <a class="block hover:text-primary" href="../access/index.html">アクセス</a>
+        </nav>
+    </header>
+    <!-- END: MainHeader -->
+    <main class="flex-1 max-w-6xl mx-auto w-full px-6 py-10 pt-28">
+        <!-- Header Section -->
+        <div class="mb-10">
+            <h1 class="text-slate-900 dark:text-slate-100 text-5xl font-extrabold leading-tight tracking-tight mb-4">
+                研究室メンバー一覧</h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">研究室メンバー紹介のページです。</p>
+        </div>
+        <!-- Category Tabs -->
+        <div class="mb-12 border-b border-slate-200 dark:border-slate-800">
+            <div class="flex gap-10">
+                <a class="flex items-center gap-2 border-b-4 border-primary dark:border-accent text-primary dark:text-accent pb-4 font-bold transition-all"
+                    href="#professors">
+                    <span class="material-symbols-outlined text-lg">school</span>
+                    教授・教員・研究員
+                </a>
+                <a class="flex items-center gap-2 border-b-4 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 pb-4 font-bold transition-all"
+                    href="#students">
+                    <span class="material-symbols-outlined text-lg">group</span>
+                    所属学生
+                </a>
+                <a class="flex items-center gap-2 border-b-4 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 pb-4 font-bold transition-all"
+                    href="#alumni">
+                    <span class="material-symbols-outlined text-lg">history_edu</span>
+                    卒業生
+                </a>
+            </div>
+        </div>
+        <!-- Professors Section -->
+        <section class="mb-16" id="professors">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">教授・教員・研究員</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Professor Card -->
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-shadow duration-300 cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1">上原 聡
+                        </h3>
+                        <p class="text-primary dark:text-accent font-semibold text-sm mb-3">教授
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded">情報セキュリティ</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded">暗号理論</span>
+                        </div>
+                        <!--
+                                <div class="flex gap-4 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                    <a class="text-slate-400 hover:text-primary dark:hover:text-accent transition-colors"
+                                        href="#"><span class="material-symbols-outlined text-xl">メール</span></a>
+                                    <a class="text-slate-400 hover:text-primary dark:hover:text-accent transition-colors"
+                                        href="#"><span class="material-symbols-outlined text-xl">履歴</span></a>
+                                </div>
+                                -->
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Students Section -->
+        <section class="mb-16" id="students">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">所属学生</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Student Cards Loop (Mock Data) -->
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-xs font-bold text-primary dark:text-accent uppercase tracking-wider mb-1">
+                            博士 後期</p>
+                        <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">田中 太郎</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">情報セキュリティ
+                        </p>
+                    </div>
+                </a>
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-xs font-bold text-primary dark:text-accent uppercase tracking-wider mb-1">
+                            博士 後期</p>
+                        <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">田中 太郎</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">情報セキュリティ
+                        </p>
+                    </div>
+                </a>
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-xs font-bold text-primary dark:text-accent uppercase tracking-wider mb-1">
+                            博士 後期</p>
+                        <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">田中 太郎</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">情報セキュリティ
+                        </p>
+                    </div>
+                </a>
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-xs font-bold text-primary dark:text-accent uppercase tracking-wider mb-1">
+                            博士 後期</p>
+                        <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">田中 太郎</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">情報セキュリティ
+                        </p>
+                    </div>
+                </a>
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-xs font-bold text-primary dark:text-accent uppercase tracking-wider mb-1">
+                            博士 後期</p>
+                        <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">田中 太郎</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">情報セキュリティ
+                        </p>
+                    </div>
+                </a>
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-xs font-bold text-primary dark:text-accent uppercase tracking-wider mb-1">
+                            博士 後期</p>
+                        <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">田中 太郎</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">情報セキュリティ
+                        </p>
+                    </div>
+                </a>
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-xs font-bold text-primary dark:text-accent uppercase tracking-wider mb-1">
+                            博士 後期</p>
+                        <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">田中 太郎</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">情報セキュリティ
+                        </p>
+                    </div>
+                </a>
+                <a href="./member.html" aria-label="メンバー詳細ページへ"
+                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all cursor-pointer no-underline focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-2">
+                    <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">person</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-xs font-bold text-primary dark:text-accent uppercase tracking-wider mb-1">
+                            博士 後期</p>
+                        <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">田中 太郎</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">情報セキュリティ
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+        <!-- Alumni Section -->
+        <section class="mb-16" id="alumni">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">卒業生</h2>
+            </div>
+            <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+                <table class="w-full text-left bg-white dark:bg-slate-900 border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 dark:bg-slate-800/50">
+                            <th
+                                class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest border-b border-slate-200 dark:border-slate-800">
+                                年</th>
+                            <th
+                                class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest border-b border-slate-200 dark:border-slate-800">
+                                学位</th>
+                            <th
+                                class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest border-b border-slate-200 dark:border-slate-800">
+                                名前</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="px-6 py-4 text-sm font-medium text-slate-700 dark:text-slate-300">2023
+                            </td>
+                            <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">修士</td>
+                            <td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100">田中 太郎
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="px-6 py-4 text-sm font-medium text-slate-700 dark:text-slate-300">2023
+                            </td>
+                            <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">修士</td>
+                            <td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100">田中 太郎
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="px-6 py-4 text-sm font-medium text-slate-700 dark:text-slate-300">2023
+                            </td>
+                            <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">修士</td>
+                            <td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100">田中 太郎
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <!-- BEGIN: Footer -->
+    <footer class="bg-lab-navy text-white py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between gap-12 mb-10">
+                <div class="space-y-6">
+                    <div class="text-2xl font-bold tracking-tighter">
+                        UEHARA LAB
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-xs leading-relaxed">
+                        The University of Kitakyushu <br />
+                        代数学・系列生成・擬似乱数生成・情報セキュリティを中心に、理論と実装の両面から情報技術を探究します。
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+                    <div class="space-y-4">
+                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">研究</h3>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a class="hover:text-white" href="../works/index.html">研究業績</a></li>
+                            <li><a class="hover:text-white" href="../works/index.html">国内・国際発表</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">ページ</h3>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a class="hover:text-white" href="../member/index.html">メンバー</a></li>
+                            <li><a class="hover:text-white" href="../access/index.html">アクセス</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">Links</h3>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a class="hover:text-white" href="#">北九州市立大学</a></li>
+                            <li><a class="hover:text-white" href="#">ひびきのキャンパス</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+                <p>© 2026 Uehara Laboratory, The University of Kitakyushu. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+    <script id="mobile-menu-script">
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', String(!isOpen));
+            });
+        }
+    </script>
+</body>
+
+</html>

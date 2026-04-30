@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<main class="pt-20">
+  <article>
+    <section class="bg-slate-50 border-b border-slate-100">
+      <div class="{% if page.image %}max-w-7xl{% else %}max-w-5xl{% endif %} mx-auto px-6 py-14 md:py-20">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <a class="hover:text-primary transition-colors" href="{{ '/' | relative_url }}">Home</a>
+          <span class="material-symbols-outlined text-base">chevron_right</span>
+          <a class="hover:text-primary transition-colors" href="{{ '/news.html' | relative_url }}">ニュース</a>
+          <span class="material-symbols-outlined text-base">chevron_right</span>
+          <span class="text-primary font-medium">{{ page.title }}</span>
+        </nav>
+
+        <div class="{% if page.image %}grid lg:grid-cols-[1fr_520px] gap-10 items-center{% else %}max-w-4xl{% endif %}">
+          <div>
+            <div class="flex flex-wrap items-center gap-3 mb-5">
+              <time class="text-slate-500 text-sm font-medium">{{ page.date | date: "%Y.%m.%d" }}</time>
+              <span class="px-3 py-1 bg-white border border-slate-200 text-[10px] font-bold uppercase tracking-wider rounded-full">{{ page.category }}</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight text-lab-navy leading-tight">{{ page.title }}</h1>
+            {% if page.summary %}<p class="mt-6 text-lg text-slate-600 leading-relaxed">{{ page.summary }}</p>{% endif %}
+          </div>
+          {% if page.image %}
+            <div class="rounded-3xl overflow-hidden shadow-soft bg-slate-100 border border-slate-200">
+              <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" class="w-full h-[320px] md:h-[420px] object-cover" />
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-12 md:py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="grid lg:grid-cols-[1fr_260px] gap-12 items-start">
+          <div class="article-body max-w-3xl">
+            {{ content }}
+            {% if page.related_links %}
+              <div class="mt-12 rounded-2xl bg-slate-50 border border-slate-200 p-6">
+                <h2 class="!mt-0 !border-0 !pl-0 text-xl">関連リンク</h2>
+                <ul>
+                  {% for link in page.related_links %}
+                    <li><a class="text-primary font-bold hover:underline" href="{{ link.href | relative_url }}">{{ link.label }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
+
+          <aside class="lg:sticky lg:top-28">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h2 class="text-sm font-bold text-lab-navy uppercase tracking-widest mb-4">News Info</h2>
+              <dl class="space-y-4 text-sm">
+                <div><dt class="text-slate-400 font-bold">Date</dt><dd class="text-slate-700 mt-1">{{ page.date | date: "%Y.%m.%d" }}</dd></div>
+                <div><dt class="text-slate-400 font-bold">Category</dt><dd class="text-slate-700 mt-1">{{ page.category }}</dd></div>
+              </dl>
+              <a class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-lab-navy px-5 py-3 text-sm font-bold text-white hover:bg-slate-800 transition-colors" href="{{ '/news.html' | relative_url }}"><span class="material-symbols-outlined text-lg">arrow_back</span>ニュース一覧へ</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>

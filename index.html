@@ -1,255 +1,78 @@
-<!DOCTYPE html>
+---
+layout: default
+title: "ホーム"
+active_nav: home
+---
+<main class="pt-20">
+  <section class="relative h-[85vh] w-full overflow-hidden flex items-center px-4" style="background-color: #0a192f;">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div class="max-w-3xl">
+        <h1 class="hero-title md:text-7xl font-bold text-white mb-6 uppercase text-3xl sm:text-5xl leading-tight">Welcome to <br class="md:hidden" />Uehara Lab</h1>
+        <div class="w-16 h-1 bg-white mb-6"></div>
+        <p class="md:text-2xl text-slate-200 font-light leading-relaxed text-lg">代数学・系列生成・擬似乱数生成・情報セキュリティを中心に、理論と実装の両面から情報技術を探究します。</p>
+      </div>
+    </div>
+  </section>
 
-<html lang="ja">
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="font-bold section-title text-3xl">News<span class="japanese-sub">ニュース</span></h2>
+      </div>
+      <div class="space-y-0 border-t border-slate-100">
+        {% assign recent_news = site.news | sort: 'date' | reverse %}
+        {% for item in recent_news limit:3 %}
+          <div class="py-6 border-b border-slate-100 flex flex-col md:flex-row md:items-center gap-2">
+            <span class="text-slate-400 text-sm w-32 shrink-0">{{ item.date | date: "%Y.%m.%d" }}</span>
+            <span class="px-3 py-1 bg-slate-100 text-[10px] font-bold uppercase tracking-wider rounded w-fit">{{ item.category }}</span>
+            <a class="text-lg hover:text-blue-600 transition-colors" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="mt-12 text-center">
+        <a class="inline-block bg-lab-navy text-white px-12 py-4 text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors" href="{{ '/news.html' | relative_url }}">View More</a>
+      </div>
+    </div>
+  </section>
 
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap"
-        rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Uehara Lab | University of Kitakyushu</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'lab-navy': '#0f172a',
-                        'lab-accent': '#1e293b',
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <!-- Custom Typography and Layout Styles -->
-    <style data-purpose="typography">
-        .hero-title {
-            letter-spacing: 0.1em;
-            line-height: 1.2;
-        }
+  <section class="bg-slate-50 py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-bold section-title mb-8 text-3xl">About<span class="japanese-sub">上原研究室について</span></h2>
+      <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
+        <p>{{ site.data.lab.hero.description }}</p>
+      </div>
+      <div class="mt-12">
+        <a class="inline-block bg-lab-navy text-white px-12 py-4 text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors" href="{{ '/labo.html' | relative_url }}">Learn More</a>
+      </div>
+    </div>
+  </section>
 
-        .section-title {
-            letter-spacing: 0.05em;
-            position: relative;
-        }
-
-        .japanese-sub {
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 0.8rem;
-            color: #64748b;
-            margin-top: 0.5rem;
-            display: block;
-        }
-    </style>
-    <style data-purpose="layout">
-        .bg-hero-overlay {
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4));
-        }
-
-        .card-hover:hover {
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-    </style>
-</head>
-
-<body class="bg-white text-slate-900 font-sans antialiased">
-    <!-- BEGIN: MainHeader -->
-    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center space-x-4">
-                <div class="text-2xl font-bold tracking-tighter text-lab-navy" data-purpose="logo">
-                    UEHARA LAB <span class="text-sm font-normal text-slate-500 ml-2 uppercase tracking-normal">University of Kitakyushu</span>
-                </div>
-            </a>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
-                <a class="hover:text-primary" href="./index.html">ホーム</a>
-                <a class="hover:text-primary text-primary" href="./labo.html">上原研究室について</a>
-                <a class="hover:text-primary" href="./works.html">研究業績</a>
-                <a class="hover:text-primary" href="./members.html">メンバー</a>
-                <a class="hover:text-primary" href="./access/index.html">アクセス</a>
-            </nav>
-            <button id="mobile-menu-button" aria-label="Toggle menu" class="md:hidden p-2 text-lab-navy">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                </svg>
-            </button>
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-bold section-title mb-16 text-center text-3xl">Activities<span class="japanese-sub">研究室の活動</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+        <div class="space-y-6 rounded-2xl border border-slate-100 p-8 bg-slate-50">
+          <span class="material-symbols-outlined text-primary text-5xl">functions</span>
+          <h3 class="text-xl font-bold">基礎研究</h3>
+          <p class="text-slate-600 leading-relaxed">代数学、系列生成、擬似乱数生成などの理論的な基盤について研究します。</p>
         </div>
-        <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 text-sm font-medium text-slate-700 space-y-3">
-            <a class="block hover:text-primary" href="./index.html">ホーム</a>
-            <a class="block hover:text-primary text-primary" href="./labo.html">上原研究室について</a>
-            <a class="block hover:text-primary" href="./works.html">研究業績</a>
-            <a class="block hover:text-primary" href="./member.html">メンバー</a>
-            <a class="block hover:text-primary" href="../access/index.html">アクセス</a>
-        </nav>
-    </header>
-    <!-- END: MainHeader -->
-    <main class="pt-20">
-        <!-- BEGIN: HeroSection -->
-        <section class="relative h-[85vh] w-full overflow-hidden flex items-center px-4"
-            style="background-color: #0a192f;">
-            <!-- Background Image Placeholder - Represents the deep teal style from Image 2 -->
-            <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-                <div class="max-w-3xl">
-                    <h1
-                        class="hero-title md:text-7xl font-bold text-white mb-6 uppercase text-3xl sm:text-4xl leading-tight sm:text-5xl">
-                        Welcome to <br class="md:hidden" />Uehara Lab</h1>
-                    <div class="w-16 h-1 bg-white mb-6"></div>
-                    <p class="md:text-2xl text-slate-200 font-light leading-relaxed text-lg">
-                        上原研究室の目的と目標をかっこいい感じのキャッチコピーをここに書いてください
-                    </p>
-                </div>
-            </div>
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-                <span class="text-white text-xs uppercase tracking-widest mb-2">Scroll</span>
-                <div class="w-px h-12 bg-white/50"></div>
-            </div>
-        </section>
-        <!-- END: HeroSection -->
-        <!-- BEGIN: NewsSection -->
-        <section class="bg-white py-16">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="mb-12">
-                    <h2 class="font-bold section-title text-3xl">News<span class="japanese-sub">ニュース</span></h2>
-                </div>
-                <div class="space-y-0 border-t border-slate-100">
-                    <!-- News Item 1 -->
-                    <div class="py-6 border-b border-slate-100 flex flex-col md:flex-row md:items-center gap-2">
-                        <span class="text-slate-400 text-sm w-32 shrink-0">2026.03.09</span>
-                        <span
-                            class="px-3 py-1 bg-slate-100 text-[10px] font-bold uppercase tracking-wider rounded w-fit">メンバー紹介</span>
-                        <a class="text-lg hover:text-blue-600 transition-colors" href="#">上原研究室に新メンバーが！紹介紹介紹介！！！圧倒的紹介！！！</a>
-                    </div>
-                </div>
-                <div class="mt-12 text-center">
-                    <a class="inline-block bg-lab-navy text-white px-12 py-4 text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors"
-                        href="#">View More</a>
-                </div>
-            </div>
-        </section>
-        <!-- END: NewsSection -->
-        <!-- BEGIN: AboutSection -->
-        <section class="bg-slate-50 py-16">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <h2 class="font-bold section-title mb-8 text-3xl">About<span class="japanese-sub">上原研究所について</span></h2>
-                <h3 class="font-bold mb-8 text-xl">Designing the next generation of <br
-                        class="hidden md:block" />environment-aware intelligent systems.</h3>
-                <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
-                    <p>
-
-                        上原研究室では、主に「暗号」、「系列」、「電子透かし」三つの分野について関する研究を行っています。
-                        「セキュリティ」では、人間やロボットの不正アクセスに対する画像を用いた認証技術に関する研究を行っています。
-                        「暗号・系列」では、通信時の暗号技術で用いられる乱数生成に関して、カオスや楕円曲線などの系列を利用した研究を行っています。
-                    </p>
-                    <p>
-                        「電子透かし」では、QRコードなどの画像や音声データなどに含まれる冗長なデータを利用して任意のデータを埋め込む技術に関する研究を行ってます。
-                        また、研究分野に加えてその中身に関しても、数学を用いた理論的なものからシステム構築をするものまで様々な研究を行っています。
-                    </p>
-                </div>
-                <div class="mt-12">
-                    <a class="inline-block bg-lab-navy text-white px-12 py-4 text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors"
-                        href="#">Learn More</a>
-                </div>
-            </div>
-        </section>
-        <!-- END: AboutSection -->
-        <!-- BEGIN: ActivitiesSection -->
-        <section class="bg-white py-16">
-            <div class="max-w-7xl mx-auto px-6">
-                <h2 class="font-bold section-title mb-16 text-center text-3xl">Activities<span
-                        class="japanese-sub">研究室の活動</span></h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-                    <!-- Activity 1 -->
-                    <div class="space-y-6">
-                        <img alt="Basic Research" class="w-full aspect-[16/10] object-cover"
-                            src="./test.png" />
-                        <h3 class="text-xl font-bold">基礎研究</h3>
-                        <p class="text-slate-600 leading-relaxed">
-                            上原研究室の基礎研究について色々書いていきたい
-                        </p>
-                    </div>
-                    <!-- Activity 2 -->
-                    <div class="space-y-6">
-                        <img alt="Education" class="w-full aspect-[16/10] object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9mf8kxC7xm3qKXavUeD9-U70Y3wBCf_Qkl8ik4wXh49vzNW_21FLw_4-tRmv5m1SxQyWR16IlO3MxRlGxDFunwFg1-SUw-VHYT12oZLHKlnSNb4ahRE7VwYC8Gsqo_1NI7lDQG36kbxSWBMPTE2jlzwD_OqxcOhqvk9rh7N3yv9tBHucbq31vJUm-18NdVmTXFX_Tidpbh1dCagmMg15Y8taXvtPUaBT2h1KFCZ_jvIN8TD_Uk1mt9Ct26BJEgLEPjIE8bFjTyO0" />
-                        <h3 class="text-xl font-bold">講義</h3>
-                        <p class="text-slate-600 leading-relaxed">
-                            上原先生がやっている講義とかとかとか、など
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END: ActivitiesSection -->
-        <!-- BEGIN: MembersSection -->
-        <section class="bg-slate-50 py-16">
-            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
-                <div class="w-full md:w-3/5">
-                    <img alt="Lab Members" class="w-full h-auto shadow-2xl"
-                        src="./uehara.jpg" />
-                </div>
-                <div class="w-full md:w-2/5 space-y-8">
-                    <h2 class="font-bold section-title text-3xl">メンバー紹介</h2>
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        上原研究室のメンバーについて紹介していくぜ！
-                    </p>
-                    <div class="space-y-4">
-                        <a class="block w-full text-center bg-lab-navy text-white py-4 font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors"
-                            href="#">教授・先生一覧</a>
-                        <a class="block w-full text-center border border-lab-navy text-lab-navy py-4 font-bold uppercase tracking-widest hover:bg-lab-navy hover:text-white transition-colors"
-                            href="#">学生一覧</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END: MembersSection -->
-    </main>
-    <!-- BEGIN: Footer -->
-    <footer class="bg-lab-navy text-white py-16 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between gap-12 mb-10">
-                <div class="space-y-6">
-                    <div class="text-2xl font-bold tracking-tighter">
-                        UEHARA LAB
-                    </div>
-                    <p class="text-slate-400 text-sm max-w-xs leading-relaxed">
-                        The University of Kitakyushu <br />
-                        代数学・系列生成・情報セキュリティ・画像AIを中心に、理論と実装の両面から情報技術を探究します。
-                    </p>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
-                    <div class="space-y-4">
-                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">研究</h3>
-                        <ul class="space-y-2 text-sm text-slate-400">
-                            <li><a class="hover:text-white" href="../works/index.html">研究業績</a></li>
-                            <li><a class="hover:text-white" href="../works/index.html">国内・国際発表</a></li>
-                        </ul>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">ページ</h3>
-                        <ul class="space-y-2 text-sm text-slate-400">
-                            <li><a class="hover:text-white" href="../member/index.html">メンバー</a></li>
-                            <li><a class="hover:text-white" href="../access/index.html">アクセス</a></li>
-                        </ul>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">Links</h3>
-                        <ul class="space-y-2 text-sm text-slate-400">
-                            <li><a class="hover:text-white" href="#">北九州市立大学</a></li>
-                            <li><a class="hover:text-white" href="#">ひびきのキャンパス</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
-                <p>© 2026 Uehara Laboratory, The University of Kitakyushu. All Rights Reserved.</p>
-            </div>
+        <div class="space-y-6 rounded-2xl border border-slate-100 p-8 bg-slate-50">
+          <span class="material-symbols-outlined text-primary text-5xl">co_present</span>
+          <h3 class="text-xl font-bold">ゼミ・発表</h3>
+          <p class="text-slate-600 leading-relaxed">文献調査、実装、実験、結果の分析を行い、ゼミで発表・議論します。</p>
         </div>
-    </footer>
-    <!-- END: Footer -->
-</body>
+      </div>
+    </div>
+  </section>
 
-</html>
+  <section class="bg-slate-50 py-16">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+      <div class="w-full md:w-3/5 rounded-3xl h-80 abstract-lab-bg shadow-2xl"></div>
+      <div class="w-full md:w-2/5 space-y-8">
+        <h2 class="font-bold section-title text-3xl">メンバー紹介</h2>
+        <p class="text-slate-600 text-lg leading-relaxed">上原研究室のメンバーを紹介します。</p>
+        <a class="block w-full text-center bg-lab-navy text-white py-4 font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors" href="{{ '/members.html' | relative_url }}">メンバー一覧</a>
+      </div>
+    </div>
+  </section>
+</main>

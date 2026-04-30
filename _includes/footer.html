@@ -1,0 +1,43 @@
+<footer class="bg-lab-navy text-white py-16 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between gap-12 mb-10">
+      <div class="space-y-6">
+        <div class="text-2xl font-bold tracking-tighter">{{ site.data.site.name }}</div>
+        <p class="text-slate-400 text-sm max-w-sm leading-relaxed">
+          {{ site.data.site.university }}<br />
+          {{ site.data.site.description }}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+        <div class="space-y-4">
+          <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">研究</h3>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a class="hover:text-white transition-colors" href="{{ '/works.html' | relative_url }}">研究業績</a></li>
+            <li><a class="hover:text-white transition-colors" href="{{ '/works.html#international' | relative_url }}">国際会議</a></li>
+            <li><a class="hover:text-white transition-colors" href="{{ '/works.html#oral' | relative_url }}">口頭発表</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">ページ</h3>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a class="hover:text-white transition-colors" href="{{ '/labo.html' | relative_url }}">研究室紹介</a></li>
+            <li><a class="hover:text-white transition-colors" href="{{ '/members.html' | relative_url }}">メンバー</a></li>
+            <li><a class="hover:text-white transition-colors" href="{{ '/news.html' | relative_url }}">ニュース</a></li>
+            <li><a class="hover:text-white transition-colors" href="{{ '/access/' | relative_url }}">アクセス</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold uppercase text-xs tracking-widest text-slate-500">Links</h3>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a class="hover:text-white transition-colors" href="#">北九州市立大学</a></li>
+            <li><a class="hover:text-white transition-colors" href="#">ひびきのキャンパス</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+      <p>{{ site.data.site.copyright }}</p>
+    </div>
+  </div>
+</footer>

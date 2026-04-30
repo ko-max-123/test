@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% include head.html %}
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 antialiased">
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
+  {% include mobile-menu-script.html %}
+  {% if page.extra_js %}
+    {% for js in page.extra_js %}<script src="{{ js | relative_url }}"></script>{% endfor %}
+  {% endif %}
+</body>
+</html>

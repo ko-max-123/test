@@ -1,0 +1,9 @@
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    const hidden = mobileMenu.classList.toggle('hidden');
+    mobileMenuButton.setAttribute('aria-expanded', String(!hidden));
+  });
+</script>

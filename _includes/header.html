@@ -1,0 +1,32 @@
+<header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur z-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="{{ '/' | relative_url }}" class="flex items-center space-x-4" aria-label="Uehara Lab Home">
+      <div class="text-2xl font-bold tracking-tighter text-lab-navy" data-purpose="logo">
+        {{ site.data.site.name }}
+        <span class="hidden sm:inline text-sm font-normal text-slate-500 ml-2 uppercase tracking-normal">{{ site.data.site.university }}</span>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
+      {% for item in site.data.navigation %}
+        <a class="hover:text-primary transition-colors {% if page.active_nav == item.key %}text-primary font-bold{% endif %}"
+           href="{{ item.href | relative_url }}"
+           {% if page.active_nav == item.key %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+
+    <button id="mobile-menu-button" aria-label="メニューを開閉" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 text-lab-navy rounded-lg hover:bg-slate-100">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 text-sm font-medium text-slate-700 space-y-3">
+    {% for item in site.data.navigation %}
+      <a class="block hover:text-primary {% if page.active_nav == item.key %}text-primary font-bold{% endif %}"
+         href="{{ item.href | relative_url }}"
+         {% if page.active_nav == item.key %}aria-current="page"{% endif %}>{{ item.label }}</a>
+    {% endfor %}
+  </nav>
+</header>

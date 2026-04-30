@@ -1,0 +1,24 @@
+- key: recent
+  label: "最近"
+  href: "/works.html"
+  description: "最近の研究業績"
+
+- key: 2022
+  label: "2022年"
+  href: "/works2022.html"
+  description: "2022年の研究業績"
+
+- key: 2021
+  label: "2021年"
+  href: "/works2021.html"
+  description: "2021年の研究業績"
+
+- key: 2020
+  label: "2020年"
+  href: "/works2020.html"
+  description: "2020年の研究業績"
+
+- key: 2019
+  label: "2019年"
+  href: "/works2019.html"
+  description: "2019年の研究業績"

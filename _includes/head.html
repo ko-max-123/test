@@ -1,0 +1,46 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.site.name }}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#003366",
+            accent: "#ec5b13",
+            "background-light": "#ffffff",
+            "background-dark": "#0f172a",
+            "lab-navy": "#0f172a",
+            "lab-accent": "#1e293b"
+          },
+          fontFamily: {
+            display: ["Noto Sans JP", "Public Sans", "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"],
+            sans: ["Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"]
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            full: "9999px"
+          },
+          boxShadow: {
+            soft: "0 18px 45px rgba(15, 23, 42, 0.08)"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+</head>

@@ -1,0 +1,25 @@
+html { scroll-behavior: smooth; }
+.hero-title { letter-spacing: 0.03em; line-height: 1.16; }
+.section-title { letter-spacing: 0.05em; position: relative; }
+.japanese-sub { font-size: 0.8rem; color: #64748b; margin-top: 0.5rem; display: block; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.card-hover:hover { opacity: 0.92; transition: opacity 0.3s ease; }
+.abstract-lab-bg {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(236, 91, 19, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 16%, rgba(0, 51, 102, 0.30), transparent 30%),
+    radial-gradient(circle at 50% 82%, rgba(15, 23, 42, 0.22), transparent 36%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 52%, #003366 100%);
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.profile-photo-fallback {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(236, 91, 19, .20), transparent 32%),
+    linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+}
+.publication-card { transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+.publication-card:hover { transform: translateY(-2px); }
+.article-body p { line-height: 2; margin-top: 1.25rem; color: #475569; }
+.article-body h2 { font-size: 1.45rem; font-weight: 800; color: #0f172a; margin-top: 3rem; padding-left: 1rem; border-left: 4px solid #003366; }
+.article-body ul { margin-top: 1.25rem; padding-left: 1.25rem; color: #475569; line-height: 2; list-style: disc; }

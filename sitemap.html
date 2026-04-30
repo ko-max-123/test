@@ -1,0 +1,147 @@
+---
+layout: page
+title: "サイトマップ"
+description: "上原研究室Webサイトの主要ページ一覧です。"
+active_nav: sitemap
+---
+
+<section class="bg-white">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-20">
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+      <a class="hover:text-primary transition-colors" href="{{ '/' | relative_url }}">Home</a>
+      <span class="material-symbols-outlined text-base" aria-hidden="true">chevron_right</span>
+      <span class="text-primary font-medium">サイトマップ</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+        <span class="material-symbols-outlined text-base" aria-hidden="true">account_tree</span>
+        Site Map
+      </span>
+      <h1 class="mt-6 text-4xl md:text-6xl font-black tracking-tight text-lab-navy leading-tight">サイトマップ</h1>
+      <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+        上原研究室Webサイトの主要ページ、ニュース、メンバー詳細、研究業績ページへのリンクをまとめています。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-50 py-14 md:py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-3 gap-8">
+      <section class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined">home</span>
+          </span>
+          <div>
+            <h2 class="text-xl font-bold text-lab-navy">主要ページ</h2>
+            <p class="text-sm text-slate-500 mt-1">Main Pages</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-sm">
+          <li><a class="group flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-4 py-3 font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors" href="{{ '/' | relative_url }}">ホーム<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></a></li>
+          <li><a class="group flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-4 py-3 font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors" href="{{ '/labo.html' | relative_url }}">上原研究室について<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></a></li>
+          <li><a class="group flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-4 py-3 font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors" href="{{ '/prospective_students.html' | relative_url }}">配属を希望する学生の方へ<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></a></li>
+          <li><a class="group flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-4 py-3 font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors" href="{{ '/members.html' | relative_url }}">メンバー<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></a></li>
+          <li><a class="group flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-4 py-3 font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors" href="{{ '/works.html' | relative_url }}">研究業績<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></a></li>
+          <li><a class="group flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-4 py-3 font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors" href="{{ '/news.html' | relative_url }}">ニュース<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></a></li>
+          <li><a class="group flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-4 py-3 font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors" href="{{ '/access/index.html' | relative_url }}">アクセス<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></a></li>
+        </ul>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined">article</span>
+          </span>
+          <div>
+            <h2 class="text-xl font-bold text-lab-navy">研究業績</h2>
+            <p class="text-sm text-slate-500 mt-1">Research Works</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-sm">
+          {% for item in site.data.works_years %}
+          <li>
+            <a class="group flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-4 py-3 font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors" href="{{ item.href | relative_url }}">
+              {{ item.label }}
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="mt-6 rounded-2xl bg-slate-50 border border-slate-100 p-5">
+          <h3 class="font-bold text-lab-navy mb-3">カテゴリ</h3>
+          <div class="flex flex-wrap gap-2 text-xs font-bold">
+            <a class="px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-primary hover:text-primary transition-colors" href="{{ '/works.html#international' | relative_url }}">国際会議</a>
+            <a class="px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-primary hover:text-primary transition-colors" href="{{ '/works.html#oral' | relative_url }}">口頭発表</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined">newspaper</span>
+          </span>
+          <div>
+            <h2 class="text-xl font-bold text-lab-navy">ニュース</h2>
+            <p class="text-sm text-slate-500 mt-1">News</p>
+          </div>
+        </div>
+        {% assign sorted_news = site.news | sort: 'date' | reverse %}
+        {% if sorted_news.size > 0 %}
+        <ul class="space-y-3 text-sm">
+          {% for item in sorted_news %}
+          <li>
+            <a class="block rounded-xl border border-slate-100 px-4 py-3 hover:border-primary transition-colors" href="{{ item.url | relative_url }}">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <time class="text-xs text-slate-400 font-bold">{{ item.date | date: "%Y.%m.%d" }}</time>
+                {% if item.category %}<span class="px-2 py-0.5 rounded-full bg-slate-100 text-[10px] font-bold text-slate-600">{{ item.category }}</span>{% endif %}
+              </div>
+              <p class="font-bold text-slate-700 hover:text-primary">{{ item.title }}</p>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-sm text-slate-500 leading-relaxed">ニュース記事はまだ登録されていません。</p>
+        {% endif %}
+      </section>
+    </div>
+
+    <section class="mt-8 rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+        <div class="flex items-center gap-3">
+          <span class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined">groups</span>
+          </span>
+          <div>
+            <h2 class="text-xl font-bold text-lab-navy">メンバー詳細</h2>
+            <p class="text-sm text-slate-500 mt-1">Member Profiles</p>
+          </div>
+        </div>
+        <a class="text-primary text-sm font-bold hover:underline inline-flex items-center gap-1" href="{{ '/members.html' | relative_url }}">
+          メンバー一覧へ
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+
+      {% assign sorted_members = site.members | sort: 'order' %}
+      {% if sorted_members.size > 0 %}
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for member in sorted_members %}
+        <a class="rounded-2xl border border-slate-100 bg-slate-50 p-5 hover:border-primary hover:bg-white hover:shadow-sm transition-all" href="{{ member.url | relative_url }}">
+          <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">{{ member.grade | default: member.role }}</p>
+          <h3 class="text-lg font-bold text-lab-navy">{{ member.name }}</h3>
+          {% if member.kana %}<p class="text-sm text-slate-500 mt-1">{{ member.kana }}</p>{% endif %}
+          {% if member.research_title %}<p class="text-sm text-slate-600 leading-relaxed mt-3">{{ member.research_title }}</p>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-sm text-slate-500 leading-relaxed">メンバー詳細はまだ登録されていません。</p>
+      {% endif %}
+    </section>
+  </div>
+</section>

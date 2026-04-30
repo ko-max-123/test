@@ -1,0 +1,146 @@
+# Uehara Lab Jekyll Site
+
+上原研究室サイトを Jekyll 化したサンプル一式です。
+
+## 目的
+
+- ヘッダー、フッター、カードなどの共通パーツを `_includes` に分離
+- ページの外枠を `_layouts` に分離
+- 研究室概要、メンバー、研究業績などの中身を `_data/*.yml` や Markdown に分離
+- GitHub Pages で公開できる構成にする
+
+## ディレクトリ構成
+
+```text
+.
+├── _config.yml
+├── Gemfile
+├── index.html
+├── labo.html
+├── prospective_students.html
+├── members.html
+├── works.html
+├── news.html
+├── access/
+│   └── index.html
+├── _includes/
+│   ├── head.html
+│   ├── header.html
+│   ├── footer.html
+│   ├── mobile-menu-script.html
+│   ├── member-card.html
+│   ├── news-card.html
+│   └── work-card.html
+├── _layouts/
+│   ├── default.html
+│   ├── page.html
+│   ├── member.html
+│   └── news.html
+├── _data/
+│   ├── site.yml
+│   ├── navigation.yml
+│   ├── lab.yml
+│   ├── members.yml
+│   ├── works.yml
+│   └── prospective.yml
+├── _members/
+│   ├── hayashi.md
+│   ├── fujiki.md
+│   ├── kuwahara.md
+│   ├── maekawa.md
+│   └── uehara.md
+├── _news/
+│   ├── 2026-03-09-new-member.md
+│   └── 2026-02-18-presentation.md
+└── assets/
+    ├── css/site.css
+    ├── js/works-filter.js
+    └── images/
+```
+
+## ローカル起動
+
+詳しくは `LOCAL_SETUP.md` を見てください。
+
+```bash
+bundle install
+bundle exec jekyll serve --livereload
+```
+
+ブラウザで以下を開きます。
+
+```text
+http://127.0.0.1:4000/
+```
+
+## 更新方法
+
+### トップページのニュース
+
+ニュースは `_news/*.md` に追加します。
+
+```yaml
+---
+title: "ニュースタイトル"
+date: 2026-04-01
+category: "お知らせ"
+summary: "一覧に出す短い説明"
+image: "/assets/images/news/sample.svg"
+---
+本文を Markdown で書きます。
+```
+
+### メンバー追加
+
+1. `_data/members.yml` に一覧表示用の情報を追加
+2. `_members/xxx.md` に詳細ページを追加
+3. `member_id` を必ず一致させる
+
+### 研究業績追加
+
+`_data/works.yml` に追加します。
+
+重要なのは `author_ids` です。
+
+```yaml
+- id: "work-2026-001"
+  year: 2026
+  type: "oral"
+  type_label: "口頭発表"
+  title: "研究タイトル"
+  authors_text: "林 夏生、上原 聡"
+  author_ids: ["hayashi", "uehara"]
+  venue: "発表会名"
+  details: "pp. 1-4, 2026年4月."
+```
+
+`author_ids` が `_members/*.md` の `member_id` と一致していれば、メンバー詳細ページから `works.html?author=hayashi` に移動したとき、その人の業績だけが表示されます。
+
+## 画像の置き場所
+
+```text
+assets/images/members/
+assets/images/news/
+assets/images/lab/
+```
+
+現在はサンプル用に画像パスだけ設定しています。実画像を置く場合は、YAML/Markdown内のパスと一致させてください。
+
+## 研究業績の年度別リンク
+
+研究業績ページの年度別リンクは、`_data/works_years.yml` で管理します。
+
+```yaml
+- key: recent
+  label: "最近"
+  href: "/works.html"
+
+- key: 2022
+  label: "2022年"
+  href: "/works2022.html"
+```
+
+表示部分は `_includes/works-year-nav.html` に切り出しており、`works.html` と年度別ページの上部・下部で共通利用しています。
+
+年度別ページは `works2022.html`、`works2021.html`、`works2020.html`、`works2019.html` を用意しています。  
+古い年度の業績を移行する場合は、`_data/works.yml` に `year: 2021` のように年度を入れて追加してください。

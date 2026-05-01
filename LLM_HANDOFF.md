@@ -115,3 +115,43 @@ Jekyll版では以下の構成にしています。
 - `works2022.html` / `works2021.html` / `works2020.html` / `works2019.html`：年度別ページ
 
 今後年度を追加する場合は、`_data/works_years.yml` にリンクを追加し、必要に応じて `works2026.html` のようなページを追加してください。
+
+
+## サイトマップページ
+
+`sitemap.html` を追加しています。
+
+- 主要ページは `sitemap.html` 内に明示的に記述
+- 研究業績の年度別リンクは `_data/works_years.yml` から自動表示
+- ニュース詳細は `_news/` コレクションから自動表示
+- メンバー詳細は `_members/` コレクションから自動表示
+- フッターのページ欄から `sitemap.html` に移動できます
+
+## 共同研究者リンク
+
+メンバー一覧ページの「教授・共同研究者」欄に、共同研究の先生への外部リンクカードを表示できます。
+
+編集するファイル：
+
+```text
+_data/collaborators.yml
+```
+
+例：
+
+```yaml
+- id: "miyazaki"
+  name: "宮崎 武"
+  affiliation: "共同研究先の大学・研究室名"
+  role: "共同研究者"
+  research_title: "系列生成・擬似乱数生成に関する共同研究"
+  url: "https://example.com/"
+```
+
+表示パーツは以下です。
+
+```text
+_includes/collaborator-card.html
+```
+
+共同研究者は研究室所属メンバーとは区別し、外部リンクアイコン付きカードとして表示します。

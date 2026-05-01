@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "サイトマップ"
 description: "上原研究室Webサイトの主要ページ一覧です。"
 active_nav: sitemap
@@ -143,5 +143,33 @@ active_nav: sitemap
       <p class="text-sm text-slate-500 leading-relaxed">メンバー詳細はまだ登録されていません。</p>
       {% endif %}
     </section>
+  
+<section class="mt-8 rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+  <div class="flex items-center gap-3 mb-6">
+    <span class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+      <span class="material-symbols-outlined">handshake</span>
+    </span>
+    <div>
+      <h2 class="text-xl font-bold text-lab-navy">共同研究者リンク</h2>
+      <p class="text-sm text-slate-500 mt-1">Collaborators</p>
+    </div>
   </div>
+
+  {% if site.data.collaborators.size > 0 %}
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for collaborator in site.data.collaborators %}
+    <a class="rounded-2xl border border-slate-100 bg-slate-50 p-5 hover:border-primary hover:bg-white hover:shadow-sm transition-all" href="{{ collaborator.url }}" target="_blank" rel="noopener noreferrer">
+      <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">{{ collaborator.role | default: "共同研究者" }}</p>
+      <h3 class="text-lg font-bold text-lab-navy">{{ collaborator.name }}</h3>
+      <p class="text-sm text-slate-500 mt-1">{{ collaborator.affiliation }}</p>
+      <p class="text-sm text-slate-600 leading-relaxed mt-3">{{ collaborator.research_title }}</p>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="text-sm text-slate-500 leading-relaxed">共同研究者リンクはまだ登録されていません。</p>
+  {% endif %}
+</section>
+
+</div>
 </section>

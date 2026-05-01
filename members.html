@@ -10,19 +10,38 @@ active_nav: members
   </div>
   <div class="mb-12 border-b border-slate-200 dark:border-slate-800">
     <div class="flex gap-10 overflow-x-auto no-scrollbar">
-      <a class="flex items-center gap-2 border-b-4 border-primary dark:border-accent text-primary dark:text-accent pb-4 font-bold transition-all whitespace-nowrap" href="#professors"><span class="material-symbols-outlined text-lg">school</span>教授・教員・研究員</a>
+      <a class="flex items-center gap-2 border-b-4 border-primary dark:border-accent text-primary dark:text-accent pb-4 font-bold transition-all whitespace-nowrap" href="#professors"><span class="material-symbols-outlined text-lg">school</span>教授・共同研究者</a>
       <a class="flex items-center gap-2 border-b-4 border-transparent text-slate-500 hover:text-slate-700 pb-4 font-bold transition-all whitespace-nowrap" href="#students"><span class="material-symbols-outlined text-lg">group</span>所属学生</a>
       <a class="flex items-center gap-2 border-b-4 border-transparent text-slate-500 hover:text-slate-700 pb-4 font-bold transition-all whitespace-nowrap" href="#alumni"><span class="material-symbols-outlined text-lg">history_edu</span>卒業生</a>
     </div>
   </div>
 
   <section class="mb-16" id="professors">
-    <div class="flex items-center gap-3 mb-8"><div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div><h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">教授・教員・研究員</h2></div>
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">教授・共同研究者</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">研究室の教員と、共同研究で関わりのある先生方へのリンクです。</p>
+        </div>
+      </div>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for member in site.data.members.professors %}
         {% assign member_page = site.members | where: "member_id", member.id | first %}
         {% assign member_url = member_page.url | default: "/members/uehara/" %}
         {% include member-card.html name=member.name grade=member.grade research_title=member.research_title image=member.image url=member_url %}
+      {% endfor %}
+
+      {% for collaborator in site.data.collaborators %}
+        {% include collaborator-card.html
+          name=collaborator.name
+          role=collaborator.role
+          affiliation=collaborator.affiliation
+          research_title=collaborator.research_title
+          url=collaborator.url
+        %}
       {% endfor %}
     </div>
   </section>

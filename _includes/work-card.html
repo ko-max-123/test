@@ -1,30 +1,58 @@
-<article class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5"
-  data-author-ids="{{ include.work.author_ids | join: ' ' }}"
-  data-related-member-ids="{% if include.work.related_member_ids %}{{ include.work.related_member_ids | join: ' ' }}{% endif %}"
+{% assign work_type = include.work.type | default: "oral" %}
+{% assign type_label = include.work.type_label %}
+{% if type_label == nil %}
+  {% if work_type == "international" %}
+    {% assign type_label = "国際会議（査読あり）" %}
+  {% elsif work_type == "journal" %}
+    {% assign type_label = "学術論文" %}
+  {% else %}
+    {% assign type_label = "口頭発表" %}
+  {% endif %}
+{% endif %}
+
+{% assign badge_class = "bg-blue-50 text-blue-700" %}
+{% assign icon_name = "record_voice_over" %}
+{% assign english_label = "Oral Presentation" %}
+{% if work_type == "international" %}
+  {% assign badge_class = "bg-emerald-50 text-emerald-700" %}
+  {% assign icon_name = "public" %}
+  {% assign english_label = "International Conference" %}
+{% elsif work_type == "journal" %}
+  {% assign badge_class = "bg-purple-50 text-purple-700" %}
+  {% assign icon_name = "description" %}
+  {% assign english_label = "Journal Article" %}
+{% endif %}
+
+<article
+  id="{{ include.work.id }}"
+  data-work-card
+  data-type="{{ work_type }}"
+  data-work-type="{{ work_type }}"
   data-work-year="{{ include.work.year }}"
-  data-work-type="{{ include.work.type }}">
+  data-author-ids="{{ include.work.author_ids | join: ',' }}"
+  data-related-member-ids="{% if include.work.related_member_ids %}{{ include.work.related_member_ids | join: ',' }}{% endif %}"
+  class="publication-card group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-soft flex flex-col md:flex-row gap-5"
+>
   <div class="flex-shrink-0">
-    {% if include.work.type == 'international' %}
-      <div class="size-14 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-700">
-        <span class="material-symbols-outlined text-3xl" aria-hidden="true">public</span>
-      </div>
-    {% else %}
-      <div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700">
-        <span class="material-symbols-outlined text-3xl" aria-hidden="true">record_voice_over</span>
-      </div>
-    {% endif %}
+    <div class="size-14 {{ badge_class }} rounded-xl flex items-center justify-center">
+      <span class="material-symbols-outlined text-3xl" aria-hidden="true">{{ icon_name }}</span>
+    </div>
   </div>
+
   <div class="flex-grow min-w-0">
     <div class="flex flex-wrap items-center gap-2 mb-3">
-      {% if include.work.type == 'international' %}
-        <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">International Conference</span>
-      {% else %}
-        <span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">Oral Presentation</span>
-      {% endif %}
+      <span class="px-2.5 py-1 rounded-full {{ badge_class }} text-xs font-bold uppercase tracking-wider">{{ english_label }}</span>
       <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">{{ include.work.year }}</span>
     </div>
-    <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">{{ include.work.title }}</h3>
+
+    <h3 class="text-lg md:text-xl font-bold leading-snug text-slate-900 group-hover:text-primary transition-colors">
+      {{ include.work.title }}
+    </h3>
+
     <p class="mt-3 text-slate-700 font-medium">{{ include.work.authors_text }}</p>
-    <p class="mt-1 text-slate-500 text-sm leading-relaxed">{{ include.work.venue }}, {{ include.work.details }}</p>
+
+    <p class="mt-1 text-slate-500 text-sm leading-relaxed">
+      {{ include.work.venue }}{% if include.work.volume %}, {{ include.work.volume }}{% endif %}{% if include.work.number %}, {{ include.work.number }}{% endif %}{% if include.work.paper_no %}, {{ include.work.paper_no }}{% endif %}{% if include.work.pages %}, {{ include.work.pages }}{% endif %}{% if include.work.place %}, {{ include.work.place }}{% endif %}{% if include.work.date_text %}, {{ include.work.date_text }}{% endif %}.
+    </p>
   </div>
 </article>

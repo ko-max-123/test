@@ -1,67 +1,692 @@
-- id: "icce-tw-2023-fujii"
+- id: icce-tw-2023-fujii
   year: 2023
-  type: "international"
-  type_label: "国際会議（査読あり）"
-  title: "Some properties of well-balanced sequences obtained from two logistic maps over integers"
-  authors_text: "H. Fujii, S. Uehara, T. Miyazaki, S. Araki and Y. Nogami"
-  author_ids: ["fujii", "uehara", "miyazaki", "araki", "nogami"]
-  venue: "Proc. of 2023 International Conference on Consumer Electronics - Beitou (ICCE-TW)"
-  details: "E8-1, pp. 1-2, Taipei, Jul. 17-19, 2023."
-  keywords: ["擬似乱数", "ロジスティック写像", "系列"]
-
-- id: "icce-tw-2023-hayashi"
+  type: international
+  type_label: 国際会議（査読あり）
+  title: Some properties of well-balanced sequences obtained from two logistic maps over integers
+  authors_text: H. Fujii, S. Uehara, T. Miyazaki, S. Araki and Y. Nogami
+  author_ids:
+  - fujii
+  - uehara
+  - miyazaki
+  - araki
+  - nogami
+  venue: Proc. of 2023 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW)
+  paper_no: E8-1
+  pages: pp. 1-2
+  place: Taipei
+  date_text: Jul. 17-19, 2023
+- id: icce-tw-2023-hayashi
   year: 2023
-  type: "international"
-  type_label: "国際会議（査読あり）"
-  title: "A study on robustness evaluation of weave filters against reverse image search attacks on CAPTCHA"
-  authors_text: "N. Hayashi, T. Satoh and S. Uehara"
-  author_ids: ["hayashi", "satoh", "uehara"]
-  related_member_ids: ["hayashi"]
-  venue: "Proc. of 2023 International Conference on Consumer Electronics - Beitou (ICCE-TW)"
-  details: "E8-5, pp. 1-2, Taipei, Jul. 17-19, 2023."
-  keywords: ["CAPTCHA", "織物フィルタ", "逆画像検索"]
-
-- id: "icce-tw-2023-maze"
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A study on robustness evaluation of weave filters against reverse image search attacks on CAPTCHA
+  authors_text: N. Hayashi, T. Satoh and S. Uehara
+  author_ids:
+  - hayashi
+  - satoh
+  - uehara
+  venue: Proc. of 2023 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW)
+  paper_no: E8-5
+  pages: pp. 1-2
+  place: Taipei
+  date_text: Jul. 17-19, 2023
+- id: icce-tw-2023-miyazaki
   year: 2023
-  type: "international"
-  type_label: "国際会議（査読あり）"
-  title: "How to construct pseudorandom bit sequences from mazes by a method digging out walls"
-  authors_text: "T. Miyazaki, S. Araki and S. Uehara"
-  author_ids: ["miyazaki", "araki", "uehara"]
-  venue: "Proc. of 2023 International Conference on Consumer Electronics - Beitou (ICCE-TW)"
-  details: "E8-8, pp. 1-2, Taipei, Jul. 17-19, 2023."
-  keywords: ["迷路", "擬似乱数", "系列"]
-
-- id: "workshop-2023-hayashi"
-  year: 2023
-  type: "oral"
-  type_label: "口頭発表"
-  title: "CAPTCHAへの逆画像検索攻撃を対象とする織物フィルタの耐性評価に関する研究"
-  authors_text: "林 夏生、上原 聡"
-  author_ids: ["hayashi", "uehara"]
-  related_member_ids: ["hayashi"]
-  venue: "第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集"
-  details: "pp. 35-37, 松山, 2023年9月11日-9月12日."
-  keywords: ["CAPTCHA", "画像認証", "織物フィルタ"]
-
-- id: "workshop-2023-fujii"
-  year: 2023
-  type: "oral"
-  type_label: "口頭発表"
-  title: "2つの整数上のカオス写像を用いた擬似乱数系列の乱数性に関する一考察"
-  authors_text: "藤井 博希、森脇 圭祐、宮崎 武、荒木 俊輔、上原 聡、野上 保之"
-  author_ids: ["fujii", "moriwaki", "miyazaki", "araki", "uehara", "nogami"]
-  venue: "第46回情報理論とその応用シンポジウム予稿集"
-  details: "no. 6.1.1, pp. 438-441, 山口, 2023年11月28日-12月1日."
-  keywords: ["カオス写像", "擬似乱数", "乱数性"]
-
-- id: "sita-2022-fujii"
+  type: international
+  type_label: 国際会議（査読あり）
+  title: How to construct pseudorandom bit sequences from mazes by a method digging out walls
+  authors_text: T. Miyazaki, S. Araki and S. Uehara
+  author_ids:
+  - miyazaki
+  - araki
+  - uehara
+  venue: Proc. of 2023 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW)
+  paper_no: E8-8
+  pages: pp. 1-2
+  place: Taipei
+  date_text: Jul. 17-19, 2023
+- id: icce-tw-2022-inoue
   year: 2022
-  type: "oral"
-  type_label: "口頭発表"
-  title: "2つの整数上のロジスティック写像を用いたバランスの良い擬似乱数生成法に関する一考察"
-  authors_text: "藤井 博希、上原 聡、宮崎 武、荒木 俊輔、日下 卓也、野上 保之"
-  author_ids: ["fujii", "uehara", "miyazaki", "araki", "kusaka", "nogami"]
-  venue: "第45回情報理論とその応用シンポジウム予稿集"
-  details: "no. 3.3.1, pp. 265-270, 登別, 2022年11月29日-12月2日."
-  keywords: ["ロジスティック写像", "擬似乱数", "系列"]
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A study on parameters of piecewise logistic map over large integers and processing time
+  authors_text: R. Inoue, T. Miyazaki, S. Uehara, S. Araki and Y. Nogami
+  author_ids:
+  - inoue
+  - miyazaki
+  - uehara
+  - araki
+  - nogami
+  venue: Proc. of 2022 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW)
+  pages: pp. 1-2
+  place: Taipei
+  date_text: Jul. 6-8, 2022
+- id: icce-tw-2022-tsuruta
+  year: 2022
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A study on a DDH-based keyed homomorphic encryption suitable to machine learning in the cloud
+  authors_text: T. Tsuruta, S. Araki, T. Miyazaki, S. Uehara and K. Kakizaki
+  author_ids:
+  - tsuruta
+  - araki
+  - miyazaki
+  - uehara
+  - kakizaki
+  venue: Proc. of 2022 Intern. Conference. on Consumer Electronics - Beitou (ICCE-TW)
+  pages: pp. 1-2
+  place: Taipei
+  date_text: Jul. 6-8, 2022
+- id: isita-2022-fujimoto
+  year: 2022
+  type: international
+  type_label: 国際会議（査読あり）
+  title: On Timing for Applying the Updating Parameters of Sum-Product/BP Decoding
+  authors_text: S. Fujimoto, T. Miyazaki, S. Uehara and J. Zheng
+  author_ids:
+  - fujimoto
+  - miyazaki
+  - uehara
+  - zheng
+  venue: Proc. of 2020 Intern. Symp. on Inform. Theory and Its Applications
+  paper_no: T-PR-101-4
+  pages: p. 72
+  place: Tsukuba
+  date_text: Oct. 17-Oct. 19, 2022
+- id: scis-2023-tsuruta
+  year: 2023
+  type: oral
+  type_label: 口頭発表
+  title: 暗号化処理を制約する演算鍵付き準同型暗号
+  authors_text: 鶴田 拓矢、荒木 俊輔、宮崎 武、上原 聡、硴崎 賢一
+  author_ids:
+  - tsuruta
+  - araki
+  - miyazaki
+  - uehara
+  - kakizaki
+  venue: 2023年暗号と情報セキュリティ・シンポジウム講演論文集
+  paper_no: 1D3-4
+  pages: pp. 1-8
+  place: 小倉
+  date_text: 1月24日-1月27日 2023年
+- id: scis-2023-miyazaki-maze
+  year: 2023
+  type: oral
+  type_label: 口頭発表
+  title: 穴掘り法による迷路を用いた擬似乱数生成における迷路サイズと種類数に関する一考察
+  authors_text: 宮崎 武、荒木 俊輔、上原 聡
+  author_ids:
+  - miyazaki
+  - araki
+  - uehara
+  venue: 2023年暗号と情報セキュリティ・シンポジウム講演論文集
+  paper_no: 2C3-3
+  pages: pp. 1-8
+  place: 小倉
+  date_text: 1月24日-1月27日 2023年
+- id: scis-2023-noguchi
+  year: 2023
+  type: oral
+  type_label: 口頭発表
+  title: 線形合同法における周期性とニューラルネットワークによる予測精度に関する考察
+  authors_text: 野口 亮祐、荒木 俊輔、宮崎 武、上原 聡、硴崎 賢一
+  author_ids:
+  - noguchi
+  - araki
+  - miyazaki
+  - uehara
+  - kakizaki
+  venue: 2023年暗号と情報セキュリティ・シンポジウム講演論文集
+  paper_no: 2C3-4
+  pages: pp. 1-7
+  place: 小倉
+  date_text: 1月24日-1月27日 2023年
+- id: finite-field-2023-fujii-logistic
+  year: 2023
+  type: oral
+  type_label: 口頭発表
+  title: ２つの整数上のロジスティック写像を用いた擬似乱数生成法の統計的乱数性に関する一考察
+  authors_text: 藤井 博希、宮崎 武、荒木 俊輔、上原 聡、野上 保之
+  author_ids:
+  - fujii
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: 第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 1-5
+  place: 松山
+  date_text: 9月11日-9月12日, 2023年
+- id: finite-field-2023-miyazaki-maze-count
+  year: 2023
+  type: oral
+  type_label: 口頭発表
+  title: 迷路法によって生成される系列の種類数の理論的解析に関する一考察
+  authors_text: 宮崎 武、荒木 俊輔、上原 聡
+  author_ids:
+  - miyazaki
+  - araki
+  - uehara
+  venue: 第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 24-29
+  place: 松山
+  date_text: 9月11日-9月12日, 2023年
+- id: finite-field-2023-hayashi-captcha
+  year: 2023
+  type: oral
+  type_label: 口頭発表
+  title: CAPTCHAへの逆画像検索攻撃を対象とする織物フィルタの耐性評価に関する研究
+  authors_text: 林 夏生、上原 聡
+  author_ids:
+  - hayashi
+  - uehara
+  venue: 第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 35-37
+  place: 松山
+  date_text: 9月11日-9月12日, 2023年
+- id: finite-field-2023-takaichi-chaos-streaming
+  year: 2023
+  type: oral
+  type_label: 口頭発表
+  title: 研究紹介:動的同期カオスベースランダム鍵を用いたビデオ/オーディオストリーミング用暗号システム
+  authors_text: 高市 康平、顔 綿柱、荒木 俊輔、宮崎 武、上原 聡
+  author_ids:
+  - takaichi
+  - gan
+  - araki
+  - miyazaki
+  - uehara
+  venue: 第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 38-40
+  place: 松山
+  date_text: 9月11日-9月12日, 2023年
+- id: sita-2023-fujii-chaos-map
+  year: 2023
+  type: oral
+  type_label: 口頭発表
+  title: 2つの整数上のカオス写像を用いた擬似乱数系列の乱数性に関する一考察
+  authors_text: 藤井 博希、森脇 圭祐、宮崎 武、荒木 俊輔、上原 聡、野上 保之
+  author_ids:
+  - fujii
+  - moriwaki
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: 第46回情報理論とその応用シンポジウム予稿集
+  paper_no: no. 6.1.1
+  pages: pp. 438-441
+  place: 山口
+  date_text: 11月28-12月1日 2023年
+- id: finite-field-2022-inoue-plm
+  year: 2022
+  type: oral
+  type_label: 口頭発表
+  title: 整数上のPLMを用いた擬似乱数系列の4つのパラメータに対する乱数性の一考察
+  authors_text: 井上 凌、宮崎 武、荒木 俊輔、上原 聡
+  author_ids:
+  - inoue
+  - miyazaki
+  - araki
+  - uehara
+  venue: 第8回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 1-4
+  place: 福岡
+  date_text: 9月12日, 2022年
+- id: sita-2022-fujii-logistic
+  year: 2022
+  type: oral
+  type_label: 口頭発表
+  title: 2つの整数上のロジスティック写像を用いたバランスの良い擬似乱数生成法に関する一考察
+  authors_text: 藤井 博希、上原 聡、宮崎 武、荒木 俊輔、日下 卓也、野上 保之
+  author_ids:
+  - fujii
+  - uehara
+  - miyazaki
+  - araki
+  - kusaka
+  - nogami
+  venue: 第45回情報理論とその応用シンポジウム予稿集
+  paper_no: no. 3.3.1
+  pages: pp. 265-270
+  place: 登別
+  date_text: 11月29-12月2日 2022年
+- id: icce-tw-2021-osonoa
+  year: 2021
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A study on control parameter and output sequence of the logistic map over integers for pseudorandom number generation
+  authors_text: G. Osonoa, S. Araki, T. Miyazaki, S. Uehara and K. Kakizaki
+  author_ids:
+  - osonoa
+  - araki
+  - miyazaki
+  - uehara
+  - kakizaki
+  venue: Proc. of 2021 Intern. Conference. on Consumer Electronics - Penghu (ICCE-TW)
+  paper_no: E4-2
+  pages: pp. 1-2
+  place: Penghu
+  date_text: Sep. 15-Sep. 17, 2021
+- id: icce-tw-2021-takahashi-watermark
+  year: 2021
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A study on digital watermarks for audio signals using phase of frequency signals in addition to the other methods
+  authors_text: K. Takahashi, T. Miyazaki, S. Araki, S. Uehara and Y. Nogami
+  author_ids:
+  - takahashi_k
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: Proc. of 2021 Intern. Conference. on Consumer Electronics - Penghu (ICCE-TW)
+  paper_no: E4-3
+  pages: pp. 1-2
+  place: Penghu
+  date_text: Sep. 15-Sep. 17, 2021
+- id: icce-tw-2021-eguchi
+  year: 2021
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A study on relationship between period and number of divisions in piecewise logistic map over integers
+  authors_text: S. Eguchi, T. Miyazaki, S. Uehara, S. Araki and Y. Nogami
+  author_ids:
+  - eguchi
+  - miyazaki
+  - uehara
+  - araki
+  - nogami
+  venue: Proc. of 2021 Intern. Conference. on Consumer Electronics - Penghu (ICCE-TW)
+  paper_no: E4-4
+  pages: pp. 1-2
+  place: Penghu
+  date_text: Sep. 15-Sep. 17, 2021
+- id: jsiam-2021-miyazaki-logistic
+  year: 2021
+  type: oral
+  type_label: 口頭発表
+  title: 整数上のロジスティック写像による擬似乱数生成器における部分系列カオス尺度を用いた乱数性の改善法
+  authors_text: 宮崎 武、荒木 俊輔、上原 聡、野上 保之
+  author_ids:
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: 日本応用数理学会2021年研究部会連合発表会
+  paper_no: 応用カオス(1)-4
+  date_text: 2021年
+- id: finite-field-2021-taniguchi-xorshift
+  year: 2021
+  type: oral
+  type_label: 口頭発表
+  title: Xorshift のパラメータと生成系列の周期の関係についての一考察
+  authors_text: 谷口 巧実、宮崎 武、荒木 俊輔、上原 聡
+  author_ids:
+  - taniguchi
+  - miyazaki
+  - araki
+  - uehara
+  venue: 第7回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 1-3
+  place: WebEX
+  date_text: 9月30日, 2021年
+- id: finite-field-2021-kakui-logistic32
+  year: 2021
+  type: oral
+  type_label: 口頭発表
+  title: 2つのロジスティック写像を用いた32bit演算精度の乱数生成器に関する一考察
+  authors_text: 角井 敦志、宮崎 武、荒木 俊輔、上原 聡
+  author_ids:
+  - kakui
+  - miyazaki
+  - araki
+  - uehara
+  venue: 第7回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 1-4
+  place: WebEX
+  date_text: 9月30日, 2021年
+- id: finite-field-2021-miyazaki-plm
+  year: 2021
+  type: oral
+  type_label: 口頭発表
+  title: 整数上のPiecewise Logistic Mapにおける分割数と系列の種類数
+  authors_text: 宮崎 武、荒木 俊輔、上原 聡
+  author_ids:
+  - miyazaki
+  - araki
+  - uehara
+  venue: 第7回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 1-8
+  place: WebEX
+  date_text: 9月30日, 2021年
+- id: iwsec-2020-kodera-residue
+  year: 2020
+  type: international
+  type_label: 国際会議（査読あり）
+  title: Equivalent keys of a nonlinear filter generator using a power residue symbol
+  authors_text: Y. Kodera, T. Tatara, T. Kusaka, Y. Nogami and S. Uehara
+  author_ids:
+  - kodera
+  - tatara
+  - kusaka
+  - nogami
+  - uehara
+  venue: Proc. of The 15th International Workshop on Security
+  paper_no: Symmetric-Key 1
+  pages: pp. 1-14
+  place: Fukui
+  date_text: Sep. 2-Sep. 4, 2020
+- id: isita-2020-kodera-blum-micali
+  year: 2020
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A parallel Blum-Micali generator based on the Gauss periods
+  authors_text: Y. Kodera, T. Kusaka, T. Miyazaki, Y. Nogami and S. Uehara
+  author_ids:
+  - kodera
+  - kusaka
+  - miyazaki
+  - nogami
+  - uehara
+  venue: Proc. of 2020 Intern. Symp. on Inform. Theory and Its Applications
+  paper_no: C04-01
+  pages: pp. 447-450
+  place: Hawaii
+  date_text: Oct. 24-Oct. 27, 2020
+- id: isita-2020-eguchi-plm
+  year: 2020
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A study on randomness of sequences obtained from piecewise logistic map over integers
+  authors_text: S. Eguchi, T. Miyazaki, S. Araki, S. Uehara and Y. Nogami
+  author_ids:
+  - eguchi
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: Proc. of 2020 Intern. Symp. on Inform. Theory and Its Applications
+  paper_no: C04-02
+  pages: pp. 451-455
+  place: Hawaii
+  date_text: Oct. 24-Oct. 27, 2020
+- id: isita-2020-nakano-hadamard
+  year: 2020
+  type: international
+  type_label: 国際会議（査読あり）
+  title: A study on binary sequences located in Hadamard matrices of order $2^n$
+  authors_text: K. Nakano, K. Takahashi, S. Uehara, T. Miyazaki, S. Araki and Y. Nogami
+  author_ids:
+  - nakano
+  - takahashi_k
+  - uehara
+  - miyazaki
+  - araki
+  - nogami
+  venue: Proc. of 2020 Intern. Symp. on Inform. Theory and Its Applications
+  paper_no: C04-04
+  pages: pp. 460-464
+  place: Hawaii
+  date_text: Oct. 24-Oct. 27, 2020
+- id: hinokuni-2020-osonoa-logistic
+  year: 2020
+  type: oral
+  type_label: 口頭発表
+  title: 整数上のロジスティック写像における制御変数の定義域の変化に対する出力値系列の類似性に関する一考察
+  authors_text: 小薗 元、荒木 俊輔、宮崎 武、上原 聡、硴崎 賢一
+  author_ids:
+  - osonoa
+  - araki
+  - miyazaki
+  - uehara
+  - kakizaki
+  venue: 火の国情報シンポジウム2020予稿集
+  paper_no: no. B.3-1
+  pages: pp. 1-6
+  place: Web
+  date_text: 3月9-3月10日 2020年
+- id: hinokuni-2020-eguchi-plm
+  year: 2020
+  type: oral
+  type_label: 口頭発表
+  title: 整数上のピースワイズ・ロジスティック写像の区分数に関する一考察
+  authors_text: 江口 颯太、宮崎 武、荒木 俊輔、上原 聡、野上 保之
+  author_ids:
+  - eguchi
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: 火の国情報シンポジウム2020予稿集
+  paper_no: no. B.3-2
+  pages: pp. 1-6
+  place: Web
+  date_text: 3月9-3月10日 2020年
+- id: hinokuni-2020-miyazaki-period
+  year: 2020
+  type: oral
+  type_label: 口頭発表
+  title: 利用目的による系列の周期探索アルゴリズム選択
+  authors_text: 宮崎 武、荒木 俊輔、上原 聡
+  author_ids:
+  - miyazaki
+  - araki
+  - uehara
+  venue: 火の国情報シンポジウム2020予稿集
+  paper_no: no. B.3-3
+  pages: pp. 1-6
+  place: Web
+  date_text: 3月9-3月10日 2020年
+- id: finite-field-2020-osonoa-domain
+  year: 2020
+  type: oral
+  type_label: 口頭発表
+  title: 整数上のロジスティック写像における定義域のに関する一考察
+  authors_text: 小薗 元、荒木 俊輔、宮崎 武、上原 聡、硴崎 賢一
+  author_ids:
+  - osonoa
+  - araki
+  - miyazaki
+  - uehara
+  - kakizaki
+  venue: 第6回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 1-6
+  place: WebEX
+  date_text: 9月28日-9月29日, 2020年
+- id: finite-field-2020-miyazaki-period-search
+  year: 2020
+  type: oral
+  type_label: 口頭発表
+  title: 幾つかの系列に対する周期探索法と，素体上のロジスティック写像の逆写像演算について
+  authors_text: 宮崎 武、荒木 俊輔、上原 聡
+  author_ids:
+  - miyazaki
+  - araki
+  - uehara
+  venue: 第6回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 1-8
+  place: WebEX
+  date_text: 9月28日-9月29日, 2020年
+- id: ieice-2019-kodera-ntu-sequences
+  year: 2019
+  type: journal
+  type_label: 学術論文
+  title: 'Algebraic group structure of the random number generator: Theoretical analysis of NTU sequence(s)'
+  authors_text: Y. Kodera, Md. Arshad ALI, T. Miyazaki, T. Kusaka, Y. Nogami, S. Uehara and R.H. Morelos-Zaragoza
+  author_ids:
+  - kodera
+  - ali
+  - miyazaki
+  - kusaka
+  - nogami
+  - uehara
+  - morelos_zaragoza
+  venue: IEICE Trans. Fundamentals
+  volume: vol. E102-A
+  number: No. 12
+  pages: pp. 1659-1667
+  date_text: Dec. 2019
+- id: iwsda-2019-miyazaki-knuth
+  year: 2019
+  type: international
+  type_label: 国際会議（査読あり）
+  title: Properties of Knuth's quadratic congruential sequences with modulus $m=2^Wp$
+  authors_text: T. Miyazaki, S. Araki, K. Kawase, S. Uehara and Y. Nogami
+  author_ids:
+  - miyazaki
+  - araki
+  - kawase
+  - uehara
+  - nogami
+  venue: Proc. of the 9th Intern. Workshop. on Signal Design and Its Applications in Communications
+  paper_no: vol. 1.2
+  pages: pp. 1-5
+  place: Dongguan
+  date_text: Oct. 20-Oct. 24, 2019
+- id: iwsda-2019-eguchi-plm
+  year: 2019
+  type: international
+  type_label: 国際会議（査読あり）
+  title: Relations between evaluations of NIST tests and Lyapunov exponents of sequences generated by the piecewise logistic
+    map over integers
+  authors_text: S. Eguchi, T. Miyazaki, S. Araki, S. Uehara and Y. Nogami
+  author_ids:
+  - eguchi
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: Proc. of the 9th Intern. Workshop. on Signal Design and Its Applications in Communications
+  paper_no: vol. 8.3
+  pages: pp. 1-5
+  place: Dongguan
+  date_text: Oct. 20-Oct. 24, 2019
+- id: candar-2019-taketa-neural-linear-complexity
+  year: 2019
+  type: international
+  type_label: 国際会議（査読あり）
+  title: Mutual relationship between the neural network model and linear complexity for pseudorandom binary number sequence
+  authors_text: Y. Taketa, Y. Kodera, S. Tanida, T. Kusaka, Y. Nogami, N. Takahashi and S. Uehara
+  author_ids:
+  - taketa
+  - kodera
+  - tanida
+  - kusaka
+  - nogami
+  - takahashi_n
+  - uehara
+  venue: CANDAR'17 (The Fifth International Symposium on Computing and Networking)
+  paper_no: WICS4
+  pages: pp. 394-400
+  date_text: Nov. 19-Nov. 22, 2019
+- id: candar-2019-kodera-trace
+  year: 2019
+  type: international
+  type_label: 国際会議（査読あり）
+  title: An efficient implementation of trace calculation over finite field with vector represetnation
+  authors_text: Y. Kodera, T. Kusaka, T. Miyazaki, M.A. Khandaker, Y. Nogami and S. Uehara
+  author_ids:
+  - kodera
+  - kusaka
+  - miyazaki
+  - khandaker
+  - nogami
+  - uehara
+  venue: CANDAR'17 (The Fifth International Symposium on Computing and Networking)
+  paper_no: WICS4
+  pages: pp. 451-455
+  date_text: Nov. 19-Nov. 22, 2019
+- id: ieice-tech-2019-ogaki-audio-tamper
+  year: 2019
+  type: oral
+  type_label: 口頭発表
+  title: エコー拡散法とオクターブ類似性を用いた会議録用音声データの改ざん検知の実装に関する研究
+  authors_text: 大垣 翔矢、荒木 俊輔、宮崎 武、上原 聡、野上 保之
+  author_ids:
+  - ogaki
+  - araki
+  - miyazaki
+  - uehara
+  - nogami
+  venue: 信学技報
+  paper_no: ISEC2018-90
+  pages: pp. 57-64
+  date_text: 3月7日 2019年
+- id: finite-field-2019-araki-logistic-period
+  year: 2019
+  type: oral
+  type_label: 口頭発表
+  title: 擬似乱数生成器に用いる整数上のロジスティック写像の最小周期の保証に向けた手法に関する一考察
+  authors_text: 荒木 俊輔、宮崎 武、上原 聡、硴崎 賢一
+  author_ids:
+  - araki
+  - miyazaki
+  - uehara
+  - kakizaki
+  venue: 第5回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 11-15
+  place: 福岡
+  date_text: 9月24日-9月25日, 2019年
+- id: finite-field-2019-miyazaki-knuth
+  year: 2019
+  type: oral
+  type_label: 口頭発表
+  title: 偶数を法とするKnuthの二次合同法による系列の乱数性についての一考察
+  authors_text: 宮崎 武、荒木 俊輔、上原 聡、野上 保之
+  author_ids:
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: 第5回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 23-25
+  place: 福岡
+  date_text: 9月24日-9月25日, 2019年
+- id: finite-field-2019-uehara-hadamard
+  year: 2019
+  type: oral
+  type_label: 口頭発表
+  title: アダマール型行列による系列に関する一考察
+  authors_text: 上原 聡
+  author_ids:
+  - uehara
+  venue: 第5回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集
+  pages: pp. 27-31
+  place: 福岡
+  date_text: 9月24日-9月25日, 2019年
+- id: sita-2019-kawase-xorshift
+  year: 2019
+  type: oral
+  type_label: 口頭発表
+  title: 小型デバイスへ実装可能なXorshift乱数生成器の改良に関する一考察
+  authors_text: 川瀬 航平、宮崎 武、荒木 俊輔、上原 聡、野上 保之
+  author_ids:
+  - kawase
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: 第42回情報理論とその応用シンポジウム予稿集
+  paper_no: no. 5.3.3
+  pages: pp. 398-401
+  place: 霧島
+  date_text: 11月26-11月29日 2019年
+- id: sita-2019-eguchi-plm
+  year: 2019
+  type: oral
+  type_label: 口頭発表
+  title: 整数上のピースワイズロジスティック写像における区分数と生成系列の乱数性
+  authors_text: 江口 颯太、宮崎 武、荒木 俊輔、上原 聡、野上 保之
+  author_ids:
+  - eguchi
+  - miyazaki
+  - araki
+  - uehara
+  - nogami
+  venue: 第42回情報理論とその応用シンポジウム予稿集
+  paper_no: no. D.10
+  pages: p. 1
+  place: 霧島
+  date_text: 11月26-11月29日 2019年

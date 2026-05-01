@@ -1,5 +1,17 @@
 html { scroll-behavior: smooth; }
 .hero-title { letter-spacing: 0.03em; line-height: 1.16; }
+.scroll-cue { animation: scroll-cue-float 1.8s ease-in-out infinite; }
+.scroll-cue-line { position: relative; overflow: hidden; }
+.scroll-cue-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: scroll-cue-line 1.8s ease-in-out infinite;
+}
 .section-title { letter-spacing: 0.05em; position: relative; }
 .japanese-sub { font-size: 0.8rem; color: #64748b; margin-top: 0.5rem; display: block; }
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
@@ -23,3 +35,13 @@ html { scroll-behavior: smooth; }
 .article-body p { line-height: 2; margin-top: 1.25rem; color: #475569; }
 .article-body h2 { font-size: 1.45rem; font-weight: 800; color: #0f172a; margin-top: 3rem; padding-left: 1rem; border-left: 4px solid #003366; }
 .article-body ul { margin-top: 1.25rem; padding-left: 1.25rem; color: #475569; line-height: 2; list-style: disc; }
+
+@keyframes scroll-cue-float {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
+
+@keyframes scroll-cue-line {
+  0% { top: -100%; }
+  55%, 100% { top: 100%; }
+}

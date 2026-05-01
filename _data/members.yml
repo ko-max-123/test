@@ -1,62 +1,165 @@
 professors:
-  - id: "uehara"
-    name: "上原 聡"
-    kana: "ウエハラ サトシ"
-    role: "教授"
-    grade: "教授"
-    category: "professors"
-    image: ""
-    keywords: ["情報セキュリティ", "暗号理論", "系列生成"]
-    research_title: "情報セキュリティ・暗号・系列生成"
-    summary: "情報セキュリティや暗号理論、系列生成に関する研究を行っています。"
-
+- id: uehara
+  name: 上原 聡
+  kana: ウエハラ サトシ
+  role: 教授
+  grade: 教授
+  category: professors
+  image: ''
+  keywords:
+  - 情報セキュリティ
+  - 暗号理論
+  - 系列生成
+  research_title: 情報セキュリティ・暗号・系列生成
+  summary: 情報セキュリティや暗号理論、系列生成に関する研究を行っています。
 students:
-  - id: "hayashi"
-    name: "林 夏生"
-    kana: "ハヤシ ナツオ"
-    role: "学生"
-    grade: "博士3年"
-    category: "students"
-    image: "/assets/images/members/HayashiNatsuo.svg"
-    image_small: "/assets/images/members/HayashiNatsuo2.svg"
-    keywords: ["画像認証", "CAPTCHA", "画像分析攻撃", "セキュリティ応用"]
-    research_title: "画像分析攻撃に耐性のある画像認証方式の提案"
-    summary: "画像認証を題材に、攻撃への耐性や安全性を評価しながら、より実用的な認証方式を検討します。"
-  - id: "fujiki"
-    name: "藤木 弘也"
-    kana: "フジキ ヒロヤ"
-    role: "学生"
-    grade: "学部4年"
-    category: "students"
-    image: "/assets/images/members/FujikiHiroya.svg"
-    image_small: "/assets/images/members/FujikiHiroya2.svg"
-    keywords: ["暗号", "符号", "数学"]
-    research_title: "暗号・符号に関する研究"
-    summary: "暗号、符号、数学的な理論を扱う研究テーマに取り組みます。"
-  - id: "kuwahara"
-    name: "桒原 大雅"
-    kana: "クワハラ テイガ"
-    role: "学生"
-    grade: "学部4年"
-    category: "students"
-    image: "/assets/images/members/KuwaharaTeiga.svg"
-    image_small: "/assets/images/members/KuwaharaTeiga2.svg"
-    keywords: ["フラクタル", "画像圧縮", "画像処理"]
-    research_title: "フラクタル画像圧縮"
-    summary: "フラクタル画像圧縮をテーマに、画像処理技術に関する研究に取り組みます。"
-  - id: "maekawa"
-    name: "前川 翔哉"
-    kana: "マエカワ ショウヤ"
-    role: "学生"
-    grade: "修士1年"
-    category: "students"
-    image: "/assets/images/members/MaekawaShoya.svg"
-    image_small: "/assets/images/members/MaekawaShoya2.svg"
-    keywords: ["研究テーマ未定", "情報技術"]
-    research_title: "研究テーマ検討中"
-    summary: "今後の研究テーマを検討しながら、情報技術に関する研究に取り組みます。"
+- id: hayashi
+  name: 林 夏生
+  kana: ハヤシ ナツオ
+  grade: 博士３年
+  research_title: '「画像分析攻撃に耐性のある画像認証方式の提案」
 
+    便利で強いCAPTCHA(人間かプログラムか見分けるテスト)を作るために、画像とAIの研究をしています。'
+  image: /assets/images/members/HayashiNatsuo.jpg
+  status: current
+  graduation_year: null
+  order: 30
+- id: murashima
+  name: 村島 悠斗
+  kana: ムラシマ ユウト
+  grade: 学部４年
+  research_title: 人間の補完能力を利用したCAPTCHAについて
+  image: /assets/images/members/MurashimaYuki.jpg
+  status: current
+  graduation_year: null
+  order: 40
+- id: ohzono
+  name: 大園 慶一
+  kana: オオゾノ ケイイチ
+  grade: 学部４年
+  research_title: カラーQRコードにおける誤り訂正
+  image: /assets/images/members/OhzonoKeichi.jpg
+  status: current
+  graduation_year: null
+  order: 41
+- id: sakai
+  name: 坂井 昂
+  kana: サカイ タカシ
+  grade: 修士２年
+  research_title: フラクタル画像圧縮・画像符号化、画像処理
+  image: /assets/images/members/SakaiTakashi.jpg
+  status: current
+  graduation_year: null
+  order: 42
+- id: sakamoto
+  name: 坂元 秀成
+  kana: サカモト ヒデナリ
+  grade: 修士１年
+  research_title: 擬似乱数系列の構成法と性能評価
+  image: /assets/images/members/SakamotoHidenari.jpg
+  status: current
+  graduation_year: null
+  order: 43
+- id: yamauchi
+  name: 山内 蓮太
+  kana: ヤマウチ レンタ
+  grade: 修士１年
+  research_title: 楕円曲線を用いた公開鍵暗号と擬似乱数生成法
+  image: /assets/images/members/YamauchiRenta.jpg
+  status: current
+  graduation_year: null
+  order: 44
+- id: abe
+  name: 安部 泰志
+  kana: アベ タイシ
+  grade: 大学６年生
+  research_title: 楕円曲線暗号、イラスト二次創作
+  image: /assets/images/members/AbeTaishi.jpg
+  status: current
+  graduation_year: null
+  order: 45
+- id: asada
+  name: 浅田 雄道
+  kana: アサダ タケミチ
+  grade: 学部４年
+  research_title: 符号について勉強し始めました^_^
+  image: /assets/images/members/AsadaTakemichi.jpg
+  status: current
+  graduation_year: null
+  order: 46
+- id: maekawa
+  name: 前川 翔哉
+  kana: マエカワ ショウヤ
+  grade: 学部４年
+  research_title: 俺には無限の可能性が秘められている
+  image: /assets/images/members/MaekawaShoya.jpg
+  status: current
+  graduation_year: null
+  order: 47
+- id: matsushita
+  name: 松下 正一郎
+  kana: ﾏﾂｼﾀ ｼｮｳｲﾁﾛｳ
+  grade: 修士２年
+  research_title: 'ゴルフ、社長、人付き合い
+
+    QRコード'
+  image: /assets/images/members/MatsushitaShoichiro.jpg
+  status: current
+  graduation_year: null
+  order: 48
+- id: fujiki
+  name: 藤木 弘也
+  kana: フジキ ヒロヤ
+  role: 学生
+  grade: 学部4年
+  category: students
+  image: /assets/images/members/FujikiHiroya.svg
+  image_small: /assets/images/members/FujikiHiroya2.svg
+  keywords:
+  - 暗号
+  - 符号
+  - 数学
+  research_title: 暗号・符号に関する研究
+  summary: 暗号、符号、数学的な理論を扱う研究テーマに取り組みます。
+- id: kuwahara
+  name: 桒原 大雅
+  kana: クワハラ テイガ
+  role: 学生
+  grade: 学部4年
+  category: students
+  image: /assets/images/members/KuwaharaTeiga.svg
+  image_small: /assets/images/members/KuwaharaTeiga2.svg
+  keywords:
+  - フラクタル
+  - 画像圧縮
+  - 画像処理
+  research_title: フラクタル画像圧縮
+  summary: フラクタル画像圧縮をテーマに、画像処理技術に関する研究に取り組みます。
 alumni:
-  - year: 2023
-    degree: "修士"
-    name: "田中 太郎"
+- id: moriwaki
+  name: 森脇 圭祐
+  kana: モリワキ ケイスケ
+  grade: 卒業生
+  research_title: 疑似乱数生成、信号処理（心電図）
+  image: /assets/images/members/MoriwakiKeisuke.jpg
+  status: alumni
+  graduation_year: 2023
+  order: 90
+- id: fujii
+  name: 藤井 博希
+  kana: フジイ ヒロキ
+  grade: 卒業生
+  research_title: 疑似乱数生成
+  image: /assets/images/members/FujiiHiroki.jpg
+  status: alumni
+  graduation_year: 2023
+  order: 91
+- id: kanzaki
+  name: 神崎 蓮
+  kana: カンザキ レン
+  grade: 卒業生
+  research_title: モザイク画像を用いたパスワード認証のセキュリティ強化
+  image: /assets/images/members/KanzakiRen.jpg
+  status: alumni
+  graduation_year: 2023
+  order: 92

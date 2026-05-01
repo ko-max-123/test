@@ -3,66 +3,142 @@ layout: default
 title: "メンバー"
 active_nav: members
 ---
-<main class="flex-1 max-w-6xl mx-auto w-full px-6 py-10 pt-28">
-  <div class="mb-10">
-    <h1 class="text-slate-900 dark:text-slate-100 text-5xl font-extrabold leading-tight tracking-tight mb-4">研究室メンバー一覧</h1>
-    <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">研究室メンバー紹介のページです。</p>
-  </div>
-  <div class="mb-12 border-b border-slate-200 dark:border-slate-800">
-    <div class="flex gap-10 overflow-x-auto no-scrollbar">
-      <a class="flex items-center gap-2 border-b-4 border-primary dark:border-accent text-primary dark:text-accent pb-4 font-bold transition-all whitespace-nowrap" href="#professors"><span class="material-symbols-outlined text-lg">school</span>教授・共同研究者</a>
-      <a class="flex items-center gap-2 border-b-4 border-transparent text-slate-500 hover:text-slate-700 pb-4 font-bold transition-all whitespace-nowrap" href="#students"><span class="material-symbols-outlined text-lg">group</span>所属学生</a>
-      <a class="flex items-center gap-2 border-b-4 border-transparent text-slate-500 hover:text-slate-700 pb-4 font-bold transition-all whitespace-nowrap" href="#alumni"><span class="material-symbols-outlined text-lg">history_edu</span>卒業生</a>
-    </div>
-  </div>
+<main class="pt-20">
+  <section class="bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-20">
+      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+        <a class="hover:text-primary transition-colors" href="{{ '/' | relative_url }}">Home</a>
+        <span class="material-symbols-outlined text-base" aria-hidden="true">chevron_right</span>
+        <span class="text-primary font-medium">メンバー</span>
+      </nav>
 
-  <section class="mb-16" id="professors">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-      <div class="flex items-center gap-3">
-        <div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div>
-        <div>
-          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">教授・共同研究者</h2>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">研究室の教員と、共同研究で関わりのある先生方へのリンクです。</p>
-        </div>
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+          <span class="material-symbols-outlined text-base" aria-hidden="true">groups</span>
+          Members
+        </span>
+        <h1 class="mt-6 text-4xl md:text-6xl font-black tracking-tight text-lab-navy leading-tight">メンバー</h1>
+        <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+          上原研究室の教員、学生、共同研究者、卒業生を紹介します。
+        </p>
       </div>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% for member in site.data.members.professors %}
-        {% assign member_page = site.members | where: "member_id", member.id | first %}
-        {% assign member_url = member_page.url | default: "/members/uehara/" %}
-        {% include member-card.html name=member.name grade=member.grade research_title=member.research_title image=member.image url=member_url %}
-      {% endfor %}
-
-      {% for collaborator in site.data.collaborators %}
-        {% include collaborator-card.html
-          name=collaborator.name
-          role=collaborator.role
-          affiliation=collaborator.affiliation
-          research_title=collaborator.research_title
-          url=collaborator.url
-        %}
-      {% endfor %}
-    </div>
   </section>
 
-  <section class="mb-16" id="students">
-    <div class="flex items-center gap-3 mb-8"><div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div><h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">所属学生</h2></div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {% for member in site.data.members.students %}
-        {% assign member_page = site.members | where: "member_id", member.id | first %}
-        {% include member-card.html name=member.name grade=member.grade research_title=member.research_title image=member.image url=member_page.url %}
-      {% endfor %}
+  <section class="max-w-7xl mx-auto px-6 py-12 md:py-16">
+    <div class="mb-10 flex flex-wrap gap-3">
+      <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#professors">
+        <span class="material-symbols-outlined text-lg">school</span>
+        教授・共同研究者
+      </a>
+      <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#students">
+        <span class="material-symbols-outlined text-lg">person</span>
+        学生
+      </a>
+      <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#alumni">
+        <span class="material-symbols-outlined text-lg">history_edu</span>
+        卒業生
+      </a>
     </div>
-  </section>
 
-  <section class="mb-16" id="alumni">
-    <div class="flex items-center gap-3 mb-8"><div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div><h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">卒業生</h2></div>
-    <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
-      <table class="w-full text-left bg-white dark:bg-slate-900 border-collapse">
-        <thead><tr class="bg-slate-50 dark:bg-slate-800/50"><th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200">年</th><th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200">学位</th><th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200">名前</th></tr></thead>
-        <tbody class="divide-y divide-slate-100 dark:divide-slate-800">{% for alumni in site.data.members.alumni %}<tr class="hover:bg-slate-50 transition-colors"><td class="px-6 py-4 text-sm font-medium text-slate-700">{{ alumni.year }}</td><td class="px-6 py-4 text-sm text-slate-600">{{ alumni.degree }}</td><td class="px-6 py-4 text-sm font-bold text-slate-900">{{ alumni.name }}</td></tr>{% endfor %}</tbody>
-      </table>
-    </div>
+    <section class="mb-16 scroll-mt-28" id="professors">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div class="flex items-center gap-3">
+          <div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div>
+          <div>
+            <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">教授・共同研究者</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">研究室の教員と、共同研究で関わりのある先生方へのリンクです。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for member in site.data.members.professors %}
+          {% assign member_page = site.members | where: "member_id", member.id | first %}
+          {% assign member_url = member_page.url | default: "/members/uehara/" %}
+          {% include member-card.html name=member.name kana=member.kana grade=member.grade research_title=member.research_title image=member.image url=member_url %}
+        {% endfor %}
+
+        {% for collaborator in site.data.collaborators %}
+          {% include collaborator-card.html
+            name=collaborator.name
+            role=collaborator.role
+            affiliation=collaborator.affiliation
+            research_title=collaborator.research_title
+            url=collaborator.url
+          %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="mb-16 scroll-mt-28" id="students">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">学生</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">現在所属している学生です。</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% assign sorted_students = site.data.members.students | sort: "order" %}
+        {% for member in sorted_students %}
+          {% assign member_page = site.members | where: "member_id", member.id | first %}
+          {% assign member_url = member_page.url | default: "#" %}
+          {% include member-card.html name=member.name kana=member.kana grade=member.grade research_title=member.research_title image=member.image url=member_url %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="scroll-mt-28" id="alumni">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div class="flex items-center gap-3">
+          <div class="h-8 w-1 bg-primary dark:bg-accent rounded-full"></div>
+          <div>
+            <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">卒業生</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">卒業生も詳細ページへリンクします。人数が増えても見やすいように年度別に折り畳めます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        {% assign sorted_alumni = site.data.members.alumni | sort: "graduation_year" | reverse %}
+        {% assign rendered_years = "|" %}
+        {% for year_source in sorted_alumni %}
+          {% assign year = year_source.graduation_year | default: "年度未設定" %}
+          {% assign year_token = year | append: "|" | prepend: "|" %}
+          {% unless rendered_years contains year_token %}
+          {% assign member_count = 0 %}
+          {% for count_member in sorted_alumni %}
+            {% if count_member.graduation_year == year_source.graduation_year %}
+              {% assign member_count = member_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          <details class="group rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden" {% if forloop.first %}open{% endif %}>
+            <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors">
+              <div>
+                <h3 class="text-lg font-black text-lab-navy">{% if year == "年度未設定" %}{{ year }}{% else %}{{ year }}年{% endif %}</h3>
+                <p class="text-sm text-slate-500 mt-1">{{ member_count }}名</p>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+
+            <div class="border-t border-slate-100 p-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for member in sorted_alumni %}
+                  {% if member.graduation_year == year_source.graduation_year %}
+                  {% assign member_page = site.members | where: "member_id", member.id | first %}
+                  {% assign member_url = member_page.url | default: "#" %}
+                  {% include member-card.html name=member.name kana=member.kana grade="卒業生" research_title=member.research_title image=member.image url=member_url %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </details>
+          {% assign rendered_years = rendered_years | append: year | append: "|" %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </section>
   </section>
 </main>

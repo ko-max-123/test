@@ -155,3 +155,68 @@ _includes/collaborator-card.html
 ```
 
 共同研究者は研究室所属メンバーとは区別し、外部リンクアイコン付きカードとして表示します。
+
+
+## 研究業績ページ：著者絞り込み時の件数更新
+
+`works.html?author=uehara` のように著者で絞り込んだ場合、表示される業績カードだけでなく、Hero右側の件数表示も絞り込み後の件数に更新されます。
+
+主な対応ファイル：
+
+```text
+assets/js/works-filter.js
+_includes/work-card.html
+works.html
+_layouts/works-year.html
+_data/works.yml
+```
+
+`_includes/work-card.html` では、各業績カードに以下の属性を付与しています。
+
+```html
+data-work-card
+data-type="international|oral|journal"
+data-author-ids="uehara,hayashi"
+```
+
+`works.html` 側では、件数表示に以下の属性を付与しています。
+
+```html
+data-work-count="international"
+data-work-count="oral"
+data-work-count="journal"
+```
+
+これにより、著者別に絞り込んだ際に、国際会議・口頭発表・学術論文の件数も自動で再計算されます。
+
+
+## メンバー詳細ページと卒業生リンク
+
+旧HTMLからメンバー情報を抽出し、`_members/*.md` として個別詳細ページを生成しています。
+
+卒業生も `members.html` から詳細ページへリンクします。卒業生が増えても見やすいように、卒業生セクションは `graduation_year` ごとの折り畳み表示にしています。
+
+主な編集対象：
+
+```text
+_members/*.md
+_data/members.yml
+members.html
+_layouts/member.html
+_includes/member-card.html
+```
+
+卒業生にしたい場合は、該当メンバーのMarkdownまたは `_data/members.yml` で以下を設定します。
+
+```yaml
+status: alumni
+category: alumni
+graduation_year: 2023
+```
+
+現役学生に戻す場合は以下です。
+
+```yaml
+status: current
+category: students
+```

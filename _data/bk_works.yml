@@ -1,0 +1,67 @@
+- id: "icce-tw-2023-fujii"
+  year: 2023
+  type: "international"
+  type_label: "国際会議（査読あり）"
+  title: "Some properties of well-balanced sequences obtained from two logistic maps over integers"
+  authors_text: "H. Fujii, S. Uehara, T. Miyazaki, S. Araki and Y. Nogami"
+  author_ids: ["fujii", "uehara", "miyazaki", "araki", "nogami"]
+  venue: "Proc. of 2023 International Conference on Consumer Electronics - Beitou (ICCE-TW)"
+  details: "E8-1, pp. 1-2, Taipei, Jul. 17-19, 2023."
+  keywords: ["擬似乱数", "ロジスティック写像", "系列"]
+
+- id: "icce-tw-2023-hayashi"
+  year: 2023
+  type: "international"
+  type_label: "国際会議（査読あり）"
+  title: "A study on robustness evaluation of weave filters against reverse image search attacks on CAPTCHA"
+  authors_text: "N. Hayashi, T. Satoh and S. Uehara"
+  author_ids: ["hayashi", "satoh", "uehara"]
+  related_member_ids: ["hayashi"]
+  venue: "Proc. of 2023 International Conference on Consumer Electronics - Beitou (ICCE-TW)"
+  details: "E8-5, pp. 1-2, Taipei, Jul. 17-19, 2023."
+  keywords: ["CAPTCHA", "織物フィルタ", "逆画像検索"]
+
+- id: "icce-tw-2023-maze"
+  year: 2023
+  type: "international"
+  type_label: "国際会議（査読あり）"
+  title: "How to construct pseudorandom bit sequences from mazes by a method digging out walls"
+  authors_text: "T. Miyazaki, S. Araki and S. Uehara"
+  author_ids: ["miyazaki", "araki", "uehara"]
+  venue: "Proc. of 2023 International Conference on Consumer Electronics - Beitou (ICCE-TW)"
+  details: "E8-8, pp. 1-2, Taipei, Jul. 17-19, 2023."
+  keywords: ["迷路", "擬似乱数", "系列"]
+
+- id: "workshop-2023-hayashi"
+  year: 2023
+  type: "oral"
+  type_label: "口頭発表"
+  title: "CAPTCHAへの逆画像検索攻撃を対象とする織物フィルタの耐性評価に関する研究"
+  authors_text: "林 夏生、上原 聡"
+  author_ids: ["hayashi", "uehara"]
+  related_member_ids: ["hayashi"]
+  venue: "第9回有限体理論とその擬似乱数系列生成への応用ワークショップ予稿集"
+  details: "pp. 35-37, 松山, 2023年9月11日-9月12日."
+  keywords: ["CAPTCHA", "画像認証", "織物フィルタ"]
+
+- id: "workshop-2023-fujii"
+  year: 2023
+  type: "oral"
+  type_label: "口頭発表"
+  title: "2つの整数上のカオス写像を用いた擬似乱数系列の乱数性に関する一考察"
+  authors_text: "藤井 博希、森脇 圭祐、宮崎 武、荒木 俊輔、上原 聡、野上 保之"
+  author_ids: ["fujii", "moriwaki", "miyazaki", "araki", "uehara", "nogami"]
+  venue: "第46回情報理論とその応用シンポジウム予稿集"
+  details: "no. 6.1.1, pp. 438-441, 山口, 2023年11月28日-12月1日."
+  keywords: ["カオス写像", "擬似乱数", "乱数性"]
+
+- id: "sita-2022-fujii"
+  year: 2022
+  type: "oral"
+  type_label: "口頭発表"
+  title: "2つの整数上のロジスティック写像を用いたバランスの良い擬似乱数生成法に関する一考察"
+  authors_text: "藤井 博希、上原 聡、宮崎 武、荒木 俊輔、日下 卓也、野上 保之"
+  author_ids: ["fujii", "uehara", "miyazaki", "araki", "kusaka", "nogami"]
+  venue: "第45回情報理論とその応用シンポジウム予稿集"
+  details: "no. 3.3.1, pp. 265-270, 登別, 2022年11月29日-12月2日."
+  keywords: ["ロジスティック写像", "擬似乱数", "系列"]

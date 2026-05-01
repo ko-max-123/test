@@ -3,6 +3,21 @@
   href: "/works.html"
   description: "最近の研究業績"
 
+- key: 2025
+  label: "2025年"
+  href: "/works2025.html"
+  description: "2025年の研究業績"
+
+- key: 2024
+  label: "2024年"
+  href: "/works2024.html"
+  description: "2024年の研究業績"
+
+- key: 2023
+  label: "2023年"
+  href: "/works2023.html"
+  description: "2023年の研究業績"
+
 - key: 2022
   label: "2022年"
   href: "/works2022.html"

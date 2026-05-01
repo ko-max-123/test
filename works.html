@@ -7,31 +7,138 @@ extra_js:
 ---
 {% assign international_works = site.data.works | where: "type", "international" %}
 {% assign oral_works = site.data.works | where: "type", "oral" %}
+{% assign journal_works = site.data.works | where: "type", "journal" %}
 {% assign all_members = site.data.members.professors | concat: site.data.members.students %}
 <script>
   window.UEHARA_AUTHORS = {
     {% for member in all_members %}"{{ member.id }}": "{{ member.name }}"{% unless forloop.last %},{% endunless %}{% endfor %}
   };
 </script>
+
 <main class="pt-20">
   <section class="bg-white border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-6 py-14 md:py-20">
-      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8"><a class="hover:text-primary transition-colors" href="{{ '/' | relative_url }}">Home</a><span class="material-symbols-outlined text-base" aria-hidden="true">chevron_right</span><span class="text-primary font-medium">研究業績</span></nav>
-      <div class="grid lg:grid-cols-[1fr_360px] gap-10 items-end">
-        <div><span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest"><span class="material-symbols-outlined text-base" aria-hidden="true">article</span>Research Works</span><h1 data-works-title class="mt-6 text-4xl md:text-6xl font-black tracking-tight text-lab-navy leading-tight">研究業績</h1><p data-works-description class="mt-5 text-lg text-slate-600 leading-relaxed max-w-3xl">上原研究室に関連する国際会議発表・口頭発表などの研究成果を掲載しています。</p></div>
-        <div class="grid grid-cols-2 gap-4"><div class="rounded-2xl bg-slate-50 border border-slate-200 p-5"><p class="text-3xl font-black text-primary">{{ international_works.size }}</p><p class="mt-1 text-sm font-medium text-slate-600">国際会議<br />（査読あり）</p></div><div class="rounded-2xl bg-slate-50 border border-slate-200 p-5"><p class="text-3xl font-black text-primary">{{ oral_works.size }}</p><p class="mt-1 text-sm font-medium text-slate-600">口頭発表</p></div></div>
+      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+        <a class="hover:text-primary transition-colors" href="{{ '/' | relative_url }}">Home</a>
+        <span class="material-symbols-outlined text-base" aria-hidden="true">chevron_right</span>
+        <span class="text-primary font-medium">研究業績</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1fr_420px] gap-10 items-end">
+        <div>
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+            <span class="material-symbols-outlined text-base" aria-hidden="true">article</span>
+            Research Works
+          </span>
+          <h1 data-works-page-title class="mt-6 text-4xl md:text-6xl font-black tracking-tight text-lab-navy leading-tight">
+            研究業績
+          </h1>
+          <p data-works-page-description class="mt-5 text-lg text-slate-600 leading-relaxed max-w-3xl">
+            上原研究室に関連する国際会議発表・口頭発表などの研究成果を掲載しています。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2{% if journal_works.size > 0 %} md:grid-cols-3{% endif %} gap-4">
+          <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+            <p class="text-3xl font-black text-primary" data-work-count="international">{{ international_works.size }}</p>
+            <p class="mt-1 text-sm font-medium text-slate-600">国際会議<br class="sm:hidden" />（査読あり）</p>
+          </div>
+          <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+            <p class="text-3xl font-black text-primary" data-work-count="oral">{{ oral_works.size }}</p>
+            <p class="mt-1 text-sm font-medium text-slate-600">口頭発表</p>
+          </div>
+          {% if journal_works.size > 0 %}
+          <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+            <p class="text-3xl font-black text-primary" data-work-count="journal">{{ journal_works.size }}</p>
+            <p class="mt-1 text-sm font-medium text-slate-600">学術論文</p>
+          </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   </section>
 
   <section class="max-w-7xl mx-auto px-6 py-10 md:py-14">
-    <div data-filter-notice class="hidden mb-8 rounded-2xl border border-primary/20 bg-white p-5 shadow-sm"><div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"><p data-filter-label class="text-sm font-bold text-slate-700"></p><a href="{{ '/works.html' | relative_url }}" class="text-primary text-sm font-bold hover:underline">すべての研究業績を表示</a></div></div>
-    {% include works-year-nav.html current="recent" wrapper_class="mb-10" %}
-    <div class="mb-12 flex flex-wrap gap-3"><a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#international"><span class="material-symbols-outlined text-lg">public</span>国際会議（査読あり）</a><a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#oral"><span class="material-symbols-outlined text-lg">record_voice_over</span>口頭発表</a></div>
-    <div class="space-y-16">
-      <section id="international" data-work-section class="scroll-mt-28"><div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7 border-b border-slate-200 pb-4"><div><h2 class="text-3xl font-black text-lab-navy">国際会議</h2><p class="mt-2 text-slate-500">査読ありの国際会議発表</p></div><span class="inline-flex w-fit px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold">{{ international_works.size }}件</span></div><div class="grid gap-5">{% for work in international_works %}{% include work-card.html work=work %}{% endfor %}</div></section>
-      <section id="oral" data-work-section class="scroll-mt-28"><div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7 border-b border-slate-200 pb-4"><div><h2 class="text-3xl font-black text-lab-navy">口頭発表</h2><p class="mt-2 text-slate-500">国内シンポジウム・ワークショップ等での発表</p></div><span class="inline-flex w-fit px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">{{ oral_works.size }}件</span></div><div class="grid gap-5">{% for work in oral_works %}{% include work-card.html work=work %}{% endfor %}</div></section>
+    <div data-filter-notice class="hidden mb-8 rounded-2xl border border-primary/20 bg-white p-5 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <p data-filter-label class="text-sm font-bold text-slate-700"></p>
+        <a href="{{ '/works.html' | relative_url }}" class="text-primary text-sm font-bold hover:underline">すべての研究業績を表示</a>
+      </div>
     </div>
+
+    {% include works-year-nav.html current="recent" wrapper_class="mb-10" %}
+
+    <div class="mb-12 flex flex-wrap gap-3">
+      <a data-category-anchor="international" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#international">
+        <span class="material-symbols-outlined text-lg">public</span>
+        国際会議（査読あり）
+      </a>
+      <a data-category-anchor="oral" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#oral">
+        <span class="material-symbols-outlined text-lg">record_voice_over</span>
+        口頭発表
+      </a>
+      {% if journal_works.size > 0 %}
+      <a data-category-anchor="journal" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-primary hover:text-primary transition-colors" href="#journal">
+        <span class="material-symbols-outlined text-lg">description</span>
+        学術論文
+      </a>
+      {% endif %}
+    </div>
+
+    <div data-empty-message class="hidden mb-12 rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
+      <p class="text-lg font-bold text-lab-navy">該当する研究業績はありません。</p>
+      <p class="mt-2 text-sm text-slate-500">条件を変更するか、すべての研究業績を表示してください。</p>
+    </div>
+
+    <div class="space-y-16">
+      {% if journal_works.size > 0 %}
+      <section id="journal" data-work-section="journal" class="scroll-mt-28">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7 border-b border-slate-200 pb-4">
+          <div>
+            <h2 class="text-3xl font-black text-lab-navy">学術論文</h2>
+            <p class="mt-2 text-slate-500">学術論文・論文誌掲載</p>
+          </div>
+          <span data-section-count="journal" class="inline-flex w-fit px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold">{{ journal_works.size }}件</span>
+        </div>
+        <div class="grid gap-5">
+          {% for work in journal_works %}
+            {% include work-card.html work=work %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      <section id="international" data-work-section="international" class="scroll-mt-28">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7 border-b border-slate-200 pb-4">
+          <div>
+            <h2 class="text-3xl font-black text-lab-navy">国際会議</h2>
+            <p class="mt-2 text-slate-500">査読ありの国際会議発表</p>
+          </div>
+          <span data-section-count="international" class="inline-flex w-fit px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold">{{ international_works.size }}件</span>
+        </div>
+        <div class="grid gap-5">
+          {% for work in international_works %}
+            {% include work-card.html work=work %}
+          {% endfor %}
+        </div>
+      </section>
+
+      <section id="oral" data-work-section="oral" class="scroll-mt-28">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7 border-b border-slate-200 pb-4">
+          <div>
+            <h2 class="text-3xl font-black text-lab-navy">口頭発表</h2>
+            <p class="mt-2 text-slate-500">国内シンポジウム・ワークショップ等での発表</p>
+          </div>
+          <span data-section-count="oral" class="inline-flex w-fit px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">{{ oral_works.size }}件</span>
+        </div>
+        <div class="grid gap-5">
+          {% for work in oral_works %}
+            {% include work-card.html work=work %}
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+
     {% include works-year-nav.html current="recent" wrapper_class="mt-16" %}
   </section>
 </main>

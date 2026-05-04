@@ -7,11 +7,11 @@
   affiliation: "共同研究先の大学・研究室名を入力"
   role: "共同研究者"
   research_title: "系列生成・擬似乱数生成に関する共同研究"
-  url: "https://example.com/"
+  url: "/"
 
 - id: "araki"
   name: "荒木 俊輔"
   affiliation: "共同研究先の大学・研究室名を入力"
   role: "共同研究者"
   research_title: "情報セキュリティ・暗号応用に関する共同研究"
-  url: "https://example.com/"
+  url: "/"

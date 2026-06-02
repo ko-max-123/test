@@ -1,13 +1,25 @@
 ---
+layout: member
+title: 桒原 大雅
+name: 桒原 大雅
+kana: クワハラ テイガ
+roman: Kuwahara Teiga
 member_id: kuwahara
-name: "桒原 大雅"
-kana: "クワハラ テイガ"
-grade: "学部4年"
-image: "/assets/images/members/KuwaharaTeiga.svg"
-image_small: "/assets/images/members/KuwaharaTeiga2.svg"
-keywords: ["フラクタル画像圧縮", "画像処理"]
-research_title: "フラクタル画像圧縮"
-research_description: "フラクタル画像圧縮をテーマに、画像処理技術に関する研究に取り組みます。"
-hobbies: ["スマブラ", "冷凍のブルーベリー"]
+grade: 修士1年
+status: current
+category: students
+image: /assets/images/members/kuwahara_teiga.png
+research_title: 擬似乱数系列
+research_description: フラクタル画像圧縮をテーマに、画像処理技術に関する研究に取り組みます。
+hobbies:
+- スマブラ
+- 冷凍のブルーベリー
+keywords:
+- セキュリティ
+- AI
+works_author_ids:
+- kuwahara
+order: 32
 ---
+
 <p>先生からいただいたレモンおいしかった。</p>

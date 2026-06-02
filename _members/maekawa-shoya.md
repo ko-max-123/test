@@ -5,10 +5,10 @@ name: 前川 翔哉
 kana: マエカワ ショウヤ
 roman: Maekawa Shoya
 member_id: maekawa
-grade: 学部４年
+grade: 修士2年
 status: current
 category: students
-image: /assets/images/members/MaekawaShoya.jpg
+image: /assets/images/members/maekawa_shoya.jpg
 research_title: 俺には無限の可能性が秘められている
 hobbies:
 - スポーツ観戦
@@ -17,7 +17,7 @@ keywords:
 - 俺には無限の可能性が秘められている
 works_author_ids:
 - maekawa
-order: 47
+order: 31
 ---
 
 そろそろちゃんと学校行きます

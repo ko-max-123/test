@@ -1,13 +1,27 @@
 ---
+layout: member
+title: 前川 翔哉
+name: 前川 翔哉
+kana: マエカワ ショウヤ
+roman: Maekawa Shoya
 member_id: maekawa
-name: "前川 翔哉"
-kana: "マエカワ ショウヤ"
-grade: "修士1年"
-image: "/assets/images/members/MaekawaShoya.svg"
-image_small: "/assets/images/members/MaekawaShoya2.svg"
-keywords: ["研究テーマ未定", "情報技術"]
-research_title: "研究テーマ検討中"
-research_description: "今後の研究テーマを検討しながら、情報技術に関する研究に取り組みます。"
-hobbies: ["スポーツ観戦", "ツーリング"]
+grade: 修士2年
+status: current
+category: students
+image: /assets/images/members/maekawa_shoya.jpg
+research_title: 俺には無限の可能性が秘められている
+hobbies:
+- スポーツ観戦
+- ツーリング
+keywords:
+- 俺には無限の可能性が秘められている
+works_author_ids:
+- maekawa
+order: 31
 ---
-<p>そろそろちゃんと学校行きます。</p>
+
+そろそろちゃんと学校行きます
+
+## 研究分野
+
+俺には無限の可能性が秘められている

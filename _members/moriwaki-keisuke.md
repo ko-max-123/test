@@ -8,8 +8,7 @@ member_id: moriwaki
 grade: 卒業生
 status: alumni
 category: alumni
-graduation_year: 2023
-image: /assets/images/members/MoriwakiKeisuke.jpg
+graduation_year: 2022
 research_title: 疑似乱数生成、信号処理（心電図）
 hobbies:
 - 旅行
@@ -19,11 +18,7 @@ keywords:
 - 信号処理（心電図）
 works_author_ids:
 - moriwaki
-order: 90
+order: 108
 ---
 
 楽しい大学生活でした。上原研ありがとう！
-
-## 研究分野
-
-疑似乱数生成、信号処理（心電図）

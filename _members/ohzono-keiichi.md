@@ -3,12 +3,11 @@ layout: member
 title: 大園 慶一
 name: 大園 慶一
 kana: オオゾノ ケイイチ
-roman: Ohzono Keiichi
+roman: Ozono Keiichi
 member_id: ohzono
-grade: 学部４年
-status: current
-category: students
-image: /assets/images/members/OhzonoKeichi.jpg
+grade: 卒業生
+status: alumni
+category: alumni
 research_title: カラーQRコードにおける誤り訂正
 hobbies:
 - 音楽を聴く
@@ -17,7 +16,7 @@ keywords:
 - カラーQRコードにおける誤り訂正
 works_author_ids:
 - ohzono
-order: 41
+order: 105
 ---
 
 1日のほとんどの時間は、アルバイト（朝刊配達）と大学で消えます…

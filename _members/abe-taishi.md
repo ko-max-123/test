@@ -5,25 +5,19 @@ name: 安部 泰志
 kana: アベ タイシ
 roman: Abe Taishi
 member_id: abe
-grade: 大学６年生
-status: current
-category: students
-image: /assets/images/members/AbeTaishi.jpg
-research_title: 楕円曲線暗号、イラスト二次創作
+grade: 卒業生
+status: alumni
+category: alumni
+graduation_year: 2024
+research_title: 楕円曲線暗号
 hobbies:
 - 就活
-keywords:
-- 楕円曲線暗号
 - イラスト二次創作
+keywords:
+- セキュリティ
 works_author_ids:
 - abe
-order: 45
+order: 101
 ---
 
-アニメが大好きな引きこもり限界オタクです。
-野球が大大好きな引きこもり限界オタクです。ボカロが大大大好きな引きこもり限界オタクです。
-ちなみにすき焼きは好きじゃない。
-
-## 研究分野
-
-楕円曲線暗号、イラスト二次創作
+アニメが大好きな引きこもり限界オタクです。 野球が大大好きな引きこもり限界オタクです。ボカロが大大大好きな引きこもり限界オタクです。 ちなみにすき焼きは好きじゃない。

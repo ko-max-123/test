@@ -8,7 +8,7 @@ extra_js:
 {% assign international_works = site.data.works | where: "type", "international" %}
 {% assign oral_works = site.data.works | where: "type", "oral" %}
 {% assign journal_works = site.data.works | where: "type", "journal" %}
-{% assign all_members = site.data.members.professors | concat: site.data.members.students %}
+{% assign all_members = site.data.members.professors | concat: site.data.members.students | concat: site.data.members.alumni %}
 <script>
   window.UEHARA_AUTHORS = {
     {% for member in all_members %}"{{ member.id }}": "{{ member.name }}"{% unless forloop.last %},{% endunless %}{% endfor %}

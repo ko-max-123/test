@@ -24,9 +24,9 @@ active_nav: prospective
             上原研究室で扱う研究テーマについて、実装や実験のイメージをつかむためのデモページです。
           </p>
           <div class="flex flex-wrap gap-3 pt-2">
-            <a href="{{ '/works.html' | relative_url }}" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary/90 transition-colors">
-              研究業績を見る
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            <a href="https://crypto-demo-realtime.vercel.app/?role=sender&amp;room=demo-room" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary/90 transition-colors">
+              暗号デモを開く
+              <span class="material-symbols-outlined text-base">open_in_new</span>
             </a>
             <a href="{{ '/prospective_students.html' | relative_url }}" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors">
               配属案内へ戻る
@@ -53,6 +53,34 @@ active_nav: prospective
 
   <section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-3xl font-bold mb-6 border-l-4 border-primary pl-6">公開中のデモ</h2>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          研究で扱う仕組みを、実際に動かしながら確認できます。
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-20">
+        <article class="group bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:shadow-xl transition-all">
+          <div class="flex items-start gap-6">
+            <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-4xl">encrypted</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Crypto Demo</p>
+              <h3 class="text-xl font-bold mb-3">リアルタイム暗号デモ</h3>
+              <p class="text-slate-600 leading-relaxed mb-5">
+                送信者としてデモルームに入り、暗号通信の動きを確認できるデモです。
+              </p>
+              <a class="inline-flex items-center gap-2 rounded-full bg-lab-navy px-5 py-2.5 text-sm font-bold text-white hover:bg-slate-800 transition-colors" href="https://crypto-demo-realtime.vercel.app/?role=sender&amp;room=demo-room" target="_blank" rel="noopener noreferrer">
+                デモを開く
+                <span class="material-symbols-outlined text-base">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
       <div class="max-w-3xl mb-12">
         <h2 class="text-3xl font-bold mb-6 border-l-4 border-primary pl-6">デモで触れられるテーマ</h2>
         <p class="text-lg text-slate-600 leading-relaxed">

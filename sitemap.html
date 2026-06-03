@@ -1,10 +1,11 @@
 ---
-layout: page
+layout: default
 title: "サイトマップ"
 description: "上原研究室Webサイトの主要ページ一覧です。"
 active_nav: sitemap
 ---
 
+<main class="pt-20">
 <section class="bg-white">
   <div class="max-w-7xl mx-auto px-6 py-14 md:py-20">
     <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
@@ -128,15 +129,21 @@ active_nav: sitemap
       </div>
 
       {% assign sorted_members = site.members | sort: 'order' %}
+      {% assign rendered_member_ids = "|" %}
       {% if sorted_members.size > 0 %}
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {% for member in sorted_members %}
+        {% assign member_id = member.member_id | default: member.name %}
+        {% assign member_token = member_id | append: "|" | prepend: "|" %}
+        {% unless rendered_member_ids contains member_token %}
         <a class="rounded-2xl border border-slate-100 bg-slate-50 p-5 hover:border-primary hover:bg-white hover:shadow-sm transition-all" href="{{ member.url | relative_url }}">
           <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">{{ member.grade | default: member.role }}</p>
           <h3 class="text-lg font-bold text-lab-navy">{{ member.name }}</h3>
           {% if member.kana %}<p class="text-sm text-slate-500 mt-1">{{ member.kana }}</p>{% endif %}
           {% if member.research_title %}<p class="text-sm text-slate-600 leading-relaxed mt-3">{{ member.research_title }}</p>{% endif %}
         </a>
+        {% assign rendered_member_ids = rendered_member_ids | append: member_id | append: "|" %}
+        {% endunless %}
         {% endfor %}
       </div>
       {% else %}
@@ -173,3 +180,4 @@ active_nav: sitemap
 
 </div>
 </section>
+</main>

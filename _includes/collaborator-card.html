@@ -11,7 +11,7 @@
     <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 text-primary text-[10px] font-bold shadow-sm">
       共同研究者
     </div>
-    <span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-600">handshake</span>
+    <span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-600" aria-hidden="true">handshake</span>
   </div>
 
   <div class="p-4 text-center">
@@ -22,7 +22,7 @@
     {% if collaborator_url and collaborator_url != "" %}
       <span class="mt-4 inline-flex items-center justify-center gap-1 text-xs font-bold text-primary group-hover:gap-2 transition-all">
         外部ページへ
-        <span class="material-symbols-outlined text-sm">open_in_new</span>
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span>
       </span>
     {% endif %}
   </div>

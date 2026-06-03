@@ -20,10 +20,10 @@ layout: default
             {% if page.image %}
               <img src="{{ page.image | relative_url }}" alt="{{ page.name }}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div class="hidden w-full h-full items-center justify-center">
-                <span class="material-symbols-outlined text-7xl text-slate-300">person</span>
+                <span class="material-symbols-outlined text-7xl text-slate-300" aria-hidden="true">person</span>
               </div>
             {% else %}
-              <span class="material-symbols-outlined text-7xl text-slate-300">person</span>
+              <span class="material-symbols-outlined text-7xl text-slate-300" aria-hidden="true">person</span>
             {% endif %}
           </div>
 
@@ -41,7 +41,7 @@ layout: default
 
             <div class="mt-6 space-y-3 text-sm">
               <div class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg">school</span>
+                <span class="material-symbols-outlined text-primary text-lg" aria-hidden="true">school</span>
                 <div>
                   <p class="font-bold text-slate-700">所属区分</p>
                   <p class="text-slate-500">
@@ -56,7 +56,7 @@ layout: default
 
               {% if page.hobbies and page.hobbies.size > 0 %}
               <div class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg">interests</span>
+                <span class="material-symbols-outlined text-primary text-lg" aria-hidden="true">interests</span>
                 <div>
                   <p class="font-bold text-slate-700">趣味</p>
                   <p class="text-slate-500">{{ page.hobbies | join: "、" }}</p>
@@ -67,11 +67,11 @@ layout: default
 
             <div class="mt-7 flex flex-col gap-3">
               <a href="{{ '/members.html' | relative_url }}" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 hover:border-primary hover:text-primary transition-all">
-                <span class="material-symbols-outlined text-lg">arrow_back</span>
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_back</span>
                 メンバー一覧へ
               </a>
               <a href="{{ '/works.html' | relative_url }}?author={{ page.member_id }}" class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white hover:bg-lab-navy transition-all">
-                <span class="material-symbols-outlined text-lg">article</span>
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">article</span>
                 研究業績を見る
               </a>
             </div>
@@ -108,7 +108,7 @@ layout: default
               </div>
               <a href="{{ '/works.html' | relative_url }}?author={{ page.member_id }}" class="text-primary text-sm font-bold hover:underline inline-flex items-center gap-1">
                 一覧で見る
-                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
               </a>
             </div>
 

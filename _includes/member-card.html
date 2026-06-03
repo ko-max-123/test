@@ -5,10 +5,10 @@
     {% if include.image %}
       <img src="{{ include.image | relative_url }}" alt="{{ include.name }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="hidden w-full h-full items-center justify-center">
-        <span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-600">person</span>
+        <span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-600" aria-hidden="true">person</span>
       </div>
     {% else %}
-      <span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-600">person</span>
+      <span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-600" aria-hidden="true">person</span>
     {% endif %}
   </div>
   <div class="p-4 text-center">

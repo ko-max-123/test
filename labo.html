@@ -8,7 +8,7 @@ active_nav: labo
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
         <a class="hover:text-primary transition-colors" href="{{ '/' | relative_url }}">Home</a>
-        <span class="material-symbols-outlined text-xs">chevron_right</span>
+        <span class="material-symbols-outlined text-xs" aria-hidden="true">chevron_right</span>
         <span class="text-primary font-medium dark:text-accent">研究室紹介</span>
       </nav>
       <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -23,7 +23,7 @@ active_nav: labo
         <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl abstract-lab-bg">
           <div class="absolute inset-0 bg-slate-950/10"></div>
           <div class="absolute inset-0 p-8 flex flex-col justify-between">
-            <div class="flex justify-end gap-3 text-white/80"><span class="material-symbols-outlined text-5xl">functions</span><span class="material-symbols-outlined text-5xl">security</span><span class="material-symbols-outlined text-5xl">hub</span></div>
+            <div class="flex justify-end gap-3 text-white/80"><span class="material-symbols-outlined text-5xl" aria-hidden="true">functions</span><span class="material-symbols-outlined text-5xl" aria-hidden="true">security</span><span class="material-symbols-outlined text-5xl" aria-hidden="true">hub</span></div>
             <div class="bg-white/10 backdrop-blur rounded-2xl border border-white/20 p-6 text-white max-w-md">
               <p class="text-sm uppercase tracking-[0.25em] text-white/70 mb-3">Research Fields</p>
               <p class="text-2xl font-bold leading-relaxed">{{ site.data.lab.hero.fields }}</p>
@@ -44,7 +44,7 @@ active_nav: labo
         <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {% for value in site.data.lab.values %}
             <div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
-              <span class="material-symbols-outlined text-primary text-3xl mb-4">{{ value.icon }}</span>
+              <span class="material-symbols-outlined text-primary text-3xl mb-4" aria-hidden="true">{{ value.icon }}</span>
               <h3 class="font-bold text-slate-900 dark:text-white mb-2">{{ value.title }}</h3>
               <p class="text-sm text-slate-500 leading-relaxed">{{ value.text }}</p>
             </div>
@@ -65,11 +65,11 @@ active_nav: labo
         {% for theme in site.data.lab.themes %}
           <div class="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-700">
             <div class="flex items-start gap-6">
-              <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-4xl">{{ theme.icon }}</span></div>
+              <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-4xl" aria-hidden="true">{{ theme.icon }}</span></div>
               <div>
                 <h3 class="text-xl font-bold mb-3 dark:text-white">{{ theme.title }}</h3>
                 <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">{{ theme.text }}</p>
-                <a class="text-primary dark:text-accent font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="{{ '/works.html' | relative_url }}">関連する研究業績を見る <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                <a class="text-primary dark:text-accent font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="{{ '/works.html' | relative_url }}">関連する研究業績を見る <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span></a>
               </div>
             </div>
           </div>
@@ -83,13 +83,13 @@ active_nav: labo
       <div class="flex flex-col lg:flex-row gap-16 items-center">
         <div class="w-full lg:w-1/2 order-2 lg:order-1">
           <div class="grid grid-cols-2 gap-4">
-            <div class="space-y-4"><div class="rounded-xl w-full h-48 shadow-md bg-slate-100 p-6 flex flex-col justify-between"><span class="material-symbols-outlined text-primary text-5xl">menu_book</span><p class="font-bold text-slate-800">文献調査</p></div><div class="rounded-xl w-full h-64 shadow-md bg-primary text-white p-6 flex flex-col justify-between"><span class="material-symbols-outlined text-5xl">code_blocks</span><p class="font-bold">実装・実験</p></div></div>
-            <div class="space-y-4 pt-8"><div class="rounded-xl w-full h-64 shadow-md bg-slate-900 text-white p-6 flex flex-col justify-between"><span class="material-symbols-outlined text-5xl">analytics</span><p class="font-bold">分析・可視化</p></div><div class="rounded-xl w-full h-48 shadow-md bg-slate-100 p-6 flex flex-col justify-between"><span class="material-symbols-outlined text-accent text-5xl">co_present</span><p class="font-bold text-slate-800">発表・議論</p></div></div>
+            <div class="space-y-4"><div class="rounded-xl w-full h-48 shadow-md bg-slate-100 p-6 flex flex-col justify-between"><span class="material-symbols-outlined text-primary text-5xl" aria-hidden="true">menu_book</span><p class="font-bold text-slate-800">文献調査</p></div><div class="rounded-xl w-full h-64 shadow-md bg-primary text-white p-6 flex flex-col justify-between"><span class="material-symbols-outlined text-5xl" aria-hidden="true">code_blocks</span><p class="font-bold">実装・実験</p></div></div>
+            <div class="space-y-4 pt-8"><div class="rounded-xl w-full h-64 shadow-md bg-slate-900 text-white p-6 flex flex-col justify-between"><span class="material-symbols-outlined text-5xl" aria-hidden="true">analytics</span><p class="font-bold">分析・可視化</p></div><div class="rounded-xl w-full h-48 shadow-md bg-slate-100 p-6 flex flex-col justify-between"><span class="material-symbols-outlined text-accent text-5xl" aria-hidden="true">co_present</span><p class="font-bold text-slate-800">発表・議論</p></div></div>
           </div>
         </div>
         <div class="w-full lg:w-1/2 order-1 lg:order-2 space-y-8">
           <div><h2 class="text-3xl font-bold mb-6 dark:text-white">研究の進め方</h2><p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">学生の興味や研究テーマに応じて、文献調査、実装、実験、結果の分析を段階的に進めていきます。</p><p class="text-slate-600 dark:text-slate-400 leading-relaxed">プログラミング経験が少ない場合でも、必要な技術を学びながら、自分の研究に必要な力を身につけていくことを重視しています。</p></div>
-          <ul class="space-y-4"><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="font-medium text-slate-800">文献調査と先行研究の整理</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="font-medium text-slate-800">プログラムによる実装・実験</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="font-medium text-slate-800">結果の可視化とデータ分析</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="font-medium text-slate-800">ゼミでの発表・卒業研究としてのまとめ</span></li></ul>
+          <ul class="space-y-4"><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" aria-hidden="true">check_circle</span><span class="font-medium text-slate-800">文献調査と先行研究の整理</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" aria-hidden="true">check_circle</span><span class="font-medium text-slate-800">プログラムによる実装・実験</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" aria-hidden="true">check_circle</span><span class="font-medium text-slate-800">結果の可視化とデータ分析</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" aria-hidden="true">check_circle</span><span class="font-medium text-slate-800">ゼミでの発表・卒業研究としてのまとめ</span></li></ul>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@ active_nav: labo
       <div class="rounded-2xl bg-lab-navy text-white p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8 overflow-hidden relative">
         <div class="absolute -right-20 -top-20 w-72 h-72 bg-primary/40 rounded-full blur-3xl"></div>
         <div class="relative max-w-3xl"><p class="text-accent font-bold uppercase tracking-widest text-sm mb-3">For Prospective Students</p><h2 class="text-3xl font-bold mb-4">配属を希望する学生の方へ</h2><p class="text-slate-300 leading-relaxed">情報理論、符号理論、擬似乱数生成、情報セキュリティなどに関心を持つ学生を歓迎します。最初から専門知識が十分である必要はありません。</p></div>
-        <a href="{{ '/prospective_students.html' | relative_url }}" class="relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-lab-navy font-bold hover:bg-slate-100 transition-colors whitespace-nowrap">配属希望者向け案内 <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+        <a href="{{ '/prospective_students.html' | relative_url }}" class="relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-lab-navy font-bold hover:bg-slate-100 transition-colors whitespace-nowrap">配属希望者向け案内 <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span></a>
       </div>
     </div>
   </section>

@@ -7,9 +7,9 @@ layout: default
       <div class="{% if page.image %}max-w-7xl{% else %}max-w-5xl{% endif %} mx-auto px-6 py-14 md:py-20">
         <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
           <a class="hover:text-primary transition-colors" href="{{ '/' | relative_url }}">Home</a>
-          <span class="material-symbols-outlined text-base">chevron_right</span>
+          <span class="material-symbols-outlined text-base" aria-hidden="true">chevron_right</span>
           <a class="hover:text-primary transition-colors" href="{{ '/news.html' | relative_url }}">ニュース</a>
-          <span class="material-symbols-outlined text-base">chevron_right</span>
+          <span class="material-symbols-outlined text-base" aria-hidden="true">chevron_right</span>
           <span class="text-primary font-medium">{{ page.title }}</span>
         </nav>
 
@@ -55,7 +55,7 @@ layout: default
                 <div><dt class="text-slate-400 font-bold">Date</dt><dd class="text-slate-700 mt-1">{{ page.date | date: "%Y.%m.%d" }}</dd></div>
                 <div><dt class="text-slate-400 font-bold">Category</dt><dd class="text-slate-700 mt-1">{{ page.category }}</dd></div>
               </dl>
-              <a class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-lab-navy px-5 py-3 text-sm font-bold text-white hover:bg-slate-800 transition-colors" href="{{ '/news.html' | relative_url }}"><span class="material-symbols-outlined text-lg">arrow_back</span>ニュース一覧へ</a>
+              <a class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-lab-navy px-5 py-3 text-sm font-bold text-white hover:bg-slate-800 transition-colors" href="{{ '/news.html' | relative_url }}"><span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_back</span>ニュース一覧へ</a>
             </div>
           </aside>
         </div>

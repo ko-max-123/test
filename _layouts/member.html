@@ -5,7 +5,7 @@ layout: default
 {% assign related_works = site.data.works | where_exp: "work", "work.author_ids contains member_id" %}
 <main class="pt-20">
   <section class="bg-white border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-6 py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-6 py-8 md:py-10">
       <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-slate-500 mb-8">
         <a class="hover:text-primary transition-colors" href="{{ '/' | relative_url }}">Home</a>
         <span class="material-symbols-outlined text-base" aria-hidden="true">chevron_right</span>

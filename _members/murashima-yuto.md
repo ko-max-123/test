@@ -2,22 +2,26 @@
 layout: member
 title: 村島 悠斗
 name: 村島 悠斗
-kana: ムラシマ ユウト
+kana: Murashima Yuto
+roman: Murashima Yuto
 member_id: murashima
-grade: 学部４年
+grade: 卒業生
 status: alumni
-alumni_type: 学部卒
 category: alumni
-research_title: 人間の補完能力を利用したCAPTCHAについて
+image: /assets/images/members/MurashimaYuki.jpg
+graduation_year: 2024
+alumni_type: 学部卒
+research_title: 人間の補完能力によるCAPTCHA
+hobbies:
+- ゲーム（PC, スマホ）
+- 散歩
+- 読書
 keywords:
-- 人間の補完能力を利用したCAPTCHAについて
+- CAPTCHA
+- タイポグリミア
 works_author_ids:
 - murashima
 order: 40
 ---
 
 優しい先輩や先生の指導のもと研究に取り組んでいます。一緒に頑張りましょう！
-
-## 研究分野
-
-人間の補完能力を利用したCAPTCHAについて

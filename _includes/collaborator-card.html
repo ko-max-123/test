@@ -11,7 +11,12 @@
     <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 text-primary text-[10px] font-bold shadow-sm">
       共同研究者
     </div>
-    <span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-600" aria-hidden="true">handshake</span>
+    {% if include.image %}
+      <img src="{{ include.image | relative_url }}" alt="{{ include.name }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="material-symbols-outlined hidden text-6xl text-slate-300 dark:text-slate-600" aria-hidden="true">handshake</span>
+    {% else %}
+      <span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-600" aria-hidden="true">handshake</span>
+    {% endif %}
   </div>
 
   <div class="p-4 text-center">

@@ -9,34 +9,35 @@ professors:
   research_title: 情報代数・疑似乱数系列・誤り訂正情報セキュリティ
   summary: 情報代数、疑似乱数系列、誤り訂正情報セキュリティに関する研究を行っています。
 students:
-- id: hayashi
-  name: 林 夏生
-  kana: ハヤシ ナツオ
-  grade: 博士３年
-  category: students
-  status: current
-  image: /assets/images/members/HayashiNatsuo.svg
-  research_title: 「画像分析攻撃に耐性のある画像認証方式の提案」 便利で強いCAPTCHA(人間かプログラムか見分けるテスト)を作るために、画像とAIの研究をしています。
-  order: 30
 - id: maekawa
   name: 前川 翔哉
-  kana: マエカワ ショウヤ
+  kana: Maekawa Shoya
   roman: Maekawa Shoya
   role: 学生
   grade: 修士2年
   category: students
   status: current
-  image: /assets/images/members/maekawa_shoya.jpg
+  image: /assets/images/members/MaekawaShoya.jpg
   keywords:
-  - 俺には無限の可能性が秘められている
-  research_title: 俺には無限の可能性が秘められている
+  - 擬似乱数生成
+  - 乱数評価
+  - ビット拡散
+  research_title: 擬似乱数の攪拌処理
+  summary: '大学院で擬似乱数系列生成について研究しています。
+
+    C言語でプログラムを書きながら、よりランダムに見える系列を作る方法を考えています。
+
+    研究以外では、筋トレをしたり、友達と話したりして過ごすことが多いです。'
   hobbies:
+  - スポーツ全般
+  - 筋トレ
+  - 麻雀
   - スポーツ観戦
-  - ツーリング
+  - 蟲神器
   order: 31
 - id: kuwahara
   name: 桒原 大雅
-  kana: クワハラ テイガ
+  kana: Kuwahara Teiga
   roman: Kuwahara Teiga
   role: 学生
   grade: 修士1年
@@ -44,13 +45,13 @@ students:
   status: current
   image: /assets/images/members/kuwahara_teiga.png
   keywords:
-  - セキュリティ
-  - AI
-  research_title: 擬似乱数系列
-  summary: フラクタル画像圧縮をテーマに、画像処理技術に関する研究に取り組みます。
+  - 攪拌処理
+  - 乱数評価
+  - 擬似乱数生成
+  research_title: 擬似乱数の攪拌処理
+  summary: 最近はChaCha20-based PRNGに興味を持っていて，実装を試したりしながら楽しく勉強しています。気になったことをすぐ調べたくなるタイプなので，研究室でもよく実装したりしています。研究室にいる時間も長めで，雑談したりコーヒーを飲んだりしながら毎日楽しく過ごしています☕
   hobbies:
-  - スマブラ
-  - 冷凍のブルーベリー
+  - 新作お菓子調査
   order: 32
 - id: sekigawa_kento
   name: 関川 謙人
@@ -62,13 +63,14 @@ students:
   status: current
   image: /assets/images/members/sekigawa_kento.jpeg
   keywords:
-  - セキュリティ
-  - ネットワーク
-  research_title: ブロックチェーン
+  - 著作権保護
+  - 分散システム
+  research_title: 「ブロックチェーン」
+  summary: 技術を追い求めることが好きです。今はBlockchainとAIがマイブームです。多種多様な話題にオープンかつ積極的に人との交流を楽しんでます。Linked Inもあるのでぜひ交流しましょう!
   hobbies:
-  - プログラミング
-  - AI遊び
+  - 技術全般
   - 雑談
+  - 冒険  etc…
   url: https://www.linkedin.com/in/sekigawakento-hanzon
   order: 33
 - id: matsuoka_ryohei
@@ -81,10 +83,13 @@ students:
   status: current
   image: /assets/images/members/matsuoka_ryohei.jpg
   keywords:
-  - セキュリティ
-  research_title: 符号
+  - 誤り訂正符号
+  - 最小距離の限界式
+  research_title: 巡回符号の性能評価
+  summary: 長距離散歩が好き。夏が嫌い。
   hobbies:
   - 野球観戦
+  - 目的のない散歩
   order: 34
 - id: taniguchi_shunya
   name: 谷口 颯彩
@@ -94,13 +99,18 @@ students:
   grade: 学部４年
   category: students
   status: current
+  keywords:
+  - 電子透かし
+  - 災害情報
+  research_title: 「音声の電子透かし」
+  summary: 懸垂が得意です。
   hobbies:
   - 筋トレ
   - 読書
   order: 35
 - id: fujiki
   name: 藤木 弘也
-  kana: フジキ ヒロヤ
+  kana: Fujiki Hiroya
   roman: Fujiki Hiroya
   role: 学生
   grade: 修士1年
@@ -109,14 +119,15 @@ students:
   image: /assets/images/members/fujiki_hiroya.jpg
   keywords:
   - 楕円曲線暗号
-  - セキュリティ
-  - 公開鍵暗号
-  research_title: ペアリング
-  summary: 暗号、符号、数学的な理論を扱う研究テーマに取り組みます。
+  - ペアリング Type1-3
+  - 安全性評価
+  research_title: ペアリング暗号のType別有効性
+  summary: 北九大で一番明るい男 藤木弘也です。筋肉の成長を見守るのが日課です。数学も好きです。何でも好きになります。趣味を共有したい人、待ってます。
   hobbies:
   - 筋トレ
-  - ゲーム
+  - 数学
   - スポーツ全般
+  - カラオケ
   order: 36
 - id: ariyoshi_aoi
   name: 有吉 葵
@@ -127,6 +138,14 @@ students:
   category: students
   status: current
   image: /assets/images/members/ariyoshi_aoi.jpg
+  keywords:
+  - デジタル署名
+  - 認証
+  research_title: 「楕円曲線暗号」
+  summary: 優しい方々と研究頑張ろうとしています。万年長袖だけど気にせんでください
+  hobbies:
+  - 猫
+  - ゲーム
   order: 37
 - id: nakashima_ryo
   name: 中島 涼
@@ -137,6 +156,15 @@ students:
   category: students
   status: current
   image: /assets/images/members/nakashima_ryo.jpg
+  keywords:
+  - CAPTCHA
+  - 画像処理
+  - 文字認証
+  research_title: 「CAPTCHA」
+  summary: ネットワークとセキュリティに興味があります。
+  hobbies:
+  - ドラマ映画
+  - 友達とチョコザップ
   order: 38
 - id: miyagi_risei
   name: 宮城 理聖
@@ -147,51 +175,52 @@ students:
   category: students
   status: current
   image: /assets/images/members/miyagi_risei.jpg
-  order: 39
-alumni:
-- id: ito_kosuke
-  name: 伊藤 滉祐
-  kana: Ito Kosuke
-  roman: Ito Kosuke
-  role: 卒業生
-  grade: 卒業生
-  category: alumni
-  status: alumni
-  graduation_year: 2025
-  alumni_type: 学部卒
-  research_title: 電子透かし
-  summary: 温泉好きです。
+  keywords:
+  - 楕円曲線暗号の解読
+  research_title: 「楕円曲線暗号」
+  summary: わすれっぽい。アメリカンドッグと音楽がともだち。
   hobbies:
-  - 温泉めぐり
-  order: 106
-- id: moroka_miki
-  name: 諸岡 美紀
-  kana: Moroka Miki
-  roman: Moroka Miki
-  role: 卒業生
-  grade: 卒業生
-  category: alumni
-  status: alumni
-  graduation_year: 2025
-  alumni_type: 学部卒
-  research_title: QRコード
-  summary: 最近は毎朝4km歩いています
-  hobbies:
+  - 音楽
+  - 映画
+  - 本
+  - 睡眠
   - 散歩
-  order: 109
+  order: 39
+- id: hayashi
+  name: 林 夏生
+  kana: Hayashi Natsuo
+  roman: Hayashi Natsuo
+  role: 研究補助員
+  grade: 研究補助員
+  category: students
+  status: current
+  image: /assets/images/members/HayashiNatsuo.jpg
+  research_title: ｢画像分析攻撃に耐性のある画像認証方式の提案｣便利で強いCAPTCHA(人間かプログラムか見分けるテスト)を作るために、画像とAIの研究をしています。
+  summary: 別の研究室からやってきました。2026年度で18年生です。狂ってますね★ コーヒーを入れて皆にふるまったり研究や人生で困っている人の相談をしたりと、研究室のお母さん役をしています。
+  hobbies:
+  - パソコン全般(作る遊ぶ壊す修理)
+  - ゲーム
+  - バイク
+  - 食事
+  - 二次元美少女鑑賞
+  - その他色々・・・
+  order: 30
+alumni:
 - id: abe
   name: 安部 泰志
-  kana: アベ タイシ
+  kana: Abe Taishi
   roman: Abe Taishi
   role: 卒業生
   grade: 卒業生
   category: alumni
   status: alumni
+  image: /assets/images/members/AbeTaishi.jpg
   graduation_year: 2024
-  alumni_type: 学部卒
+  alumni_type: 修士修了
   keywords:
-  - セキュリティ
-  research_title: 楕円曲線暗号
+  - 楕円曲線
+  - 座標系に対する演算コスト
+  research_title: 楕円曲線暗号の計算コスト
   summary: アニメが大好きな引きこもり限界オタクです。 野球が大大好きな引きこもり限界オタクです。ボカロが大大大好きな引きこもり限界オタクです。 ちなみにすき焼きは好きじゃない。
   hobbies:
   - 就活
@@ -199,18 +228,20 @@ alumni:
   order: 101
 - id: sakai
   name: 坂井 昂
-  kana: サカイ タカシ
+  kana: Sakai Takashi
   roman: Sakai Takashi
   role: 卒業生
   grade: 卒業生
   category: alumni
   status: alumni
+  image: /assets/images/members/SakaiTakashi.jpg
   graduation_year: 2024
-  alumni_type: 学部卒
+  alumni_type: 修士修了
   keywords:
   - 画像符号化
   - 画像処理
-  research_title: フラクタル画像圧縮
+  - k-means法
+  research_title: フラクタル画像圧縮の高効率符号化
   summary: '上原研究室はメンバー間の仲が非常にいいのが魅力です。先輩方からは研究や就活などのアドバイスをいただけたり、同級生とも気兼ねなく話して楽しみながら研究生活を送っています。
 
     楽しいだけではなく先生方のアドバイスや研究活動を通して、学ぶこともあり、自己成長にもつながります。'
@@ -222,148 +253,165 @@ alumni:
   order: 102
 - id: matsushita
   name: 松下 正一郎
-  kana: ﾏﾂｼﾀ ｼｮｳｲﾁﾛｳ
+  kana: Matsushita Shoichiro
   roman: Matsushita Shoichiro
   role: 卒業生
   grade: 卒業生
   category: alumni
   status: alumni
+  image: /assets/images/members/MatsushitaShoichiro.jpg
   graduation_year: 2024
-  alumni_type: 学部卒
+  alumni_type: 修士修了
   keywords:
-  - ゴルフ
-  - 社長
-  - 人付き合い
-  - QRコード
-  research_title: QRコード
+  - 誤り訂正符号
+  - Sum-product復号法
+  research_title: LDPC符号の復号効率
+  summary: 考え中…
   hobbies:
   - ゴルフ
   - 社長
   - 人付き合い
   order: 103
-- id: asada
-  name: 浅田 雄道
-  kana: アサダ タケミチ
-  roman: Asada Takemichi
-  role: 卒業生
-  grade: 卒業生
-  category: alumni
-  status: alumni
-  graduation_year: 2024
-  alumni_type: 学部卒
-  keywords:
-  - セキュリティ
-  research_title: 秘密鍵共有
-  summary: '上原研究室はとてもアットホームな研究室です！
-
-    先輩はみんな優しくて、僕たち後輩のことを大切にしてくれます！上原研最高^_^'
-  hobbies:
-  - アウトドア
-  order: 107
 - id: fujii
   name: 藤井 博希
-  kana: フジイ ヒロキ
+  kana: Fujii Hiroki
   roman: Fujii Hiroki
   role: 卒業生
   grade: 卒業生
   category: alumni
   status: alumni
+  image: /assets/images/members/FujiiHiroki.jpg
   graduation_year: 2022
-  alumni_type: 学部卒
+  alumni_type: 修士修了
   keywords:
-  - 疑似乱数系列
-  research_title: 疑似乱数系列
+  - 擬似乱数生成
+  - 攪拌処理
+  - 乱数評価
+  - 小型デバイス
+  research_title: 攪拌処理によるロジスティック写像の乱数性
   summary: 上原先生ありがとう、林さん早く卒業してください。
   hobbies:
   - ツムツム
   - HIPHOP
   - ダンス
   order: 104
-- id: moriwaki
-  name: 森脇 圭祐
-  kana: モリワキ ケイスケ
-  roman: Moriwaki Keisuke
-  role: 卒業生
-  grade: 卒業生
-  category: alumni
-  status: alumni
-  graduation_year: 2022
-  alumni_type: 学部卒
-  keywords:
-  - 疑似乱数系列
-  - 信号処理（心電図）
-  research_title: 疑似乱数系列、信号処理（心電図）
-  summary: 楽しい大学生活でした。上原研ありがとう！
-  hobbies:
-  - 旅行
-  - ダンス
-  order: 108
-- id: kanzaki
-  name: 神崎 蓮
-  kana: カンザキ レン
-  roman: Kanzaki Ren
-  role: 卒業生
-  grade: 卒業生
-  category: alumni
-  status: alumni
-  graduation_year: 2022
-  alumni_type: 学部卒
-  keywords:
-  - モザイク画像を用いたパスワード認証のセキュリティ強化
-  research_title: モザイク画像を用いたパスワード認証のセキュリティ強化
-  summary: どんなに君がセキュリティを高めても、僕からは突破される。それがモザイクのようにモヤのかかった恋になることが分かっていても、ね。
-  hobbies:
-  - 街中の寂しさに溺れたハートを修理すること
-  order: 110
-- id: murashima
-  name: 村島 悠斗
-  kana: ムラシマ ユウト
-  grade: 学部４年
-  category: alumni
-  status: alumni
-  alumni_type: 学部卒
-  keywords:
-  - 人間の補完能力を利用したCAPTCHAについて
-  research_title: 人間の補完能力を利用したCAPTCHAについて
-  order: 40
-- id: sakamoto
-  name: 坂元 秀成
-  kana: サカモト ヒデナリ
-  grade: 修士１年
-  category: alumni
-  status: alumni
-  alumni_type: 修士修了
-  keywords:
-  - 擬似乱数系列の構成法と性能評価
-  research_title: 擬似乱数系列の構成法と性能評価
-  order: 43
-- id: yamauchi
-  name: 山内 蓮太
-  kana: ヤマウチ レンタ
-  grade: 修士１年
-  category: alumni
-  status: alumni
-  alumni_type: 修士修了
-  keywords:
-  - 楕円曲線を用いた公開鍵暗号と疑似乱数系列
-  research_title: 楕円曲線を用いた公開鍵暗号と疑似乱数系列
-  order: 44
 - id: ohzono
   name: 大園 慶一
-  kana: オオゾノ ケイイチ
+  kana: Ozono Keiichi
   roman: Ozono Keiichi
   role: 卒業生
   grade: 卒業生
   category: alumni
   status: alumni
+  image: /assets/images/members/OhzonoKeichi.jpg
+  graduation_year: 2024
   alumni_type: 学部卒
   keywords:
-  - カラーQRコードにおける誤り訂正
+  - カラーQRコード
+  - Polar符号
   research_title: カラーQRコードにおける誤り訂正
+  summary: 1日のほとんどの時間は、アルバイト（朝刊配達）と大学で消えます…
   hobbies:
   - 音楽を聴く
   - ノンアルビールを飲む
   order: 105
+- id: ito_kosuke
+  name: 伊藤 滉祐
+  kana: Ito Kosuke
+  roman: Ito Kosuke
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2025
+  alumni_type: 学部卒
+  keywords:
+  - 電子透かし
+  - エコー拡散法
+  research_title: 電子透かしを用いた音声放送による災害情報
+  summary: 温泉好きです。
+  hobbies:
+  - 温泉めぐり
+  order: 106
+- id: asada
+  name: 浅田 雄道
+  kana: Asada Takemichi
+  roman: Asada Takemichi
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  image: /assets/images/members/AsadaTakemichi.jpg
+  graduation_year: 2024
+  alumni_type: 学部卒
+  keywords:
+  - McEliece暗号
+  - 耐量子暗号
+  research_title: McEliece暗号による鍵共有法
+  summary: '上原研究室はとてもアットホームな研究室です！
+
+    先輩はみんな優しくて、僕たち後輩のことを大切にしてくれます！上原研最高^_^'
+  hobbies:
+  - アウトドア
+  order: 107
+- id: moriwaki
+  name: 森脇 圭祐
+  kana: Moriwaki Keisuke
+  roman: Moriwaki Keisuke
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  image: /assets/images/members/MoriwakiKeisuke.jpg
+  graduation_year: 2022
+  alumni_type: 修士修了
+  keywords:
+  - 小型デバイス
+  - 擬似乱数生成
+  - 乱数評価
+  research_title: バイタル情報の秘匿
+  summary: 楽しい大学生活でした。上原研ありがとう！
+  hobbies:
+  - 旅行
+  - ダンス
+  order: 108
+- id: moroka_miki
+  name: 諸岡 美紀
+  kana: Moroka Miki
+  roman: Moroka Miki
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2025
+  alumni_type: 学部卒
+  keywords:
+  - QRコード
+  - 誤り訂正符号
+  research_title: ホログラムQRコード
+  summary: 最近は毎朝4km歩いています
+  hobbies:
+  - 散歩
+  order: 109
+- id: kanzaki
+  name: 神崎 蓮
+  kana: Kanzaki Ren
+  roman: Kanzaki Ren
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  image: /assets/images/members/KanzakiRen.jpg
+  graduation_year: 2022
+  alumni_type: 学部卒
+  keywords:
+  - 個人認証
+  - 画像処理
+  research_title: モザイク画像のパスワード認証
+  summary: どんなに君がセキュリティを高めても、（以降背景色に）僕からは突破される。それがモザイクのようにモヤのかかった恋になることが分かっていても、ね。
+  hobbies:
+  - 街中の寂しさに溺れたハートを修理すること
+  order: 110
 - id: nakashima_rinako
   name: 中島 理南子
   kana: Nakashima Rinako
@@ -372,6 +420,219 @@ alumni:
   grade: 卒業生
   category: alumni
   status: alumni
+  graduation_year: 2025
   alumni_type: 学部卒
-  research_title: 画像認証関連
+  keywords:
+  - CAPTCHA
+  - 画像処理
+  - 文字認証
+  research_title: ブロックフォントのCAPTCHA
+  summary: 面白いゲーム教えて欲しいです！
+  hobbies:
+  - ゲーム
+  - 猫
   order: 111
+- id: hanada_ryoji
+  name: 花田 遼司
+  kana: Hanada Ryoji
+  roman: Hanada Ryoji
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2022
+  alumni_type: 学部卒
+  keywords:
+  - 楕円曲線
+  - 座標系
+  - 計算量
+  research_title: 楕円曲線の座標系に対する計算量
+  order: 132
+- id: ozawa_moeko
+  name: 小澤 萌子
+  kana: Ozawa Moeko
+  roman: Ozawa Moeko
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2025
+  alumni_type: 学部卒
+  keywords:
+  - CAPTCHA
+  - 3Dモデリング
+  - 文字認証
+  research_title: 3DフォントのCAPTCHA
+  summary: 今年の目標はたくさん旅行にいって、残りの大学生活楽しく過ごすこと
+  hobbies:
+  - 漫画とジグソーパズル
+  order: 133
+- id: murashima
+  name: 村島 悠斗
+  kana: Murashima Yuto
+  roman: Murashima Yuto
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  image: /assets/images/members/MurashimaYuki.jpg
+  graduation_year: 2024
+  alumni_type: 学部卒
+  keywords:
+  - CAPTCHA
+  - タイポグリミア
+  research_title: 人間の補完能力によるCAPTCHA
+  summary: 優しい先輩や先生の指導のもと研究に取り組んでいます。一緒に頑張りましょう！
+  hobbies:
+  - ゲーム（PC, スマホ）
+  - 散歩
+  - 読書
+  order: 40
+- id: yamauchi
+  name: 山内 蓮太
+  kana: Yamauchi Renta
+  roman: Yamauchi Renta
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  image: /assets/images/members/YamauchiRenta.jpg
+  graduation_year: 2025
+  alumni_type: 修士修了
+  keywords:
+  - 楕円曲線
+  - Me演算
+  - 乱数生成
+  - 乱数評価
+  research_title: 楕円曲線による擬似乱数生成
+  summary: 永遠にマリオカートとスプラトゥーンをプレイしています。いつかインド人を越える数学力を得るために日々精進!俺、1000万プレイヤーなんで。
+  hobbies:
+  - ゲーム
+  - YouTube
+  - カレー
+  - 1000万プレイヤー
+  order: 44
+- id: inoue_ryo
+  name: 井上 凌
+  kana: Inoue Ryo
+  roman: Inoue Ryo
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2021
+  alumni_type: 修士修了
+  keywords:
+  - 乱数生成
+  - パラメータ
+  - 乱数評価
+  research_title: ピースワイズロジステック写像におけるパラメータ設定
+  order: 136
+- id: hayashi_yoshiki
+  name: 林 芳樹
+  kana: Hayashi Yoshiki
+  roman: Hayashi Yoshiki
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2021
+  alumni_type: 修士修了
+  keywords:
+  - 電子透かし
+  - 振幅変調
+  - スペクトル拡散
+  - 音声処理
+  research_title: 振幅変調を用いた電子透かしによる防災放送
+  order: 137
+- id: mizogami_takuma
+  name: 溝上 琢麻
+  kana: Mizogami Takuma
+  roman: Mizogami Takuma
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2021
+  alumni_type: 修士修了
+  keywords:
+  - ロジステック写像
+  - 階差系列
+  - NIST検定
+  research_title: ロジステック写像による階差系列
+  order: 138
+- id: watanabe_yutaro
+  name: 渡辺 悠太郎
+  kana: Watanabe Yutaro
+  roman: Watanabe Yutaro
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2021
+  alumni_type: 修士修了
+  keywords:
+  - 準同型暗号
+  - GPU高速化
+  - BFV方式
+  research_title: GPUを用いたBFV準同型暗号の高速化
+  order: 139
+- id: ishida_chisei
+  name: 石田 千晟
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2021
+  alumni_type: 学部卒
+  research_title: 情報代数学
+  order: 140
+- id: sakamoto
+  name: 坂元 秀成
+  kana: Sakamoto Hidenari
+  roman: Sakamoto Hidenari
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  image: /assets/images/members/SakamotoHidenari.jpg
+  graduation_year: 2025
+  alumni_type: 修士修了
+  research_title: 擬似乱数系列の構成法と性能評価
+  summary: 優しい先輩ばかりなので一緒に楽しく研究も頑張りましょう。
+  hobbies:
+  - サッカー
+  - 格闘技
+  - カフェ
+  order: 43
+- id: kawano_mikito
+  name: 川野 幹斗
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2021
+  alumni_type: 学部卒
+  order: 142
+- id: sakamoto_touma
+  name: 阪元 透馬
+  kana: Sakamoto Touma
+  roman: Sakamoto Touma
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2021
+  alumni_type: 学部卒
+  order: 143
+- id: oda_jun
+  name: 小田 潤
+  kana: Oda Jun
+  roman: Oda Jun
+  role: 卒業生
+  grade: 卒業生
+  category: alumni
+  status: alumni
+  graduation_year: 2021
+  alumni_type: 学部卒
+  order: 144

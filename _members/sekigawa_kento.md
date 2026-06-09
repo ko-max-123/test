@@ -9,18 +9,18 @@ grade: 修士1年
 status: current
 category: students
 image: /assets/images/members/sekigawa_kento.jpeg
-research_title: ブロックチェーン
+research_title: 「ブロックチェーン」
 hobbies:
-- プログラミング
-- AI遊び
+- 技術全般
 - 雑談
+- 冒険  etc…
 keywords:
-- セキュリティ
-- ネットワーク
+- 著作権保護
+- 分散システム
+url: https://www.linkedin.com/in/sekigawakento-hanzon
 works_author_ids:
 - sekigawa_kento
 order: 33
-external_url: https://www.linkedin.com/in/sekigawakento-hanzon
 ---
 
-プロフィールを準備中です。
+技術を追い求めることが好きです。今はBlockchainとAIがマイブームです。多種多様な話題にオープンかつ積極的に人との交流を楽しんでます。Linked Inもあるのでぜひ交流しましょう!

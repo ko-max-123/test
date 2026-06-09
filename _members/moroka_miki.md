@@ -10,9 +10,12 @@ status: alumni
 category: alumni
 graduation_year: 2025
 alumni_type: 学部卒
-research_title: QRコード
+research_title: ホログラムQRコード
 hobbies:
 - 散歩
+keywords:
+- QRコード
+- 誤り訂正符号
 works_author_ids:
 - moroka_miki
 order: 109

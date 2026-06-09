@@ -9,9 +9,17 @@ grade: 学部４年
 status: current
 category: students
 image: /assets/images/members/nakashima_ryo.jpg
+research_title: 「CAPTCHA」
+hobbies:
+- ドラマ映画
+- 友達とチョコザップ
+keywords:
+- CAPTCHA
+- 画像処理
+- 文字認証
 works_author_ids:
 - nakashima_ryo
 order: 38
 ---
 
-プロフィールを準備中です。
+ネットワークとセキュリティに興味があります。

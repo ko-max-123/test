@@ -9,9 +9,16 @@ grade: 学部４年
 status: current
 category: students
 image: /assets/images/members/ariyoshi_aoi.jpg
+research_title: 「楕円曲線暗号」
+hobbies:
+- 猫
+- ゲーム
+keywords:
+- デジタル署名
+- 認証
 works_author_ids:
 - ariyoshi_aoi
 order: 37
 ---
 
-プロフィールを準備中です。
+優しい方々と研究頑張ろうとしています。万年長袖だけど気にせんでください

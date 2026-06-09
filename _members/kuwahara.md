@@ -2,24 +2,23 @@
 layout: member
 title: 桒原 大雅
 name: 桒原 大雅
-kana: クワハラ テイガ
+kana: Kuwahara Teiga
 roman: Kuwahara Teiga
 member_id: kuwahara
 grade: 修士1年
 status: current
 category: students
 image: /assets/images/members/kuwahara_teiga.png
-research_title: 擬似乱数系列
-research_description: フラクタル画像圧縮をテーマに、画像処理技術に関する研究に取り組みます。
+research_title: 擬似乱数の攪拌処理
 hobbies:
-- スマブラ
-- 冷凍のブルーベリー
+- 新作お菓子調査
 keywords:
-- セキュリティ
-- AI
+- 攪拌処理
+- 乱数評価
+- 擬似乱数生成
 works_author_ids:
 - kuwahara
 order: 32
 ---
 
-<p>先生からいただいたレモンおいしかった。</p>
+最近はChaCha20-based PRNGに興味を持っていて，実装を試したりしながら楽しく勉強しています。気になったことをすぐ調べたくなるタイプなので，研究室でもよく実装したりしています。研究室にいる時間も長めで，雑談したりコーヒーを飲んだりしながら毎日楽しく過ごしています☕

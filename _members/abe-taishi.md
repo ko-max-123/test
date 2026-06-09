@@ -2,20 +2,22 @@
 layout: member
 title: 安部 泰志
 name: 安部 泰志
-kana: アベ タイシ
+kana: Abe Taishi
 roman: Abe Taishi
 member_id: abe
 grade: 卒業生
 status: alumni
 category: alumni
+image: /assets/images/members/AbeTaishi.jpg
 graduation_year: 2024
-alumni_type: 学部卒
-research_title: 楕円曲線暗号
+alumni_type: 修士修了
+research_title: 楕円曲線暗号の計算コスト
 hobbies:
 - 就活
 - イラスト二次創作
 keywords:
-- セキュリティ
+- 楕円曲線
+- 座標系に対する演算コスト
 works_author_ids:
 - abe
 order: 101

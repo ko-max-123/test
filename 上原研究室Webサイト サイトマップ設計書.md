@@ -135,7 +135,7 @@
 |---|---|
 | URL | `/members.html` |
 | 主な役割 | 教員・学生・卒業生の一覧 |
-| データ元 | `_members/`, `_data/members.yml` |
+| データ元 | `_members/` |
 | 表示形式 | カード形式、卒業生は表形式 |
 | 主な遷移先 | 各メンバー詳細ページ |
 
@@ -191,7 +191,6 @@
 | `_data/navigation.yml` | ヘッダーナビゲーション |
 | `_data/lab.yml` | 研究室紹介ページの内容 |
 | `_data/prospective.yml` | 配属希望者向けページの内容 |
-| `_data/members.yml` | メンバー一覧の補助情報 |
 | `_data/works.yml` | 研究業績一覧 |
 | `_data/works_years.yml` | 年度別リンク |
 
@@ -236,7 +235,6 @@ uehara-lab-jekyll/
 │   ├── navigation.yml
 │   ├── lab.yml
 │   ├── prospective.yml
-│   ├── members.yml
 │   ├── works.yml
 │   └── works_years.yml
 │

@@ -53,10 +53,9 @@ active_nav: members
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% for member in site.data.members.professors %}
-          {% assign member_page = site.members | where: "member_id", member.id | first %}
-          {% assign member_url = member_page.url | default: "/members/uehara/" %}
-          {% include member-card.html name=member.name kana=member.kana grade=member.grade research_title=member.research_title image=member.image url=member_url %}
+        {% assign professors = site.members | where: "category", "professors" | sort: "order" %}
+        {% for member in professors %}
+          {% include member-card.html name=member.name kana=member.kana grade=member.grade research_title=member.research_title image=member.image url=member.url %}
         {% endfor %}
 
         {% for collaborator in site.data.collaborators %}
@@ -82,11 +81,10 @@ active_nav: members
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% assign sorted_students = site.data.members.students | sort: "order" %}
+        {% assign current_members = site.members | where: "status", "current" %}
+        {% assign sorted_students = current_members | where: "category", "students" | sort: "order" %}
         {% for member in sorted_students %}
-          {% assign member_page = site.members | where: "member_id", member.id | first %}
-          {% assign member_url = member_page.url | default: "#" %}
-          {% include member-card.html name=member.name kana=member.kana grade=member.grade research_title=member.research_title image=member.image url=member_url %}
+          {% include member-card.html name=member.name kana=member.kana grade=member.grade research_title=member.research_title image=member.image url=member.url %}
         {% endfor %}
       </div>
     </section>
@@ -103,7 +101,7 @@ active_nav: members
       </div>
 
       <div class="space-y-4">
-        {% assign sorted_alumni = site.data.members.alumni | sort: "graduation_year" | reverse %}
+        {% assign sorted_alumni = site.members | where: "status", "alumni" | sort: "graduation_year" | reverse %}
         {% assign rendered_years = "|" %}
         {% for year_source in sorted_alumni %}
           {% assign year = year_source.graduation_year | default: "年度未設定" %}
@@ -128,9 +126,7 @@ active_nav: members
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {% for member in sorted_alumni %}
                   {% if member.graduation_year == year_source.graduation_year %}
-                  {% assign member_page = site.members | where: "member_id", member.id | first %}
-                  {% assign member_url = member_page.url | default: "#" %}
-                  {% include member-card.html name=member.name kana=member.kana grade="卒業生" alumni_type=member.alumni_type research_title=member.research_title image=member.image url=member_url %}
+                  {% include member-card.html name=member.name kana=member.kana grade="卒業生" alumni_type=member.alumni_type research_title=member.research_title image=member.image url=member.url %}
                   {% endif %}
                 {% endfor %}
               </div>

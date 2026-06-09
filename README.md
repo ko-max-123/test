@@ -40,7 +40,6 @@
 │   ├── site.yml
 │   ├── navigation.yml
 │   ├── lab.yml
-│   ├── members.yml
 │   ├── works.yml
 │   └── prospective.yml
 ├── _members/
@@ -92,9 +91,9 @@ image: "/assets/images/news/sample.svg"
 
 ### メンバー追加
 
-1. `_data/members.yml` に一覧表示用の情報を追加
-2. `_members/xxx.md` に詳細ページを追加
-3. `member_id` を必ず一致させる
+`_members/xxx.md`を追加します。一覧表示と詳細ページは、このMarkdownのフロントマターから自動生成されます。
+
+`member_id`は研究業績の`author_ids`と一致させてください。
 
 ### 研究業績追加
 
@@ -229,13 +228,12 @@ data-work-count="journal"
 
 ```text
 _members/*.md
-_data/members.yml
 members.html
 _layouts/member.html
 _includes/member-card.html
 ```
 
-卒業生にしたい場合は、該当メンバーのMarkdownまたは `_data/members.yml` で以下を設定します。
+卒業生にしたい場合は、該当メンバーのMarkdownで以下を設定します。
 
 ```yaml
 status: alumni

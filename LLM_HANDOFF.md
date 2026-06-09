@@ -31,24 +31,20 @@
 
 ### メンバー
 
-- `_data/members.yml`：一覧カード用
-- `_members/*.md`：詳細ページ用
+- `_members/*.md`：一覧カードと詳細ページの共通データ
 
-追加時は `id` と `member_id` を必ず一致させる。
+追加・更新時は、対象メンバーのMarkdownだけを編集する。
+`member_id`は研究業績の`author_ids`と一致させる。
 
 例：
-
-```yaml
-# _data/members.yml
-- id: "hayashi"
-  name: "林 夏生"
-```
 
 ```yaml
 # _members/hayashi.md
 ---
 member_id: hayashi
 name: "林 夏生"
+status: current
+category: students
 ---
 ```
 
@@ -200,13 +196,12 @@ data-work-count="journal"
 
 ```text
 _members/*.md
-_data/members.yml
 members.html
 _layouts/member.html
 _includes/member-card.html
 ```
 
-卒業生にしたい場合は、該当メンバーのMarkdownまたは `_data/members.yml` で以下を設定します。
+卒業生にしたい場合は、該当メンバーのMarkdownで以下を設定します。
 
 ```yaml
 status: alumni

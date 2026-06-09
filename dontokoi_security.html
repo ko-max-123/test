@@ -1,9 +1,13 @@
+---
+layout: null
+permalink: /dontokoi_security.html
+---
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>どんとこいセキュリティ研究室｜学生による研究室紹介</title>
+  <title>どんとこい！セキュリティ研究室｜学生による研究室紹介</title>
   <meta name="description" content="上原研究室の学生が、配属を考えている学生向けに研究室の雰囲気や研究の進め方を紹介するページです。" />
   <style>
     :root {
@@ -380,7 +384,7 @@
   <div class="page">
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="./index.html" aria-label="上原研究室トップへ">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="上原研究室トップへ">
           <span class="brand-mark" aria-hidden="true">S</span>
           <span>学生による研究室紹介</span>
         </a>
@@ -403,17 +407,18 @@
             研究室で過ごす学生側の感覚を伝えることを目的にしています。
           </p>
           <div class="hero-note">
-            情報理論・符号理論・擬似乱数生成・情報セキュリティなどの研究を、
+            情報代数・疑似乱数系列・誤り訂正情報セキュリティなどの研究を、
             学生にも入りやすい言葉で紹介します。
           </div>
           <div class="hero-actions">
             <a class="button button-primary" href="#concept">まず雰囲気を見る</a>
-            <a class="button button-secondary" href="./prospective_students.html">通常の配属希望者向けページへ</a>
+            <a class="button button-secondary" href="{{ '/research_demo.html' | relative_url }}">研究デモを見る</a>
+            <a class="button button-secondary" href="{{ '/prospective_students.html' | relative_url }}">配属希望者向けページへ</a>
           </div>
         </div>
 
-        <div class="logo-card" aria-label="どんとこいセキュリティ研究室のロゴ">
-          <img src="./assets/dontokoi-security-logo.png" alt="どんとこい！セキュリティ研究室のロゴ。盾、鍵、虫眼鏡、回路のモチーフが描かれている。" />
+        <div class="logo-card" aria-label="どんとこい！セキュリティ研究室のロゴ">
+          <img src="{{ '/assets/images/lab/dontokoi-security-logo.png' | relative_url }}" alt="どんとこい！セキュリティ研究室のロゴ。盾、鍵、虫眼鏡、回路のモチーフが描かれている。" />
         </div>
       </section>
 
@@ -422,7 +427,7 @@
           <p class="eyebrow">Concept</p>
           <h2>堅い研究テーマを、少し入りやすく。</h2>
           <p>
-            セキュリティや符号理論という言葉は難しく聞こえますが、研究の入口は
+            情報代数や誤り訂正情報セキュリティという言葉は難しく聞こえますが、研究の入口は
             「なぜ安全と言えるのか」「どうすれば正しく情報を伝えられるのか」を一つずつ確かめることです。
           </p>
         </div>
@@ -473,7 +478,7 @@
               <div class="step-number">1</div>
               <div>
                 <h3>興味を言葉にする</h3>
-                <p>暗号、乱数、QRコード、認証、符号理論など、気になるものをまず整理します。</p>
+                <p>情報代数、疑似乱数系列、QRコード、認証、誤り訂正情報セキュリティなど、気になるものをまず整理します。</p>
               </div>
             </article>
             <article class="step">
@@ -531,7 +536,7 @@
           <article class="voice">
             <strong>分からないことを残さず、次に進む</strong>
             <p>
-              セキュリティや符号理論は積み上げが重要です。
+              情報代数や誤り訂正情報セキュリティは積み上げが重要です。
               分からない言葉や式を一つずつ確認していく姿勢が役に立ちます。
             </p>
           </article>
@@ -540,7 +545,7 @@
             <strong>気軽さと正確さの両方を大切に</strong>
             <p>
               キャッチコピーは親しみやすくしていますが、
-              内容は情報理論・符号理論・情報セキュリティの基盤に沿って紹介します。
+              内容は情報代数・疑似乱数系列・誤り訂正情報セキュリティの基盤に沿って紹介します。
             </p>
           </article>
         </div>

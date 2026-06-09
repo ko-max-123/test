@@ -53,17 +53,37 @@ active_nav: home
 
   <section class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-bold section-title mb-16 text-center text-3xl">Activities<span class="japanese-sub">研究室の活動</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-        <div class="space-y-6 rounded-2xl border border-slate-100 p-8 bg-slate-50">
-          <span class="material-symbols-outlined text-primary text-5xl" aria-hidden="true">functions</span>
-          <h3 class="text-xl font-bold">基礎研究</h3>
-          <p class="text-slate-600 leading-relaxed">情報代数、疑似乱数系列、誤り訂正情報セキュリティなど、情報技術を支える数理的な基盤について研究します。</p>
+      <h2 class="font-bold section-title mb-10 text-center text-3xl">Activities<span class="japanese-sub">研究室の活動</span></h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="rounded-xl border border-slate-100 p-5 bg-slate-50">
+          <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">functions</span>
+          <h3 class="mt-3 text-lg font-bold">基礎研究</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">情報技術を支える数理的な基盤を探究します。</p>
         </div>
-        <div class="space-y-6 rounded-2xl border border-slate-100 p-8 bg-slate-50">
-          <span class="material-symbols-outlined text-primary text-5xl" aria-hidden="true">co_present</span>
-          <h3 class="text-xl font-bold">ゼミ・発表</h3>
-          <p class="text-slate-600 leading-relaxed">文献調査、実装、実験、結果の分析を行い、ゼミで発表・議論します。</p>
+        <div class="rounded-xl border border-slate-100 p-5 bg-slate-50">
+          <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">co_present</span>
+          <h3 class="mt-3 text-lg font-bold">ゼミ発表</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">調査や実験の成果を発表し、議論を深めます。</p>
+        </div>
+        <div class="rounded-xl border border-slate-100 p-5 bg-slate-50">
+          <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">podium</span>
+          <h3 class="mt-3 text-lg font-bold">学会発表</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">研究成果を学会で発表し、広く共有します。</p>
+        </div>
+        <div class="rounded-xl border border-slate-100 p-5 bg-slate-50">
+          <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">science</span>
+          <h3 class="mt-3 text-lg font-bold">応用研究</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">理論を実装し、実験と評価を通して応用します。</p>
+        </div>
+        <div class="rounded-xl border border-slate-100 p-5 bg-slate-50">
+          <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">celebration</span>
+          <h3 class="mt-3 text-lg font-bold">レクリエーション</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">交流を深め、研究室で楽しく活動します。</p>
+        </div>
+        <div class="rounded-xl border border-slate-100 p-5 bg-slate-50">
+          <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">settings</span>
+          <h3 class="mt-3 text-lg font-bold">研究室運営</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">メンバーで協力し、研究環境を整えます。</p>
         </div>
       </div>
     </div>
@@ -71,7 +91,9 @@ active_nav: home
 
   <section class="bg-slate-50 py-16">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
-      <div class="w-full md:w-3/5 rounded-3xl h-80 abstract-lab-bg shadow-2xl"></div>
+      <div class="w-full md:w-3/5 rounded-3xl h-80 overflow-hidden bg-lab-navy shadow-2xl">
+        <img src="{{ '/assets/images/lab/2025allmembers.JPG' | relative_url }}" alt="2025年度 上原研究室メンバー集合写真" class="h-full w-full object-cover" />
+      </div>
       <div class="w-full md:w-2/5 space-y-8">
         <h2 class="font-bold section-title text-3xl">メンバー紹介</h2>
         <p class="text-slate-600 text-lg leading-relaxed">上原研究室のメンバーを紹介します。</p>

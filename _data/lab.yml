@@ -2,7 +2,7 @@ hero:
   label: "About Uehara Lab"
   title_line1: "数理情報とセキュリティで、"
   title_line2: "信頼できる情報技術の基盤を探究する"
-  description: "上原研究室では、情報代数、疑似乱数系列、誤り訂正情報セキュリティなどの数理的基盤をもとに、信頼性の高い情報システムに関する研究を行っています。理論の理解に加え、実装・実験・評価を通して、安全で信頼できる情報技術のあり方を探究します。"
+  description: "上原研究室では、情報代数、疑似乱数系列、誤り訂正情報セキュリティなどの数理的基盤をもとに、信頼性の高い情報システムに関する研究を行っています。理論の理解に加え、実装と評価を通して、安全で安定し、効率的で信頼できる情報技術のあり方を探究します。"
   fields: "Information Algebra / Pseudorandom Sequences / Error-Correcting Information Security"
 
 mission:

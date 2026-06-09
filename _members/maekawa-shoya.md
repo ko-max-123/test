@@ -8,7 +8,7 @@ member_id: maekawa
 grade: 修士2年
 status: current
 category: students
-image: /assets/images/members/MaekawaShoya.jpg
+image: /assets/images/members/maekawa_shoya.jpg
 research_title: 擬似乱数の攪拌処理
 hobbies:
 - スポーツ全般

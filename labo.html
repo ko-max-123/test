@@ -62,17 +62,20 @@ active_nav: labo
         <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
+        <!-- 情報セキュリティの研究テーマカードは非表示 -->
         {% for theme in site.data.lab.themes %}
-          <div class="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-700">
-            <div class="flex items-start gap-6">
-              <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-4xl" aria-hidden="true">{{ theme.icon }}</span></div>
-              <div>
-                <h3 class="text-xl font-bold mb-3 dark:text-white">{{ theme.title }}</h3>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">{{ theme.text }}</p>
-                <a class="text-primary dark:text-accent font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="{{ '/works.html' | relative_url }}">関連する研究業績を見る <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span></a>
+          {% unless theme.title == "情報セキュリティ" %}
+            <div class="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-700">
+              <div class="flex items-start gap-6">
+                <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-4xl" aria-hidden="true">{{ theme.icon }}</span></div>
+                <div>
+                  <h3 class="text-xl font-bold mb-3 dark:text-white">{{ theme.title }}</h3>
+                  <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">{{ theme.text }}</p>
+                  <a class="text-primary dark:text-accent font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="{{ '/works.html' | relative_url }}">関連する研究業績を見る <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span></a>
+                </div>
               </div>
             </div>
-          </div>
+          {% endunless %}
         {% endfor %}
       </div>
     </div>

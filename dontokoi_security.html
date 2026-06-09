@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>どんとこいセキュリティ研究室｜学生による研究室紹介</title>
+  <meta name="description" content="上原研究室の学生が、配属を考えている学生向けに研究室の雰囲気や研究の進め方を紹介するページです。" />
+  <style>
+    :root {
+      --navy: #071d49;
+      --blue: #0b63ce;
+      --sky: #36a3ff;
+      --light: #eef6ff;
+      --white: #ffffff;
+      --text: #14213d;
+      --muted: #60708f;
+      --line: rgba(11, 99, 206, 0.18);
+      --shadow: 0 22px 60px rgba(7, 29, 73, 0.18);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(54, 163, 255, 0.20), transparent 26rem),
+        radial-gradient(circle at 90% 0%, rgba(11, 99, 206, 0.16), transparent 22rem),
+        linear-gradient(180deg, #ffffff 0%, #eef6ff 46%, #ffffff 100%);
+      line-height: 1.8;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page { overflow: hidden; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue), var(--navy));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 8px 18px rgba(11, 99, 206, 0.28);
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .nav a:hover { color: var(--blue); }
+
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 72px 20px 48px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--blue);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      margin: 18px 0 18px;
+      color: var(--navy);
+      font-size: clamp(2.2rem, 6vw, 4.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.05em;
+      font-weight: 950;
+    }
+
+    .hero h1 span { display: block; color: var(--blue); }
+
+    .lead {
+      margin: 0;
+      font-size: 1.12rem;
+      color: #33415c;
+      max-width: 680px;
+    }
+
+    .hero-note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-left: 5px solid var(--sky);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 14px;
+      color: #45556f;
+      font-size: 0.95rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      border: 2px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--blue), var(--navy));
+      box-shadow: 0 14px 28px rgba(11, 99, 206, 0.28);
+    }
+
+    .button-secondary {
+      color: var(--blue);
+      background: rgba(255, 255, 255, 0.82);
+      border-color: var(--line);
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .logo-card {
+      position: relative;
+      padding: 24px;
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .logo-card::before {
+      content: "";
+      position: absolute;
+      inset: -34px -22px auto auto;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(54, 163, 255, 0.18);
+      z-index: -1;
+    }
+
+    .logo-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 22px;
+      background: white;
+    }
+
+    .section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 58px 20px;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--blue);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+
+    .section-heading p {
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 36px rgba(7, 29, 73, 0.08);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--sky), var(--blue));
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.18rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #4d5d78;
+      font-size: 0.98rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .message-box {
+      padding: 28px;
+      border-radius: 28px;
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(11, 99, 206, 0.95), rgba(7, 29, 73, 0.98)),
+        radial-gradient(circle at 80% 10%, rgba(54, 163, 255, 0.45), transparent 20rem);
+      box-shadow: var(--shadow);
+    }
+
+    .message-box h2 { color: white; }
+    .message-box p { color: rgba(255, 255, 255, 0.9); }
+
+    .steps { display: grid; gap: 14px; }
+
+    .step {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      padding: 18px;
+      border-radius: 20px;
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--light);
+      color: var(--blue);
+      font-weight: 950;
+    }
+
+    .step h3 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .voice-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .voice {
+      padding: 22px;
+      border-radius: 22px;
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    .voice strong {
+      display: block;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .voice p { margin: 0; color: #4d5d78; }
+
+    .caution {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #fff8e6;
+      border: 1px solid rgba(200, 140, 0, 0.22);
+      color: #645027;
+      font-size: 0.94rem;
+    }
+
+    .site-footer {
+      margin-top: 42px;
+      padding: 32px 20px;
+      color: rgba(255, 255, 255, 0.82);
+      background: var(--navy);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .site-footer strong { color: white; }
+
+    @media (max-width: 900px) {
+      .hero, .split { grid-template-columns: 1fr; }
+      .hero { padding-top: 44px; }
+      .cards, .voice-list { grid-template-columns: 1fr; }
+      .nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="上原研究室トップへ">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>学生による研究室紹介</span>
+        </a>
+        <nav class="nav" aria-label="ページ内メニュー">
+          <a href="#concept">コンセプト</a>
+          <a href="#research-life">研究の進め方</a>
+          <a href="#voices">学生目線</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="badge">上原研究室 所属学生による紹介ページ</span>
+          <h1>どんとこい！<span>セキュリティ研究室</span></h1>
+          <p class="lead">
+            「難しそう」「数学が多そう」「セキュリティって何をするの？」という不安に、
+            所属学生の目線で答えるためのページです。先生からの配属基準や公式な募集条件ではなく、
+            研究室で過ごす学生側の感覚を伝えることを目的にしています。
+          </p>
+          <div class="hero-note">
+            情報理論・符号理論・擬似乱数生成・情報セキュリティなどの研究を、
+            学生にも入りやすい言葉で紹介します。
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#concept">まず雰囲気を見る</a>
+            <a class="button button-secondary" href="./prospective_students.html">通常の配属希望者向けページへ</a>
+          </div>
+        </div>
+
+        <div class="logo-card" aria-label="どんとこいセキュリティ研究室のロゴ">
+          <img src="./assets/dontokoi-security-logo.png" alt="どんとこい！セキュリティ研究室のロゴ。盾、鍵、虫眼鏡、回路のモチーフが描かれている。" />
+        </div>
+      </section>
+
+      <section class="section" id="concept">
+        <div class="section-heading">
+          <p class="eyebrow">Concept</p>
+          <h2>堅い研究テーマを、少し入りやすく。</h2>
+          <p>
+            セキュリティや符号理論という言葉は難しく聞こえますが、研究の入口は
+            「なぜ安全と言えるのか」「どうすれば正しく情報を伝えられるのか」を一つずつ確かめることです。
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">01</div>
+            <h3>最初から詳しくなくて大丈夫</h3>
+            <p>
+              配属前から専門知識を完璧に持っている必要はありません。
+              文献を読み、試し、分からないところを整理しながら進めます。
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">02</div>
+            <h3>理論だけで終わらせない</h3>
+            <p>
+              数式や理論を学ぶだけでなく、プログラムで動かしたり、
+              実験結果を表やグラフにして確かめたりします。
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">03</div>
+            <h3>相談しながら形にする</h3>
+            <p>
+              最初から完璧な研究テーマが決まっていなくても、
+              興味のある技術や疑問を出発点にして、少しずつ研究として整理します。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="research-life">
+        <div class="split">
+          <div class="message-box">
+            <p class="eyebrow">Student Message</p>
+            <h2>「どんとこい」は、無理に強がる言葉ではありません。</h2>
+            <p>
+              分からないことがあっても、調べて、試して、説明できるようにする。
+              その積み重ねで研究に向き合っていこう、という学生側の合言葉です。
+            </p>
+          </div>
+
+          <div class="steps">
+            <article class="step">
+              <div class="step-number">1</div>
+              <div>
+                <h3>興味を言葉にする</h3>
+                <p>暗号、乱数、QRコード、認証、符号理論など、気になるものをまず整理します。</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-number">2</div>
+              <div>
+                <h3>調べて、メモにする</h3>
+                <p>論文や技術記事を読み、分かったこと・分からないことをメモや資料にまとめます。</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-number">3</div>
+              <div>
+                <h3>小さく実装してみる</h3>
+                <p>PythonやJavaScriptなどで簡単な実験を作り、理論や仕組みを動かして確認します。</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-number">4</div>
+              <div>
+                <h3>結果を説明できる形にする</h3>
+                <p>実験結果を比較し、なぜそうなったのかを考察して、発表や卒業研究につなげます。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="voices">
+        <div class="section-heading">
+          <p class="eyebrow">Student View</p>
+          <h2>学生目線で伝えたいこと</h2>
+          <p>
+            このページは、先生の公式な配属基準を示すものではありません。
+            研究室所属学生が、配属を考える学生に向けて雰囲気を伝えるためのページです。
+          </p>
+        </div>
+
+        <div class="voice-list">
+          <article class="voice">
+            <strong>研究テーマは難しく見えるけど、入口は身近です</strong>
+            <p>
+              パスワード、QRコード、暗号通信、データの誤り検出など、
+              普段使っている技術の裏側から研究テーマを考えられます。
+            </p>
+          </article>
+
+          <article class="voice">
+            <strong>発表や説明の力も大切です</strong>
+            <p>
+              実装できたかどうかだけでなく、調べた内容や実験結果を
+              相手に伝わる形に整理する力も研究を通して身につけます。
+            </p>
+          </article>
+
+          <article class="voice">
+            <strong>分からないことを残さず、次に進む</strong>
+            <p>
+              セキュリティや符号理論は積み上げが重要です。
+              分からない言葉や式を一つずつ確認していく姿勢が役に立ちます。
+            </p>
+          </article>
+
+          <article class="voice">
+            <strong>気軽さと正確さの両方を大切に</strong>
+            <p>
+              キャッチコピーは親しみやすくしていますが、
+              内容は情報理論・符号理論・情報セキュリティの基盤に沿って紹介します。
+            </p>
+          </article>
+        </div>
+
+        <div class="caution">
+          ※このページは学生による紹介ページです。配属条件、成績基準、研究テーマの最終決定などについて、
+          先生や大学からの公式な案内を代替するものではありません。
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>どんとこい！セキュリティ研究室</strong><br />
+      上原研究室所属学生による、配属を考える学生向けの紹介ページ
+    </footer>
+  </div>
+</body>
+</html>

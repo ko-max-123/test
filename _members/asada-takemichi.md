@@ -9,6 +9,7 @@ grade: 卒業生
 status: alumni
 category: alumni
 graduation_year: 2024
+alumni_type: 学部卒
 research_title: 秘密鍵共有
 hobbies:
 - アウトドア

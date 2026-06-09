@@ -158,6 +158,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2025
+  alumni_type: 学部卒
   research_title: 電子透かし
   summary: 温泉好きです。
   hobbies:
@@ -172,6 +173,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2025
+  alumni_type: 学部卒
   research_title: QRコード
   summary: 最近は毎朝4km歩いています
   hobbies:
@@ -186,6 +188,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2024
+  alumni_type: 学部卒
   keywords:
   - セキュリティ
   research_title: 楕円曲線暗号
@@ -203,6 +206,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2024
+  alumni_type: 学部卒
   keywords:
   - 画像符号化
   - 画像処理
@@ -225,6 +229,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2024
+  alumni_type: 学部卒
   keywords:
   - ゴルフ
   - 社長
@@ -245,6 +250,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2024
+  alumni_type: 学部卒
   keywords:
   - セキュリティ
   research_title: 秘密鍵共有
@@ -263,6 +269,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2022
+  alumni_type: 学部卒
   keywords:
   - 疑似乱数系列
   research_title: 疑似乱数系列
@@ -281,6 +288,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2022
+  alumni_type: 学部卒
   keywords:
   - 疑似乱数系列
   - 信号処理（心電図）
@@ -299,6 +307,7 @@ alumni:
   category: alumni
   status: alumni
   graduation_year: 2022
+  alumni_type: 学部卒
   keywords:
   - モザイク画像を用いたパスワード認証のセキュリティ強化
   research_title: モザイク画像を用いたパスワード認証のセキュリティ強化
@@ -312,6 +321,7 @@ alumni:
   grade: 学部４年
   category: alumni
   status: alumni
+  alumni_type: 学部卒
   keywords:
   - 人間の補完能力を利用したCAPTCHAについて
   research_title: 人間の補完能力を利用したCAPTCHAについて
@@ -322,6 +332,7 @@ alumni:
   grade: 修士１年
   category: alumni
   status: alumni
+  alumni_type: 修士修了
   keywords:
   - 擬似乱数系列の構成法と性能評価
   research_title: 擬似乱数系列の構成法と性能評価
@@ -332,6 +343,7 @@ alumni:
   grade: 修士１年
   category: alumni
   status: alumni
+  alumni_type: 修士修了
   keywords:
   - 楕円曲線を用いた公開鍵暗号と疑似乱数系列
   research_title: 楕円曲線を用いた公開鍵暗号と疑似乱数系列
@@ -344,6 +356,7 @@ alumni:
   grade: 卒業生
   category: alumni
   status: alumni
+  alumni_type: 学部卒
   keywords:
   - カラーQRコードにおける誤り訂正
   research_title: カラーQRコードにおける誤り訂正
@@ -359,5 +372,6 @@ alumni:
   grade: 卒業生
   category: alumni
   status: alumni
+  alumni_type: 学部卒
   research_title: 画像認証関連
   order: 111

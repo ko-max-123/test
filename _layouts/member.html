@@ -46,7 +46,7 @@ layout: default
                   <p class="font-bold text-slate-700">所属区分</p>
                   <p class="text-slate-500">
                     {% if page.status == "alumni" %}
-                      卒業生{% if page.graduation_year %}（{{ page.graduation_year }}年）{% endif %}
+                      卒業生{% if page.graduation_year or page.alumni_type %}（{% if page.graduation_year %}{{ page.graduation_year }}年{% endif %}{% if page.graduation_year and page.alumni_type %}・{% endif %}{% if page.alumni_type %}{{ page.alumni_type }}{% endif %}）{% endif %}
                     {% else %}
                       {{ page.grade | default: "学生" }}
                     {% endif %}

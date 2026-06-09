@@ -6,6 +6,7 @@ kana: ヤマウチ レンタ
 member_id: yamauchi
 grade: 修士１年
 status: alumni
+alumni_type: 修士修了
 category: alumni
 research_title: 楕円曲線を用いた公開鍵暗号と疑似乱数系列
 keywords:

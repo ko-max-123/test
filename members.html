@@ -129,7 +129,7 @@ active_nav: members
                   {% if member.graduation_year == year_source.graduation_year %}
                   {% assign member_page = site.members | where: "member_id", member.id | first %}
                   {% assign member_url = member_page.url | default: "#" %}
-                  {% include member-card.html name=member.name kana=member.kana grade="卒業生" research_title=member.research_title image=member.image url=member_url %}
+                  {% include member-card.html name=member.name kana=member.kana grade="卒業生" alumni_type=member.alumni_type research_title=member.research_title image=member.image url=member_url %}
                   {% endif %}
                 {% endfor %}
               </div>

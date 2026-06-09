@@ -6,6 +6,7 @@ kana: ムラシマ ユウト
 member_id: murashima
 grade: 学部４年
 status: alumni
+alumni_type: 学部卒
 category: alumni
 research_title: 人間の補完能力を利用したCAPTCHAについて
 keywords:

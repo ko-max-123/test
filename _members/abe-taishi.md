@@ -9,6 +9,7 @@ grade: 卒業生
 status: alumni
 category: alumni
 graduation_year: 2024
+alumni_type: 学部卒
 research_title: 楕円曲線暗号
 hobbies:
 - 就活

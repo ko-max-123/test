@@ -7,6 +7,7 @@ roman: Ozono Keiichi
 member_id: ohzono
 grade: 卒業生
 status: alumni
+alumni_type: 学部卒
 category: alumni
 research_title: カラーQRコードにおける誤り訂正
 hobbies:

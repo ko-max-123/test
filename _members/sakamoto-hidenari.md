@@ -6,6 +6,7 @@ kana: サカモト ヒデナリ
 member_id: sakamoto
 grade: 修士１年
 status: alumni
+alumni_type: 修士修了
 category: alumni
 research_title: 擬似乱数系列の構成法と性能評価
 keywords:

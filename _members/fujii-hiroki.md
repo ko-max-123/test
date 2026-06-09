@@ -9,6 +9,7 @@ grade: 卒業生
 status: alumni
 category: alumni
 graduation_year: 2022
+alumni_type: 学部卒
 research_title: 疑似乱数系列
 hobbies:
 - ツムツム

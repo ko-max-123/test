@@ -7,6 +7,7 @@ roman: Nakashima Rinako
 member_id: nakashima_rinako
 grade: 卒業生
 status: alumni
+alumni_type: 学部卒
 category: alumni
 research_title: 画像認証関連
 works_author_ids:

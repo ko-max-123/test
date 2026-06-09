@@ -241,6 +241,7 @@ _includes/member-card.html
 status: alumni
 category: alumni
 graduation_year: 2023
+alumni_type: 学部卒 # または 修士修了
 ```
 
 現役学生に戻す場合は以下です。

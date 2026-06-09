@@ -9,12 +9,12 @@ grade: 卒業生
 status: alumni
 category: alumni
 graduation_year: 2022
-research_title: 疑似乱数生成、信号処理（心電図）
+research_title: 疑似乱数系列、信号処理（心電図）
 hobbies:
 - 旅行
 - ダンス
 keywords:
-- 疑似乱数生成
+- 疑似乱数系列
 - 信号処理（心電図）
 works_author_ids:
 - moriwaki

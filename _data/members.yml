@@ -6,8 +6,8 @@ professors:
   grade: 教授
   category: professors
   status: current
-  research_title: 情報セキュリティ・暗号・系列生成
-  summary: 情報セキュリティや暗号理論、系列生成に関する研究を行っています。
+  research_title: 情報代数・疑似乱数系列・誤り訂正情報セキュリティ
+  summary: 情報代数、疑似乱数系列、誤り訂正情報セキュリティに関する研究を行っています。
 students:
 - id: hayashi
   name: 林 夏生
@@ -264,8 +264,8 @@ alumni:
   status: alumni
   graduation_year: 2022
   keywords:
-  - 疑似乱数生成
-  research_title: 疑似乱数生成
+  - 疑似乱数系列
+  research_title: 疑似乱数系列
   summary: 上原先生ありがとう、林さん早く卒業してください。
   hobbies:
   - ツムツム
@@ -282,9 +282,9 @@ alumni:
   status: alumni
   graduation_year: 2022
   keywords:
-  - 疑似乱数生成
+  - 疑似乱数系列
   - 信号処理（心電図）
-  research_title: 疑似乱数生成、信号処理（心電図）
+  research_title: 疑似乱数系列、信号処理（心電図）
   summary: 楽しい大学生活でした。上原研ありがとう！
   hobbies:
   - 旅行
@@ -333,8 +333,8 @@ alumni:
   category: alumni
   status: alumni
   keywords:
-  - 楕円曲線を用いた公開鍵暗号と擬似乱数生成法
-  research_title: 楕円曲線を用いた公開鍵暗号と擬似乱数生成法
+  - 楕円曲線を用いた公開鍵暗号と疑似乱数系列
+  research_title: 楕円曲線を用いた公開鍵暗号と疑似乱数系列
   order: 44
 - id: ohzono
   name: 大園 慶一

@@ -9,13 +9,13 @@ grade: 卒業生
 status: alumni
 category: alumni
 graduation_year: 2022
-research_title: 疑似乱数生成
+research_title: 疑似乱数系列
 hobbies:
 - ツムツム
 - HIPHOP
 - ダンス
 keywords:
-- 疑似乱数生成
+- 疑似乱数系列
 works_author_ids:
 - fujii
 order: 104

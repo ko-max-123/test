@@ -7,9 +7,9 @@ member_id: yamauchi
 grade: 修士１年
 status: alumni
 category: alumni
-research_title: 楕円曲線を用いた公開鍵暗号と擬似乱数生成法
+research_title: 楕円曲線を用いた公開鍵暗号と疑似乱数系列
 keywords:
-- 楕円曲線を用いた公開鍵暗号と擬似乱数生成法
+- 楕円曲線を用いた公開鍵暗号と疑似乱数系列
 works_author_ids:
 - yamauchi
 order: 44
@@ -21,4 +21,4 @@ order: 44
 
 ## 研究分野
 
-楕円曲線を用いた公開鍵暗号と擬似乱数生成法
+楕円曲線を用いた公開鍵暗号と疑似乱数系列

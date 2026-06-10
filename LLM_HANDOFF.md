@@ -140,7 +140,7 @@ _data/collaborators.yml
   name: "宮崎 武"
   affiliation: "共同研究先の大学・研究室名"
   role: "共同研究者"
-  research_title: "疑似乱数系列に関する共同研究"
+  research_title: "擬似乱数系列に関する共同研究"
   url: "https://example.com/"
 ```
 

@@ -7,11 +7,11 @@ member_id: uehara
 grade: 教授
 status: current
 category: professors
-research_title: 情報代数・疑似乱数系列・誤り訂正情報セキュリティ
-research_description: 情報代数、疑似乱数系列、誤り訂正情報セキュリティを専門分野としています。
+research_title: 情報代数・擬似乱数系列・誤り訂正情報セキュリティ
+research_description: 情報代数、擬似乱数系列、誤り訂正情報セキュリティを専門分野としています。
 keywords:
 - 情報代数
-- 疑似乱数系列
+- 擬似乱数系列
 - 誤り訂正情報セキュリティ
 works_author_ids:
 - uehara

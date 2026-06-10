@@ -194,31 +194,35 @@ active_nav: prospective
         </article>
       </div>
 
-      <div class="max-w-3xl mb-12">
-        <h2 class="text-3xl font-bold mb-6 border-l-4 border-primary pl-6">デモで触れられるテーマ</h2>
-        <p class="text-lg text-slate-600 leading-relaxed">
-          公開できるデモは順次追加していきます。まずは研究テーマの概要と関連業績を確認できます。
-        </p>
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold mb-4">デモで触れられるテーマ</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed">上原研究室では、情報代数、擬似乱数系列、誤り訂正符号・情報セキュリティとその応用に関する研究を進めています。</p>
+        <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
+        <!-- 情報セキュリティの研究テーマカードは非表示 -->
         {% for theme in site.data.lab.themes %}
-          <article class="group bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:shadow-xl transition-all">
-            <div class="flex items-start gap-6">
-              <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-4xl" aria-hidden="true">{{ theme.icon }}</span>
+          {% unless theme.title == "情報セキュリティ" %}
+            <article class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200">
+              <div class="flex items-start gap-6">
+                <div class="bg-primary/5 p-4 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                  <span class="material-symbols-outlined text-4xl" aria-hidden="true">{{ theme.icon }}</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-3">{{ theme.title }}</h3>
+                  <p class="text-slate-600 leading-relaxed">{{ theme.text }}</p>
+                </div>
               </div>
-              <div>
-                <h3 class="text-xl font-bold mb-3">{{ theme.title }}</h3>
-                <p class="text-slate-600 leading-relaxed mb-4">{{ theme.text }}</p>
-                <a class="text-primary font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" href="{{ '/works.html' | relative_url }}">
-                  関連する研究業績を見る
-                  <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-          </article>
+            </article>
+          {% endunless %}
         {% endfor %}
+      </div>
+      <div class="mt-10 text-center">
+        <a class="inline-flex items-center gap-2 rounded-full bg-lab-navy px-6 py-3 text-sm font-bold text-white hover:bg-slate-800 transition-colors" href="{{ '/works.html' | relative_url }}">
+          関連する研究業績を見る
+          <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+        </a>
       </div>
     </div>
   </section>

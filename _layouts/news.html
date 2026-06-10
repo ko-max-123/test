@@ -23,7 +23,7 @@ layout: default
             {% if page.summary %}<p class="mt-6 text-lg text-slate-600 leading-relaxed">{{ page.summary }}</p>{% endif %}
           </div>
           {% if page.image %}
-            <div class="rounded-3xl overflow-hidden shadow-soft bg-slate-100 border border-slate-200">
+            <div class="hidden rounded-3xl overflow-hidden shadow-soft bg-slate-100 border border-slate-200 lg:block">
               <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" class="w-full h-[320px] md:h-[420px] object-cover" />
             </div>
           {% endif %}

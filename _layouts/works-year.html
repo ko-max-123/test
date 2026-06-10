@@ -32,7 +32,7 @@ layout: default
           </p>
         </div>
 
-        <div class="grid grid-cols-2{% if journal_works.size > 0 %} md:grid-cols-3{% endif %} gap-4">
+        <div class="hidden grid-cols-2{% if journal_works.size > 0 %} md:grid-cols-3{% endif %} gap-4 lg:grid">
           <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
             <p class="text-3xl font-black text-primary" data-work-count="international">{{ international_works.size }}</p>
             <p class="mt-1 text-sm font-medium text-slate-600">国際会議<br />（査読あり）</p>
